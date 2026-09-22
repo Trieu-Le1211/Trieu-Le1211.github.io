@@ -34,5 +34,14 @@
   },
   "thoughts/index.qmd": {
     "index.html": "81b46876"
+  },
+  "bioinformatics/Molecular clocks.qmd": {
+    "Molecular clocks.html": "e931c82a"
+  },
+  "bioinformatics/bayesian-statistics.qmd": {
+    "bayesian-statistics.html": "59c256ec"
+  },
+  "trieu-le.qmd": {
+    "trieu-le.html": "12e6eecc"
   }
 }

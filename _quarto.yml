@@ -2,21 +2,22 @@ project:
   type: website
 
 website:
-  title: "Trieu Le"
   navbar:
+    title: false
     left:
-      - href: index.html
+      - href: trieu-le.qmd
+        text: Trieu Le
+      - href: index.qmd
         text: Home
-      - href: about.html
+      - href: about.qmd
         text: About Me
-      - href: publications.html
+      - href: publications.qmd
         text: Publications
-      - href: bioinformatics/index.html
-        text: Bioinformatics for Dummies
-      - href: thoughts/index.html
+      - href: bioinformatics/index.qmd
+        text: Bioinformatics for "Dum me"
+      - href: thoughts/index.qmd
         text: Thoughts
-      - href: cv.html
-        text: CV
+
 
 format:
   html:

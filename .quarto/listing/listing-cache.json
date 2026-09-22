@@ -3,6 +3,10 @@
     "thoughts/index.qmd": [
       "*.qmd",
       "!index.qmd"
+    ],
+    "bioinformatics/index.qmd": [
+      "*.qmd",
+      "!index.qmd"
     ]
   }
 }

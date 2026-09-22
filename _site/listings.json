@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/bioinformatics/index.html",
+    "items": [
+      "/bioinformatics/Molecular clocks.html",
+      "/bioinformatics/bayesian-statistics.html"
+    ]
+  },
+  {
     "listing": "/thoughts/index.html",
     "items": [
       "/thoughts/science-through-the-lens-of-investing.html"

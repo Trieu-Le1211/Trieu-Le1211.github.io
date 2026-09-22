@@ -1,47 +1,25 @@
 ---
 title: "Bioinformatics for Dummies"
+description: "My notes on the mathematics, algorithms, and biological ideas behind bioinformatics."
+
+listing:
+  contents:
+    - "*.qmd"
+    - "!index.qmd"
+  sort: "date desc"
+  type: default
+  fields:
+    - title
+    - subtitle
+    - date
+    - categories
+
+page-layout: full
+toc: false
 ---
 
-A collection of notes from my journey learning the mathematics,
-algorithms and concepts behind bioinformatics and microbial genomics.
+I am learning bioinformatics from first principles.
 
-## Statistics & Mathematics
+This series is my attempt to understand not only **how to use bioinformatics tools**, but also the mathematics, algorithms, and biological assumptions behind them.
 
-- Probability
-- Probability distributions
-- Bayesian statistics
-
-## Sequencing
-
-- Illumina
-- Oxford Nanopore
-- PacBio
-
-## Genomic Algorithms
-
-- Sequence alignment
-- De Bruijn graphs
-- Genome assembly
-- Clustering and distance algorithms
-
-## Phylogenetics
-
-- Tree-building algorithms
-- Maximum likelihood
-- Bayesian phylogenetics
-- Recombination
-- Molecular clocks
-- BactDating
-
-## Population Genomics
-
-- Population structure
-- Pangenomes
-- Selection and dN/dS
-- GWAS
-
-## Other Topics
-
-- Metagenomics
-- Machine learning
-- Drug development and testing
+I write these notes primarily to consolidate my own understanding. Hopefully, they may also be useful to others learning bioinformatics.

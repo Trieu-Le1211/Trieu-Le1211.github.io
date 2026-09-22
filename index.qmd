@@ -37,7 +37,7 @@ Topics include:
 Phylogenetics · Pangenomics · Population structure · GWAS · 
 Metagenomics · Machine learning**
 
-[Explore Bioinformatics for Dummies →](bioinformatics/index.html)
+[Explore Bioinformatics for "Dum me" →](bioinformatics/index.html)
 
 ---
 

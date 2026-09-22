@@ -1,0 +1,13 @@
+---
+title: "Molecular Clocks"
+subtitle: "Understanding probability, priors, likelihoods, and posteriors"
+date: 2026-09-22
+author: "Trieu Le"
+categories:
+  - Statistics
+  - Probability
+  - Bayesian
+toc: true
+---
+
+[← Back to Bioinformatics for Dummies](index.qmd)
