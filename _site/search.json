@@ -1,0 +1,247 @@
+[
+  {
+    "objectID": "bioinformatics/index.html",
+    "href": "bioinformatics/index.html",
+    "title": "Bioinformatics for Dummies",
+    "section": "",
+    "text": "A collection of notes from my journey learning the mathematics, algorithms and concepts behind bioinformatics and microbial genomics."
+  },
+  {
+    "objectID": "bioinformatics/index.html#statistics-mathematics",
+    "href": "bioinformatics/index.html#statistics-mathematics",
+    "title": "Bioinformatics for Dummies",
+    "section": "Statistics & Mathematics",
+    "text": "Statistics & Mathematics\n\nProbability\nProbability distributions\nBayesian statistics"
+  },
+  {
+    "objectID": "bioinformatics/index.html#sequencing",
+    "href": "bioinformatics/index.html#sequencing",
+    "title": "Bioinformatics for Dummies",
+    "section": "Sequencing",
+    "text": "Sequencing\n\nIllumina\nOxford Nanopore\nPacBio"
+  },
+  {
+    "objectID": "bioinformatics/index.html#genomic-algorithms",
+    "href": "bioinformatics/index.html#genomic-algorithms",
+    "title": "Bioinformatics for Dummies",
+    "section": "Genomic Algorithms",
+    "text": "Genomic Algorithms\n\nSequence alignment\nDe Bruijn graphs\nGenome assembly\nClustering and distance algorithms"
+  },
+  {
+    "objectID": "bioinformatics/index.html#phylogenetics",
+    "href": "bioinformatics/index.html#phylogenetics",
+    "title": "Bioinformatics for Dummies",
+    "section": "Phylogenetics",
+    "text": "Phylogenetics\n\nTree-building algorithms\nMaximum likelihood\nBayesian phylogenetics\nRecombination\nMolecular clocks\nBactDating"
+  },
+  {
+    "objectID": "bioinformatics/index.html#population-genomics",
+    "href": "bioinformatics/index.html#population-genomics",
+    "title": "Bioinformatics for Dummies",
+    "section": "Population Genomics",
+    "text": "Population Genomics\n\nPopulation structure\nPangenomes\nSelection and dN/dS\nGWAS"
+  },
+  {
+    "objectID": "bioinformatics/index.html#other-topics",
+    "href": "bioinformatics/index.html#other-topics",
+    "title": "Bioinformatics for Dummies",
+    "section": "Other Topics",
+    "text": "Other Topics\n\nMetagenomics\nMachine learning\nDrug development and testing"
+  },
+  {
+    "objectID": "thoughts/Index.html",
+    "href": "thoughts/Index.html",
+    "title": "Thoughts",
+    "section": "",
+    "text": "Science Through the Lens of Investing\n\n\nA reflection on recognition, timing, and communication in research\n\n\n\nResearch\n\nPhD\n\nReflections\n\nInvesting\n\n\n\n\n\n\nSep 11, 2026\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am a clinician-researcher with interests in infectious diseases, antimicrobial resistance, microbial genomics, and bacterial evolution.\nMy research interests include:\n\nInfectious diseases\nAntimicrobial resistance\nMicrobial genomics\nBacterial population genomics\nPlasmids and mobile genetic elements\nBioinformatics"
+  },
+  {
+    "objectID": "about.html#trieu-le",
+    "href": "about.html#trieu-le",
+    "title": "About Me",
+    "section": "",
+    "text": "I am a clinician-researcher with interests in infectious diseases, antimicrobial resistance, microbial genomics, and bacterial evolution.\nMy research interests include:\n\nInfectious diseases\nAntimicrobial resistance\nMicrobial genomics\nBacterial population genomics\nPlasmids and mobile genetic elements\nBioinformatics"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Trieu Le",
+    "section": "",
+    "text": "I am a researcher interested in microbial genomics, antimicrobial resistance, and bacterial evolution."
+  },
+  {
+    "objectID": "index.html#microbial-genomics-plasmids-and-mobile-genetic-elements-infectious-diseases",
+    "href": "index.html#microbial-genomics-plasmids-and-mobile-genetic-elements-infectious-diseases",
+    "title": "Trieu Le",
+    "section": "",
+    "text": "I am a researcher interested in microbial genomics, antimicrobial resistance, and bacterial evolution."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Trieu Le",
+    "section": "Research Interests",
+    "text": "Research Interests\n\n💻 Bioinformatics\n🧬 Microbial genomics\n🧫 Bacterial population genomics\n🔗 Plasmids and mobile genetic elements\n💊 Antimicrobial resistance\n🦠 Infectious diseases"
+  },
+  {
+    "objectID": "index.html#bioinformatics-for-dummies",
+    "href": "index.html#bioinformatics-for-dummies",
+    "title": "Trieu Le",
+    "section": "Bioinformatics for Dummies",
+    "text": "Bioinformatics for Dummies\nLearning bioinformatics from first principles.\nI use this space to document what I learn about the mathematics, algorithms, and biological concepts behind modern genomic analysis.\nTopics include:\nProbability · Bayesian statistics · Sequencing · Alignment · Phylogenetics · Pangenomics · Population structure · GWAS · Metagenomics · Machine learning\nExplore Bioinformatics for Dummies →"
+  },
+  {
+    "objectID": "index.html#thoughts",
+    "href": "index.html#thoughts",
+    "title": "Trieu Le",
+    "section": "Thoughts",
+    "text": "Thoughts\nReflections on research, medicine, science, and my PhD journey.\nRead my thoughts →"
+  },
+  {
+    "objectID": "index.html#publications",
+    "href": "index.html#publications",
+    "title": "Trieu Le",
+    "section": "Publications",
+    "text": "Publications\nSelected publications and research outputs.\nView publications →"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "My research spans microbial genomics, antimicrobial resistance, tuberculosis, and infectious diseases.\nORCID"
+  },
+  {
+    "objectID": "publications.html#section",
+    "href": "publications.html#section",
+    "title": "Publications",
+    "section": "2026",
+    "text": "2026\n\nPhylogenetic distribution and longitudinal persistence of plasmids in Mycobacterium abscessus\nTrieu Le, Josephine M. Bryant\nMicrobial Genomics, 2026.\nDOI"
+  },
+  {
+    "objectID": "publications.html#section-1",
+    "href": "publications.html#section-1",
+    "title": "Publications",
+    "section": "2025",
+    "text": "2025\n\nAmira: detection of AMR genes directly from long reads using gene-space de Bruijn graphs\nDaniel Anderson, Leandro Lima, Trieu Le, Louise Judd, Ryan Wick, Zamin Iqbal\nPreprint, 2025.\nPreprint\n\n\n\nInfection by Clonally Related Mycobacterium abscessus Isolates: The Role of Drinking Water\nRachel Thomson, N. Wheeler, R. E. Stockwell, J. Bryant, S. L. Taylor, L. E. X. Leong, T. Le, G. B. Rogers, R. Carter, L. J. Sherrard, et al.\nAmerican Journal of Respiratory and Critical Care Medicine, 2025.\nDOI · PubMed"
+  },
+  {
+    "objectID": "publications.html#section-2",
+    "href": "publications.html#section-2",
+    "title": "Publications",
+    "section": "2024",
+    "text": "2024\n\nRifampicin tolerance and growth fitness among isoniazid-resistant clinical Mycobacterium tuberculosis isolates from a longitudinal study\nSrinivasan Vijay, Nguyen Le Hoai Bao, Dao Nguyen Vinh, Le Thanh Hoang Nhat, Do Dang Anh Thu, Nguyen Le Quang, Le Pham Tien Trieu, Hoang Ngoc Nhung, Vu Thi Ngoc Ha, Phan Vuong Khac Thai, et al.\neLife, 2024.\nDOI\n\n\n\nRifampicin resistant Mycobacterium tuberculosis in Vietnam, 2020–2022\nHung Van Nguyen, Hoa Binh Nguyen, Doan Thu Ha, Dinh Thi Huong, Vu Ngoc Trung, Khieu Thi Thuy Ngoc, Tran Huyen Trang, Ha Vu Thi Ngoc, Tram Trinh Thi Bich, Trieu Le Pham Tien, et al.\nJournal of Clinical Tuberculosis and Other Mycobacterial Diseases, 2024.\nDOI\n\n\n\nTargeted sequencing from cerebrospinal fluid for rapid identification of drug-resistant tuberculous meningitis\nTrinh Thi Bich Tram, Le Pham Tien Trieu, Le Thanh Hoang Nhat, Do Dang Anh Thu, Nguyen Le Quang, Nguyen Duc Bang, Tran Thi Hong Chau, Guy E. Thwaites, Timothy M. Walker, Vu Thi Ngoc Ha, et al.\nJournal of Clinical Microbiology, 2024.\nDOI\n\n\n\nA modified decontamination and storage method for sputum from patients with tuberculosis\nNguyen Le Quang, Do Dang Anh Thu, Le Pham Tien Trieu, Nguyen Hong Hanh, Nguyen Huu Lan, Dang Thi Minh Ha, Guy Thwaites, Nguyen Thuy Thuong Thuong, Timothy M. Walker\nWellcome Open Research, 2024.\nDOI"
+  },
+  {
+    "objectID": "publications.html#section-3",
+    "href": "publications.html#section-3",
+    "title": "Publications",
+    "section": "2023",
+    "text": "2023\n\nFLASH-TB: an Application of Next-Generation CRISPR to Detect Drug Resistant Tuberculosis from Direct Sputum\nTrinh Thi Bich Tram, Vu Thi Ngoc Ha, Le Pham Tien Trieu, Philip M. Ashton, Emily D. Crawford, Do Dang Anh Thu, Nguyen Le Quang, Guy E. Thwaites, Timothy M. Walker, Catherine Anscombe, et al.\nJournal of Clinical Microbiology, 2023.\nDOI"
+  },
+  {
+    "objectID": "publications.html#section-4",
+    "href": "publications.html#section-4",
+    "title": "Publications",
+    "section": "2021",
+    "text": "2021\n\nMost-Probable-Number-Based Minimum Duration of Killing Assay for Determining the Spectrum of Rifampicin Susceptibility in Clinical Mycobacterium tuberculosis Isolates\nSrinivasan Vijay, Hoang Ngoc Nhung, Nguyen Le Hoai Bao, Do Dang Anh Thu, Le Pham Tien Trieu, Nguyen Hoan Phu, Guy E. Thwaites, Babak Javid, Nguyen T. T. Thuong\nAntimicrobial Agents and Chemotherapy, 2021.\nDOI"
+  },
+  {
+    "objectID": "publications.html#section-5",
+    "href": "publications.html#section-5",
+    "title": "Publications",
+    "section": "2019",
+    "text": "2019\n\nRecombinant human granulocyte colony-stimulating factor alleviates liver fibrosis in bile duct-ligated mice\nHuy Quang Do, Trinh Van Le, Minh Thanh Dang, Tien-Trieu Pham-Le, Luan Van Tran, Khon Chan Huynh, Ai-Xuan Le Holterman, Nhung Hai Truong\nBiomedical Research and Therapy, 2019.\nDOI"
+  },
+  {
+    "objectID": "publications.html#peer-review",
+    "href": "publications.html#peer-review",
+    "title": "Publications",
+    "section": "Peer Review",
+    "text": "Peer Review\nReviewer for:\n\nNature Communications\nMicrobial Genomics"
+  },
+  {
+    "objectID": "thoughts/science-through-the-lens-of-investing.html",
+    "href": "thoughts/science-through-the-lens-of-investing.html",
+    "title": "Science Through the Lens of Investing",
+    "section": "",
+    "text": "I recently returned from a conference in Berlin, Germany. For me, it was a very successful conference, and I achieved the goals I had set for myself. But after observing and talking with many colleagues, I also came away with some interesting thoughts about modern scientific research.\nThey reminded me, surprisingly, of investing.\nI noticed that there were a few young researchers who were exceptionally good—arguably well ahead of their peers. But perhaps because they had gone so far, so quickly, some of their ideas were very new and difficult for both the panel and much of the audience to immediately grasp.\nJudging from the reactions of the audience and some of the more senior researchers, their presentations did not seem to receive as much recognition as I might have expected.\nMeanwhile, other colleagues—also very capable researchers—presented work that was somewhat more familiar. Some aspects might even have been slightly outdated, but the ideas were easier to understand and closer to what the audience already knew.\nTheir work received considerable recognition, and they were among those who really stood out at the conference."
+  },
+  {
+    "objectID": "thoughts/science-through-the-lens-of-investing.html#science-may-work-in-a-similar-way",
+    "href": "thoughts/science-through-the-lens-of-investing.html#science-may-work-in-a-similar-way",
+    "title": "Science Through the Lens of Investing",
+    "section": "Science may work in a similar way",
+    "text": "Science may work in a similar way\nI think something similar can happen in science.\nThe researchers receiving recognition today are undoubtedly talented. But there are also excellent researchers working on ideas that are newer, less familiar, or simply different from the mainstream.\nTheir work may eventually receive the recognition it deserves, but that can require time:\n\ntime to accumulate evidence,\ntime for ideas to mature,\nand time for the wider field to catch up with a new way of thinking.\n\nIn investing, timing matters.\nIn research, communication and staying connected with your field matter too.\nPerhaps having a good idea is only part of the challenge. Another part is communicating that idea in a way that allows other people to understand why it matters.\n\nP.S. This reflection is entirely about colleagues who are more senior and experienced than I am—it is not about me. These are simply my personal observations and interpretations from the conference.\nHave you noticed anything similar in your own field?"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "I am a clinician-researcher with research interests in infectious diseases, antimicrobial resistance, microbial genomics, bacterial population genomics, and mobile genetic elements.\nMy current research focuses on using genomic and computational approaches to understand bacterial evolution and the dissemination of antimicrobial resistance."
+  },
+  {
+    "objectID": "cv.html#profile",
+    "href": "cv.html#profile",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "I am a clinician-researcher with research interests in infectious diseases, antimicrobial resistance, microbial genomics, bacterial population genomics, and mobile genetic elements.\nMy current research focuses on using genomic and computational approaches to understand bacterial evolution and the dissemination of antimicrobial resistance."
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum Vitae",
+    "section": "Education",
+    "text": "Education\n\nPhD in Life Sciences\nUniversity of Bath, United Kingdom\n2024–2028\nResearch focus: microbial genomics, bacterial evolution, antimicrobial resistance, pangenomics, and mobile genetic elements.\n\n\n\nMPhil in Genomic Medicine\nUniversity of Cambridge / Wellcome Sanger Institute, United Kingdom\n2023–2024\nResearch and training in genomics, bioinformatics, and microbial genomics.\n\n\n\nBSc in Biology and Biotechnology\nUniversity of Science, Vietnam National University Ho Chi Minh City, Vietnam\n2014–2018"
+  },
+  {
+    "objectID": "cv.html#research-experience",
+    "href": "cv.html#research-experience",
+    "title": "Curriculum Vitae",
+    "section": "Research Experience",
+    "text": "Research Experience\n\nPhD Researcher\nUniversity of Bath\n2024–Present\nResearch in bacterial population genomics, antimicrobial resistance, plasmids, mobile genetic elements, and bacterial evolution.\nCurrent methodological interests include:\n\nLong-read bacterial genomics\nPangenomics\nPlasmid genomics\nPhylogenetics\nPopulation genomics\nAntimicrobial resistance\nMobile genetic elements\nBioinformatics algorithm development and application\n\n\n\n\nMPhil Student\nWellcome Sanger Institute / University of Cambridge\n2023–2024\nTraining and research in genomic science and bioinformatics, with a focus on microbial genomics.\n\n\n\nResearch Assistant — Tuberculosis Research Group\nOxford University Clinical Research Unit, Vietnam\n2018–2023\nResearch focused on Mycobacterium tuberculosis, tuberculosis diagnostics, antimicrobial resistance, and genomic approaches to infectious diseases.\nResearch activities included:\n\nTuberculosis microbiology\nDrug-resistance research\nMolecular and genomic diagnostics\nClinical research\nBacterial genomics\nResearch data analysis"
+  },
+  {
+    "objectID": "cv.html#research-interests",
+    "href": "cv.html#research-interests",
+    "title": "Curriculum Vitae",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nMicrobial genomics\nAntimicrobial resistance\nBacterial population genomics\nBacterial evolution\nPlasmids and mobile genetic elements\nPangenomics\nPhylogenetics\nLong-read sequencing\nBioinformatics\nInfectious diseases"
+  },
+  {
+    "objectID": "cv.html#selected-publications",
+    "href": "cv.html#selected-publications",
+    "title": "Curriculum Vitae",
+    "section": "Selected Publications",
+    "text": "Selected Publications\n\nPhylogenetic distribution and longitudinal persistence of plasmids in Mycobacterium abscessus\nTrieu Le, Josephine M. Bryant\nMicrobial Genomics, 2026.\nDOI\n\n\nAmira: detection of AMR genes directly from long reads using gene-space de Bruijn graphs\nDaniel Anderson, Leandro Lima, Trieu Le, Louise Judd, Ryan Wick, Zamin Iqbal\nPreprint, 2025.\nDOI\n\n\nInfection by Clonally Related Mycobacterium abscessus Isolates: The Role of Drinking Water\nRachel Thomson, et al.\nAmerican Journal of Respiratory and Critical Care Medicine, 2025.\nDOI\n\n\nRifampicin tolerance and growth fitness among isoniazid-resistant clinical Mycobacterium tuberculosis isolates from a longitudinal study\nSrinivasan Vijay, et al.\neLife, 2024.\nDOI\nView all publications →"
+  },
+  {
+    "objectID": "cv.html#technical-skills",
+    "href": "cv.html#technical-skills",
+    "title": "Curriculum Vitae",
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nGenomics & Bioinformatics\n\nBacterial whole-genome sequencing\nShort- and long-read sequencing analysis\nGenome assembly\nPangenome analysis\nPhylogenetic analysis\nPopulation genomics\nPlasmid analysis\nAntimicrobial resistance analysis\nMobile genetic element analysis\n\n\n\nComputational\n\nR\nCommand-line bioinformatics\nLinux / Unix\nGit and GitHub\nReproducible genomic workflows\n\n\n\nLaboratory & Research\n\nBacterial culture\nMycobacterium tuberculosis research\nBSL-3 laboratory work\nMolecular microbiology\nClinical research\nGood Clinical Laboratory Practice (GCLP)\nGood Clinical Practice (GCP)"
+  },
+  {
+    "objectID": "cv.html#academic-service",
+    "href": "cv.html#academic-service",
+    "title": "Curriculum Vitae",
+    "section": "Academic Service",
+    "text": "Academic Service\n\nPeer Review\nReviewer for:\n\nNature Communications\nMicrobial Genomics"
+  },
+  {
+    "objectID": "cv.html#research-profiles",
+    "href": "cv.html#research-profiles",
+    "title": "Curriculum Vitae",
+    "section": "Research Profiles",
+    "text": "Research Profiles\nORCID · GitHub"
+  }
+]

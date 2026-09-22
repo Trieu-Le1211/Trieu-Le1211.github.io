@@ -1,0 +1,47 @@
+---
+title: "Bioinformatics for Dummies"
+---
+
+A collection of notes from my journey learning the mathematics,
+algorithms and concepts behind bioinformatics and microbial genomics.
+
+## Statistics & Mathematics
+
+- Probability
+- Probability distributions
+- Bayesian statistics
+
+## Sequencing
+
+- Illumina
+- Oxford Nanopore
+- PacBio
+
+## Genomic Algorithms
+
+- Sequence alignment
+- De Bruijn graphs
+- Genome assembly
+- Clustering and distance algorithms
+
+## Phylogenetics
+
+- Tree-building algorithms
+- Maximum likelihood
+- Bayesian phylogenetics
+- Recombination
+- Molecular clocks
+- BactDating
+
+## Population Genomics
+
+- Population structure
+- Pangenomes
+- Selection and dN/dS
+- GWAS
+
+## Other Topics
+
+- Metagenomics
+- Machine learning
+- Drug development and testing

@@ -1,0 +1,35 @@
+{
+  "index.qmd": {
+    "index.html": "d3d64bff"
+  },
+  "about.qmd": {
+    "about.html": "b70148f0"
+  },
+  "Publications.qmd": {
+    "Publications.html": "531d135c"
+  },
+  "Thoughts/Index.qmd": {
+    "Index.html": "0bbd5ebc"
+  },
+  "CV.qmd": {
+    "CV.html": "b110b168"
+  },
+  "Bioinformatics/index.qmd": {
+    "index.html": "02f28086"
+  },
+  "thoughts/Index.qmd": {
+    "Index.html": "7f4c4dc2"
+  },
+  "cv.qmd": {
+    "cv.html": "6668a9f0"
+  },
+  "bioinformatics/index.qmd": {
+    "index.html": "c3603833"
+  },
+  "publications.qmd": {
+    "publications.html": "3667d87a"
+  },
+  "thoughts/science-through-the-lens-of-investing.qmd": {
+    "science-through-the-lens-of-investing.html": "4024e481"
+  }
+}

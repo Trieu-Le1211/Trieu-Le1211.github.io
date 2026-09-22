@@ -1,0 +1,17 @@
+---
+title: "About Me"
+---
+
+## Trieu Le
+
+I am a clinician-researcher with interests in infectious diseases, 
+antimicrobial resistance, microbial genomics, and bacterial evolution.
+
+My research interests include:
+
+- Infectious diseases
+- Antimicrobial resistance
+- Microbial genomics
+- Bacterial population genomics
+- Plasmids and mobile genetic elements
+- Bioinformatics

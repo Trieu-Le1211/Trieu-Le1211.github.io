@@ -1,0 +1,135 @@
+---
+title: "Publications"
+toc: false
+---
+
+My research spans **microbial genomics, antimicrobial resistance, 
+tuberculosis, and infectious diseases**.
+
+[ORCID](https://orcid.org/0009-0000-2555-0496)
+
+---
+
+## 2026
+
+### Phylogenetic distribution and longitudinal persistence of plasmids in *Mycobacterium abscessus*
+
+**Trieu Le**, Josephine M. Bryant  
+*Microbial Genomics*, 2026.
+
+[DOI](https://doi.org/10.1099/mgen.0.001807)
+
+---
+
+## 2025
+
+### Amira: detection of AMR genes directly from long reads using gene-space de Bruijn graphs
+
+Daniel Anderson, Leandro Lima, **Trieu Le**, Louise Judd, Ryan Wick, Zamin Iqbal  
+*Preprint*, 2025.
+
+[Preprint](https://doi.org/10.1101/2025.05.16.654303)
+
+---
+
+### Infection by Clonally Related *Mycobacterium abscessus* Isolates: The Role of Drinking Water
+
+Rachel Thomson, N. Wheeler, R. E. Stockwell, J. Bryant, S. L. Taylor, 
+L. E. X. Leong, **T. Le**, G. B. Rogers, R. Carter, L. J. Sherrard, et al.  
+*American Journal of Respiratory and Critical Care Medicine*, 2025.
+
+[DOI](https://doi.org/10.1164/rccm.202409-1824oc) · 
+[PubMed](https://pubmed.ncbi.nlm.nih.gov/40072241/)
+
+---
+
+## 2024
+
+### Rifampicin tolerance and growth fitness among isoniazid-resistant clinical *Mycobacterium tuberculosis* isolates from a longitudinal study
+
+Srinivasan Vijay, Nguyen Le Hoai Bao, Dao Nguyen Vinh, Le Thanh Hoang Nhat, 
+Do Dang Anh Thu, Nguyen Le Quang, **Le Pham Tien Trieu**, Hoang Ngoc Nhung, 
+Vu Thi Ngoc Ha, Phan Vuong Khac Thai, et al.  
+*eLife*, 2024.
+
+[DOI](https://doi.org/10.7554/eLife.93243)
+
+---
+
+### Rifampicin resistant *Mycobacterium tuberculosis* in Vietnam, 2020–2022
+
+Hung Van Nguyen, Hoa Binh Nguyen, Doan Thu Ha, Dinh Thi Huong, Vu Ngoc Trung, 
+Khieu Thi Thuy Ngoc, Tran Huyen Trang, Ha Vu Thi Ngoc, Tram Trinh Thi Bich, 
+**Trieu Le Pham Tien**, et al.  
+*Journal of Clinical Tuberculosis and Other Mycobacterial Diseases*, 2024.
+
+[DOI](https://doi.org/10.1016/j.jctube.2024.100431)
+
+---
+
+### Targeted sequencing from cerebrospinal fluid for rapid identification of drug-resistant tuberculous meningitis
+
+Trinh Thi Bich Tram, **Le Pham Tien Trieu**, Le Thanh Hoang Nhat, 
+Do Dang Anh Thu, Nguyen Le Quang, Nguyen Duc Bang, Tran Thi Hong Chau, 
+Guy E. Thwaites, Timothy M. Walker, Vu Thi Ngoc Ha, et al.  
+*Journal of Clinical Microbiology*, 2024.
+
+[DOI](https://doi.org/10.1128/jcm.01287-23)
+
+---
+
+### A modified decontamination and storage method for sputum from patients with tuberculosis
+
+Nguyen Le Quang, Do Dang Anh Thu, **Le Pham Tien Trieu**, Nguyen Hong Hanh, 
+Nguyen Huu Lan, Dang Thi Minh Ha, Guy Thwaites, Nguyen Thuy Thuong Thuong, 
+Timothy M. Walker  
+*Wellcome Open Research*, 2024.
+
+[DOI](https://doi.org/10.12688/wellcomeopenres.18888.2)
+
+---
+
+## 2023
+
+### FLASH-TB: an Application of Next-Generation CRISPR to Detect Drug Resistant Tuberculosis from Direct Sputum
+
+Trinh Thi Bich Tram, Vu Thi Ngoc Ha, **Le Pham Tien Trieu**, Philip M. Ashton, 
+Emily D. Crawford, Do Dang Anh Thu, Nguyen Le Quang, Guy E. Thwaites, 
+Timothy M. Walker, Catherine Anscombe, et al.  
+*Journal of Clinical Microbiology*, 2023.
+
+[DOI](https://doi.org/10.1128/jcm.01634-22)
+
+---
+
+## 2021
+
+### Most-Probable-Number-Based Minimum Duration of Killing Assay for Determining the Spectrum of Rifampicin Susceptibility in Clinical *Mycobacterium tuberculosis* Isolates
+
+Srinivasan Vijay, Hoang Ngoc Nhung, Nguyen Le Hoai Bao, Do Dang Anh Thu, 
+**Le Pham Tien Trieu**, Nguyen Hoan Phu, Guy E. Thwaites, Babak Javid, 
+Nguyen T. T. Thuong  
+*Antimicrobial Agents and Chemotherapy*, 2021.
+
+[DOI](https://doi.org/10.1128/AAC.01439-20)
+
+---
+
+## 2019
+
+### Recombinant human granulocyte colony-stimulating factor alleviates liver fibrosis in bile duct-ligated mice
+
+Huy Quang Do, Trinh Van Le, Minh Thanh Dang, **Tien-Trieu Pham-Le**, 
+Luan Van Tran, Khon Chan Huynh, Ai-Xuan Le Holterman, Nhung Hai Truong  
+*Biomedical Research and Therapy*, 2019.
+
+[DOI](https://doi.org/10.15419/bmrat.v6i6.549)
+
+---
+
+## Peer Review
+
+Reviewer for:
+
+- *Nature Communications*
+- *Microbial Genomics*

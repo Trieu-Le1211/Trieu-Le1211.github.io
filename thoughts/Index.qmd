@@ -1,0 +1,19 @@
+---
+title: "Thoughts"
+description: "Reflections on science, research, medicine, and my PhD journey."
+
+listing:
+  contents:
+    - "*.qmd"
+    - "!index.qmd"
+  sort: "date desc"
+  type: default
+  fields:
+    - title
+    - subtitle
+    - date
+    - categories
+
+page-layout: full
+toc: false
+---

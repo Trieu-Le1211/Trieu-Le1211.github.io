@@ -1,0 +1,8 @@
+{
+  "listingMap": {
+    "thoughts/Index.qmd": [
+      "*.qmd",
+      "!index.qmd"
+    ]
+  }
+}

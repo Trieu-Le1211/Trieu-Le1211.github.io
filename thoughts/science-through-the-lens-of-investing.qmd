@@ -1,0 +1,74 @@
+---
+title: "Science Through the Lens of Investing"
+subtitle: "A reflection on recognition, timing, and communication in research"
+date: 2026-09-11
+categories:
+  - Research
+  - PhD
+  - Reflections
+  - Investing
+author: "Trieu Le"
+toc: false
+---
+
+I recently returned from a conference in Berlin, Germany. For me, it was a very successful conference, and I achieved the goals I had set for myself. But after observing and talking with many colleagues, I also came away with some interesting thoughts about modern scientific research.
+
+They reminded me, surprisingly, of **investing**.
+
+I noticed that there were a few young researchers who were exceptionally good—arguably well ahead of their peers. But perhaps because they had gone so far, so quickly, some of their ideas were very new and difficult for both the panel and much of the audience to immediately grasp.
+
+Judging from the reactions of the audience and some of the more senior researchers, their presentations did not seem to receive as much recognition as I might have expected.
+
+Meanwhile, other colleagues—also very capable researchers—presented work that was somewhat more familiar. Some aspects might even have been slightly outdated, but the ideas were easier to understand and closer to what the audience already knew.
+
+Their work received considerable recognition, and they were among those who really stood out at the conference.
+
+### The investing analogy
+
+This reminded me of investing in stocks.
+
+Consider a company with strong fundamentals and growth potential, such as 
+**AMD during 2024–2025**. For a period, the market remained sceptical and 
+Wall Street did not seem to give it the recognition that some investors expected.
+
+![AMD and Broadcom (AVGO) weekly charts in 2023.](images/AVGO%20vs%20AMD%202023.png){fig-align="center" width="90%"}
+
+Meanwhile, another major semiconductor company—not exactly a direct 
+competitor—**Broadcom (AVGO)** performed extremely strongly.
+
+AMD attracted much greater market attention later.
+
+![AMD and Broadcom (AVGO) weekly charts in 2026.](images/AVGO%20vs%20AMD%202026.png){fig-align="center" width="90%"}
+
+Of course, companies whose share prices rise are often good companies too; 
+the market may simply recognise them at the right time.
+
+Other companies may pursue a vision that differs from the prevailing consensus 
+and therefore face more scepticism. If their underlying business ultimately 
+proves successful, however, the market may eventually recognise that value.
+
+That process can take years—or sometimes even longer.
+
+## Science may work in a similar way
+
+I think something similar can happen in science.
+
+The researchers receiving recognition today are undoubtedly talented. But there are also excellent researchers working on ideas that are newer, less familiar, or simply different from the mainstream.
+
+Their work may eventually receive the recognition it deserves, but that can require time:
+
+- time to accumulate evidence,
+- time for ideas to mature,
+- and time for the wider field to catch up with a new way of thinking.
+
+In investing, **timing matters**.
+
+In research, **communication and staying connected with your field matter too**.
+
+Perhaps having a good idea is only part of the challenge. Another part is communicating that idea in a way that allows other people to understand **why it matters**.
+
+---
+
+*P.S. This reflection is entirely about colleagues who are more senior and experienced than I am—it is not about me. These are simply my personal observations and interpretations from the conference.*
+
+**Have you noticed anything similar in your own field?**

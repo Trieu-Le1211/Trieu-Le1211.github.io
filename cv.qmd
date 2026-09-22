@@ -1,0 +1,185 @@
+---
+title: "Curriculum Vitae"
+toc: true
+toc-depth: 2
+---
+
+## Profile
+
+I am a clinician-researcher with research interests in **infectious diseases,
+antimicrobial resistance, microbial genomics, bacterial population genomics,
+and mobile genetic elements**.
+
+My current research focuses on using genomic and computational approaches to
+understand bacterial evolution and the dissemination of antimicrobial resistance.
+
+---
+
+## Education
+
+### PhD in Life Sciences
+**University of Bath, United Kingdom**  
+2024–2028
+
+Research focus: microbial genomics, bacterial evolution, antimicrobial resistance,
+pangenomics, and mobile genetic elements.
+
+---
+
+### MPhil in Genomic Medicine
+**University of Cambridge / Wellcome Sanger Institute, United Kingdom**  
+2023–2024
+
+Research and training in genomics, bioinformatics, and microbial genomics.
+
+---
+
+### BSc in Biology and Biotechnology
+**University of Science, Vietnam National University Ho Chi Minh City, Vietnam**  
+2014–2018
+
+---
+
+## Research Experience
+
+### PhD Researcher
+**University of Bath**  
+2024–Present
+
+Research in bacterial population genomics, antimicrobial resistance, plasmids,
+mobile genetic elements, and bacterial evolution.
+
+Current methodological interests include:
+
+- Long-read bacterial genomics
+- Pangenomics
+- Plasmid genomics
+- Phylogenetics
+- Population genomics
+- Antimicrobial resistance
+- Mobile genetic elements
+- Bioinformatics algorithm development and application
+
+---
+
+### MPhil Student
+**Wellcome Sanger Institute / University of Cambridge**  
+2023–2024
+
+Training and research in genomic science and bioinformatics, with a focus on
+microbial genomics.
+
+---
+
+### Research Assistant — Tuberculosis Research Group
+**Oxford University Clinical Research Unit, Vietnam**  
+2018–2023
+
+Research focused on *Mycobacterium tuberculosis*, tuberculosis diagnostics,
+antimicrobial resistance, and genomic approaches to infectious diseases.
+
+Research activities included:
+
+- Tuberculosis microbiology
+- Drug-resistance research
+- Molecular and genomic diagnostics
+- Clinical research
+- Bacterial genomics
+- Research data analysis
+
+---
+
+## Research Interests
+
+- Microbial genomics
+- Antimicrobial resistance
+- Bacterial population genomics
+- Bacterial evolution
+- Plasmids and mobile genetic elements
+- Pangenomics
+- Phylogenetics
+- Long-read sequencing
+- Bioinformatics
+- Infectious diseases
+
+---
+
+## Selected Publications
+
+### Phylogenetic distribution and longitudinal persistence of plasmids in *Mycobacterium abscessus*
+
+**Trieu Le**, Josephine M. Bryant  
+*Microbial Genomics*, 2026.  
+[DOI](https://doi.org/10.1099/mgen.0.001807)
+
+### Amira: detection of AMR genes directly from long reads using gene-space de Bruijn graphs
+
+Daniel Anderson, Leandro Lima, **Trieu Le**, Louise Judd, Ryan Wick, Zamin Iqbal  
+Preprint, 2025.  
+[DOI](https://doi.org/10.1101/2025.05.16.654303)
+
+### Infection by Clonally Related *Mycobacterium abscessus* Isolates: The Role of Drinking Water
+
+Rachel Thomson, et al.  
+*American Journal of Respiratory and Critical Care Medicine*, 2025.  
+[DOI](https://doi.org/10.1164/rccm.202409-1824oc)
+
+### Rifampicin tolerance and growth fitness among isoniazid-resistant clinical *Mycobacterium tuberculosis* isolates from a longitudinal study
+
+Srinivasan Vijay, et al.  
+*eLife*, 2024.  
+[DOI](https://doi.org/10.7554/eLife.93243)
+
+[View all publications →](publications.html)
+
+---
+
+## Technical Skills
+
+### Genomics & Bioinformatics
+
+- Bacterial whole-genome sequencing
+- Short- and long-read sequencing analysis
+- Genome assembly
+- Pangenome analysis
+- Phylogenetic analysis
+- Population genomics
+- Plasmid analysis
+- Antimicrobial resistance analysis
+- Mobile genetic element analysis
+
+### Computational
+
+- R
+- Command-line bioinformatics
+- Linux / Unix
+- Git and GitHub
+- Reproducible genomic workflows
+
+### Laboratory & Research
+
+- Bacterial culture
+- *Mycobacterium tuberculosis* research
+- BSL-3 laboratory work
+- Molecular microbiology
+- Clinical research
+- Good Clinical Laboratory Practice (GCLP)
+- Good Clinical Practice (GCP)
+
+---
+
+## Academic Service
+
+### Peer Review
+
+Reviewer for:
+
+- *Nature Communications*
+- *Microbial Genomics*
+
+---
+
+## Research Profiles
+
+[ORCID](https://orcid.org/0009-0000-2555-0496) ·
+[GitHub](https://github.com/Trieu-Le1211)

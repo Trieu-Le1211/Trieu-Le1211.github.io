@@ -1,0 +1,56 @@
+---
+title: "Trieu Le"
+page-layout: full
+toc: false
+---
+
+## · Microbial Genomics · Plasmids and mobile genetic elements · Infectious Diseases
+
+I am a researcher interested in microbial genomics, 
+antimicrobial resistance, and bacterial evolution.
+
+
+---
+
+## Research Interests
+
+- 💻 Bioinformatics
+- 🧬 Microbial genomics
+- 🧫 Bacterial population genomics
+- 🔗 Plasmids and mobile genetic elements
+- 💊 Antimicrobial resistance
+- 🦠 Infectious diseases
+
+
+---
+
+## Bioinformatics for Dummies
+
+**Learning bioinformatics from first principles.**
+
+I use this space to document what I learn about the mathematics, 
+algorithms, and biological concepts behind modern genomic analysis.
+
+Topics include:
+
+**Probability · Bayesian statistics · Sequencing · Alignment · 
+Phylogenetics · Pangenomics · Population structure · GWAS · 
+Metagenomics · Machine learning**
+
+[Explore Bioinformatics for Dummies →](bioinformatics/index.html)
+
+---
+
+## Thoughts
+
+Reflections on research, medicine, science, and my PhD journey.
+
+[Read my thoughts →](thoughts/index.html)
+
+---
+
+## Publications
+
+Selected publications and research outputs.
+
+[View publications →](publications.html)
