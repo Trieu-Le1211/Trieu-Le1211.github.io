@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="My notes on the mathematics, algorithms, and biological ideas behind bioinformatics.">
 
 <title>Bioinformatics for Dummies – Trieu Le</title>
 <style>
@@ -36,6 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -73,7 +76,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -109,15 +170,11 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../bioinformatics/index.html" aria-current="page"> 
-<span class="menu-text">Bioinformatics for Dummies</span></a>
+<span class="menu-text">Bioinformatics for “Dum me”</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../thoughts/index.html"> 
 <span class="menu-text">Thoughts</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../cv.html"> 
-<span class="menu-text">CV</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -127,34 +184,26 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#statistics-mathematics" id="toc-statistics-mathematics" class="nav-link active" data-scroll-target="#statistics-mathematics">Statistics &amp; Mathematics</a></li>
-  <li><a href="#sequencing" id="toc-sequencing" class="nav-link" data-scroll-target="#sequencing">Sequencing</a></li>
-  <li><a href="#genomic-algorithms" id="toc-genomic-algorithms" class="nav-link" data-scroll-target="#genomic-algorithms">Genomic Algorithms</a></li>
-  <li><a href="#phylogenetics" id="toc-phylogenetics" class="nav-link" data-scroll-target="#phylogenetics">Phylogenetics</a></li>
-  <li><a href="#population-genomics" id="toc-population-genomics" class="nav-link" data-scroll-target="#population-genomics">Population Genomics</a></li>
-  <li><a href="#other-topics" id="toc-other-topics" class="nav-link" data-scroll-target="#other-topics">Other Topics</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Bioinformatics for Dummies</h1>
 </div>
 
+<div>
+  <div class="description">
+    My notes on the mathematics, algorithms, and biological ideas behind bioinformatics.
+  </div>
+</div>
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -166,64 +215,70 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A collection of notes from my journey learning the mathematics, algorithms and concepts behind bioinformatics and microbial genomics.</p>
-<section id="statistics-mathematics" class="level2">
-<h2 class="anchored" data-anchor-id="statistics-mathematics">Statistics &amp; Mathematics</h2>
-<ul>
-<li>Probability</li>
-<li>Probability distributions</li>
-<li>Bayesian statistics</li>
-</ul>
-</section>
-<section id="sequencing" class="level2">
-<h2 class="anchored" data-anchor-id="sequencing">Sequencing</h2>
-<ul>
-<li>Illumina</li>
-<li>Oxford Nanopore</li>
-<li>PacBio</li>
-</ul>
-</section>
-<section id="genomic-algorithms" class="level2">
-<h2 class="anchored" data-anchor-id="genomic-algorithms">Genomic Algorithms</h2>
-<ul>
-<li>Sequence alignment</li>
-<li>De Bruijn graphs</li>
-<li>Genome assembly</li>
-<li>Clustering and distance algorithms</li>
-</ul>
-</section>
-<section id="phylogenetics" class="level2">
-<h2 class="anchored" data-anchor-id="phylogenetics">Phylogenetics</h2>
-<ul>
-<li>Tree-building algorithms</li>
-<li>Maximum likelihood</li>
-<li>Bayesian phylogenetics</li>
-<li>Recombination</li>
-<li>Molecular clocks</li>
-<li>BactDating</li>
-</ul>
-</section>
-<section id="population-genomics" class="level2">
-<h2 class="anchored" data-anchor-id="population-genomics">Population Genomics</h2>
-<ul>
-<li>Population structure</li>
-<li>Pangenomes</li>
-<li>Selection and dN/dS</li>
-<li>GWAS</li>
-</ul>
-</section>
-<section id="other-topics" class="level2">
-<h2 class="anchored" data-anchor-id="other-topics">Other Topics</h2>
-<ul>
-<li>Metagenomics</li>
-<li>Machine learning</li>
-<li>Drug development and testing</li>
-</ul>
+<p>I am learning bioinformatics from first principles.</p>
+<p>This series is my attempt to understand not only <strong>how to use bioinformatics tools</strong>, but also the mathematics, algorithms, and biological assumptions behind them.</p>
+<p>I write these notes primarily to consolidate my own understanding. Hopefully, they may also be useful to others learning bioinformatics.</p>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="U3RhdGlzdGljcyUyQ1Byb2JhYmlsaXR5JTJDQmF5ZXNpYW4=" data-listing-date-sort="1790031600000" data-listing-file-modified-sort="1790108244407" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../bioinformatics/Molecular clocks.html" class="no-external">Molecular Clocks</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../bioinformatics/Molecular clocks.html" class="no-external">Understanding probability, priors, likelihoods, and posteriors</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljcw=='); return false;">Statistics</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHJvYmFiaWxpdHk='); return false;">Probability</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmF5ZXNpYW4='); return false;">Bayesian</div>
+
+</div>
+</div>
+<div class="metadata">
+<a href="../bioinformatics/Molecular clocks.html" class="no-external">
+<div class="listing-date">
+Sep 22, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="U3RhdGlzdGljcyUyQ1Byb2JhYmlsaXR5JTJDQmF5ZXNpYW4=" data-listing-date-sort="1790031600000" data-listing-file-modified-sort="1790108275923" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="53">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../bioinformatics/bayesian-statistics.html" class="no-external">Bayesian Statistics</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../bioinformatics/bayesian-statistics.html" class="no-external">Understanding probability, priors, likelihoods, and posteriors</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGlzdGljcw=='); return false;">Statistics</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('UHJvYmFiaWxpdHk='); return false;">Probability</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('QmF5ZXNpYW4='); return false;">Bayesian</div>
+
+</div>
+</div>
+<div class="metadata">
+<a href="../bioinformatics/bayesian-statistics.html" class="no-external">
+<div class="listing-date">
+Sep 22, 2026
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
