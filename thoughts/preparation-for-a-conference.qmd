@@ -1,0 +1,14 @@
+---
+title: "Preparation for a Conference"
+subtitle: "A reflection on recognition, timing, and communication in research"
+date: "2026-09-22"
+categories:
+  - Research
+  - PhD
+  - Reflections
+  - Investing
+author: "Trieu Le"
+toc: false
+---
+
+I recently returned from a conference in Berlin, Germany. For me, it was a very successful conference, and I achieved the goals I had set for myself. But after observing and talking with many colleagues, I also came away with some interesting thoughts about modern scientific research.

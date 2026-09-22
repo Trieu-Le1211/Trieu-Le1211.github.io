@@ -4,10 +4,9 @@ page-layout: full
 toc: false
 ---
 
-## Hello 👋
-
 I'm Trieu.
-Lê Phạm Tiến Triều
+
+**Lê Phạm Tiến Triều**
 
 Research has taken me through different laboratories, universities, teams,
 conferences, and countries. This page is a collection of some of the people,
@@ -25,162 +24,181 @@ places, and moments that have been part of that journey.
   <img src="images/logos/university-of-bath-logo-svg-vector.svg">
 </div>
 
-
-
 ---
 
 ## 🇻🇳 OUCRU Vietnam
 
-My research journey in infectious diseases and genomics began at the Oxford University Clinical Research Unit (OUCRU) in Vietnam.
+My early research journey in infectious diseases and genomics at the
+Oxford University Clinical Research Unit (OUCRU) in Vietnam.
 
-::: {layout-ncol=3}
+<div class="photo-grid">
 
-![](images/OUCRU/IMG_8219.jpeg)
+<img src="images/OUCRU/IMG_8047.JPG">
+<img src="images/OUCRU/IMG_8239.JPG">
+<img src="images/OUCRU/IMG_8219.jpeg">
+<img src="images/OUCRU/IMG_8185.jpeg">
+<img src="images/OUCRU/IMG_8042.jpeg">
+<img src="images/OUCRU/IMG_2379.JPG">
 
-![](images/OUCRU/IMG_8042.jpeg)
 
-![](images/OUCRU/IMG_8239.JPG)
-
-![](images/OUCRU/IMG_2379.JPG)
-
-![](images/OUCRU/IMG_8047.JPG)
-
-:::
-
----
-
-## 🎓 University of Cambridge
-
-A chapter of learning, genomics, and discovering the world of computational biology.
-
-::: {layout-ncol=3}
-
-![](images/Uni%20of%20Cambridge/IMG_9155.PNG)
-
-![](images/Uni%20of%20Cambridge/765fdbe0-0a6b-4ed6-9d00-a6dbaa716bc7.jpg)
-
-![](images/Uni%20of%20Cambridge/IMG_5723.JPG)
-
-![](images/Uni%20of%20Cambridge/49fef541-40b2-4ad9-a194-6becf08acb62.jpg)
-
-![](images/Uni%20of%20Cambridge/IMG_5663.jpeg)
-
-![](images/Uni%20of%20Cambridge/IMG_9149.JPG)
-
-:::
-
----
-
-## 🧬 Wellcome Sanger Institute
-
-Some memories from my time at the Wellcome Sanger Institute.
-
-::: {layout-ncol=3}
-
-![](images/Wellcome%20Sanger%20Institute/IMG_2225.jpeg)
-
-![](images/Wellcome%20Sanger%20Institute/IMG_3084.JPG)
-
-![](images/Wellcome%20Sanger%20Institute/IMG_2228.jpeg)
-
-![](images/Wellcome%20Sanger%20Institute/IMG_2217.jpeg)
-
-:::
+</div>
 
 ---
 
 ## 🔬 Josie Bryant's Team
 
-Science is also about the people you work with and learn from.
+Science is not only about experiments and data, but also about the people
+we work with and learn from.
 
-::: {layout-ncol=3}
+<div class="photo-grid">
 
-![](images/Josie%20Bryant's%20team/IMG_3173.jpeg)
+<img src="images/Josie Bryant's team/IMG_0133.jpeg">
+<img src="images/Josie Bryant's team/IMG_2127.jpeg">
+<img src="images/Josie Bryant's team/IMG_3173.jpeg">
+<img src="images/Josie Bryant's team/IMG_2244.jpeg">
 
-![](images/Josie%20Bryant's%20team/IMG_2127.jpeg)
 
-![](images/Josie%20Bryant's%20team/IMG_2244.jpeg)
 
-:::
+</div>
 
 ---
 
-## 🇻🇳 Vietsocs
+## 🎓 University of Cambridge
 
-And life outside the laboratory matters too.
+A year of learning genomics, bioinformatics, and computational biology,
+and an important transition in my journey towards genomic research.
 
-::: {layout-ncol=3}
+<div class="photo-grid">
 
-![](images/Vietsocs/att.cFE74BcjqYBIivNww4esw8BAUrsLogZ6Zyfnx2CUClg.jpg)
+<img src="images/Uni of Cambridge/IMG_9149.JPG">
+<img src="images/Uni of Cambridge/IMG_9155.PNG">
+<img src="images/Uni of Cambridge/IMG_2510.JPG">
+<img src="images/Uni of Cambridge/765fdbe0-0a6b-4ed6-9d00-a6dbaa716bc7.jpg">
+<img src="images/Uni of Cambridge/49fef541-40b2-4ad9-a194-6becf08acb62.jpg">
+<img src="images/Uni of Cambridge/IMG_5719.jpeg">
+<img src="images/Uni of Cambridge/IMG_5663.jpeg">
+<img src="images/Uni of Cambridge/IMG_5723.JPG">
 
-![](images/Vietsocs/IMG_5725.jpeg)
+</div>
 
-![](images/Vietsocs/DJI_20260529152838_0398_D.JPG)
+---
 
-:::
+## 🧬 Wellcome Sanger Institute
+
+Some memories from my time at the Wellcome Sanger Institute — a place
+where I was surrounded by genomics, computational biology, and people
+working at the forefront of genomic research.
+
+<div class="photo-grid">
+
+<img src="images/Wellcome Sanger Institute/IMG_3081.JPG">
+<img src="images/Wellcome Sanger Institute/IMG_2225.jpeg">
+<img src="images/Wellcome Sanger Institute/IMG_3084.JPG">
+<img src="images/Wellcome Sanger Institute/IMG_2217.jpeg">
+
+</div>
 
 ---
 
 ## 🎓 University of Bath
 
-The next chapter of my research journey — my PhD at the University of Bath.
+The next chapter of the journey — my PhD.
 
-::: {layout-ncol=3}
+My research focuses on bacterial genomics and evolution, particularly
+the role of plasmids and other mobile genetic elements in the spread
+of antimicrobial resistance.
 
-![](images/Uni%20of%20Bath/IMG_8983.JPG)
+<div class="photo-grid">
 
-![](images/Uni%20of%20Bath/IMG_6161.jpeg)
+<img src="images/Uni of Bath/IMG_3605.jpeg">
+<img src="images/Uni of Bath/IMG_8983.JPG">
+<img src="images/Uni of Bath/IMG_3627.jpeg">
+<img src="images/Uni of Bath/IMG_6161.jpeg">
 
-:::
+</div>
 
 ---
 
 ## 🧬 Zamin Iqbal's Team
 
-My PhD research has taken me further into bacterial genomics, pangenomics, mobile genetic elements, and bacterial evolution.
+Research is rarely a solitary journey. I am fortunate to work with people
+from whom I can learn about bacterial genomics, pangenomics, algorithms,
+evolution, and much more.
 
-::: {layout-ncol=3}
+<div class="photo-grid">
 
-![](images/Zam%20Iqbal's%20team/IMG_6964.jpeg)
+<img src="images/Zam Iqbal's team/20251208_205911_Original.JPG">
+<img src="images/Zam Iqbal's team/IMG_6190.jpeg">
+<img src="images/Zam Iqbal's team/IMG_6182.jpeg">
+<img src="images/Zam Iqbal's team/IMG_6964.jpeg">
+<img src="images/Zam Iqbal's team/IMG_7051.jpeg">
+<img src="images/Zam Iqbal's team/IMG_8991.jpeg">
+<img src="images/Zam Iqbal's team/IMG_9708.jpeg">
 
-![](images/Zam%20Iqbal's%20team/20251208_205911_Original.JPG)
 
-![](images/Zam%20Iqbal's%20team/IMG_7051.jpeg)
-
-![](images/Zam%20Iqbal's%20team/IMG_6190.jpeg)
-
-![](images/Zam%20Iqbal's%20team/IMG_8991.jpeg)
-
-![](images/Zam%20Iqbal's%20team/IMG_9708.jpeg)
-
-![](images/Zam%20Iqbal's%20team/IMG_6182.jpeg)
-
-:::
+</div>
 
 ---
 
 ## 🌍 Conferences
 
-Conferences have given me opportunities to present my work, discover new ideas, and meet researchers from around the world.
+One of the parts of research I enjoy most is meeting people with different
+ideas and perspectives.
 
-::: {layout-ncol=3}
+Conferences have given me opportunities to present my work, discover new
+research, discuss ideas, and meet researchers from around the world.
 
-![](images/Conference/IMG_9490.jpeg)
+<div class="photo-grid">
 
-![](images/Conference/IMG_9690.jpeg)
+<img src="images/Conference/IMG_9490.jpeg">
+<img src="images/Conference/c67799a7-f0d5-4d29-83a7-e346a2f40812.jpg">
+<img src="images/Conference/Image.jpg">
+<img src="images/Conference/IMG_9690.jpeg">
 
-![](images/Conference/c67799a7-f0d5-4d29-83a7-e346a2f40812.jpg)
-
-:::
+</div>
 
 ---
 
+## 🔬 Visiting the Old Lab
 
+Sometimes moving forward also means returning to where part of the journey
+began.
 
-## Along the way
+<div class="photo-grid">
 
-Science is more than experiments, data, papers, and results. It is also the people we meet, the places we go, and the experiences that shape how we think.
+<img src="images/visiting old lab/IMG_3747.jpeg">
+<img src="images/visiting old lab/IMG_3740.JPG">
+<img src="images/visiting old lab/IMG_3755.JPG">
+<img src="images/visiting old lab/IMG_3752.JPG">
+
+</div>
+
+---
+
+## 🇻🇳 Vietsocs
+
+Life beyond research matters too.
+
+Community, friendships, shared experiences, and staying connected with
+Vietnam have also been an important part of my life in the UK.
+
+<div class="photo-grid">
+
+<img src="images/Vietsocs/att.cFE74BcjqYBIivNww4esw8BAUrsLogZ6Zyfnx2CUClg.jpg">
+<img src="images/Vietsocs/IMG_5725.jpeg">
+<img src="images/Vietsocs/DJI_20260529152838_0398_D.JPG">
+
+</div>
+
+---
+
+## Along the Way
+
+Science is more than experiments, code, data, papers, and results.
+
+It is also about the people we meet, the places we go, the ideas we encounter,
+and the experiences that gradually shape how we think.
 
 This page is a growing collection of those moments.
 
-More to come.
+**More to come.**

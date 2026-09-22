@@ -1,17 +1,45 @@
-/* css styles */
-/* Institutional logo strip */
+/* ========================================
+   PHOTO GALLERY
+   ======================================== */
+
+   .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 1.5rem 0 3rem 0;
+  }
+  
+  .photo-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  
+  /* Mobile: 3 photo per row */
+  
+  @media (max-width: 768px) {
+    .photo-grid {
+      grid-template-columns: 3fr;
+    }
+  }
+
+  /* ========================================
+   LOGOS
+   ======================================== */
 
 .logo-strip {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
-    margin: 15px auto 30px auto;
+    gap: 15px;
+    margin: 20px auto 35px auto;
   }
   
   .logo-strip img {
-    max-width: 120px;
-    height: 80px;
-    object-fit: contain;
+    width: auto !important;
+    height: 40px !important;
+    max-width: 100px !important;
+    object-fit: contain !important;
   }

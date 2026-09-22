@@ -14,7 +14,7 @@ website:
       - href: publications.qmd
         text: Publications
       - href: bioinformatics/index.qmd
-        text: Bioinformatics for "Dum me"
+        text: Bioinformatics for "Dumb me"
       - href: thoughts/index.qmd
         text: Thoughts
 

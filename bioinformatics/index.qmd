@@ -1,5 +1,5 @@
 ---
-title: "Bioinformatics for Dummies"
+title: "Bioinformatics for 'Dumb me'"
 description: "My notes on the mathematics, algorithms, and biological ideas behind bioinformatics."
 
 listing:
