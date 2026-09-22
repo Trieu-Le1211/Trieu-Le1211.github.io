@@ -1,1 +1,17 @@
 /* css styles */
+/* Institutional logo strip */
+
+.logo-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 15px auto 30px auto;
+  }
+  
+  .logo-strip img {
+    max-width: 120px;
+    height: 80px;
+    object-fit: contain;
+  }
