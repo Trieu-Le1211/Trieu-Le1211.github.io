@@ -165,77 +165,63 @@
     "href": "bioinformatics/bayesian-statistics.html",
     "title": "Bayesian Statistics",
     "section": "",
-    "text": "← Back to Bioinformatics for “Dum me”"
+    "text": "← Back to Bioinformatics for “Dum me”\nWhy am I learning this?\nBayesian statistics appears frequently in bioinformatics, from phylogenetic inference to genomic epidemiology.\nAs someone whose background is in biology, I have often found the terms confusing and intimidating.\nSo, let change that."
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html#why-am-i-learning-this",
-    "href": "bioinformatics/bayesian-statistics.html#why-am-i-learning-this",
+    "objectID": "bioinformatics/bayesian-statistics.html#is-it-a-crocodile-or-a-aligator",
+    "href": "bioinformatics/bayesian-statistics.html#is-it-a-crocodile-or-a-aligator",
     "title": "Bayesian Statistics",
-    "section": "Why am I learning this?",
-    "text": "Why am I learning this?\nBayesian statistics appears frequently in bioinformatics, from phylogenetic inference to genomic epidemiology.\nBefore using these methods, I want to understand what Bayesian inference actually means."
+    "section": "1. Is it a crocodile or a aligator? 🐊",
+    "text": "1. Is it a crocodile or a aligator? 🐊\nImagine you are blindfolded and asked to identify an animal. You somehow safely touch it and feel its rough skin. You are told that it is either a crocodile or an alligator.\nThese two animals are very similar, but they have some differences. For example, crocodiles generally have a V-shaped snout, while alligators have a broader, U-shaped snout.\nRight now, with the limited information you have, you are not sure whether it is a crocodile or an alligator. You can only make a guess. For simplicity, you assume that they are equally likely.\nWhat is a prior?\nIn Bayesian statistics, a prior represents our initial belief about the probability of something before observing new evidence.\nIn the crocodile vs. alligator example, our prior belief is that either animal is equally likely because we do not yet have enough information to favour one over the other.\nAs we gather more evidence, we can update our prior belief to form a posterior—our updated belief after taking the new evidence into account.\nAdditional information\nYou realise that you are standing in the United States, where alligators are much more common than crocodiles (with ratio 2500:1). Now you are leaning towards the animal being an alligator. You can update your initial belief based on this new information.\nBut then your friend tells you that the animal was captured from the Nile River in Africa and brought to the United States. Nile crocodiles inhabit freshwater rivers, lakes, and marshes across sub-Saharan Africa, including parts of the Nile River. Now you are leaning towards the animal being a crocodile. Once again, you update your belief based on the latest information. If you followed that reasoning, then you have just used Bayesian inference in action.\nYou started with a prior belief, gathered new evidence, and updated your belief to form a posterior belief. As more evidence becomes available, you can continue updating what you believe."
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html#the-basic-idea",
-    "href": "bioinformatics/bayesian-statistics.html#the-basic-idea",
+    "objectID": "bioinformatics/bayesian-statistics.html#who-is-bayes",
+    "href": "bioinformatics/bayesian-statistics.html#who-is-bayes",
     "title": "Bayesian Statistics",
-    "section": "1. The basic idea",
-    "text": "1. The basic idea\n…"
+    "section": "2. Who is Bayes?",
+    "text": "2. Who is Bayes?\nThomas Bayes (c. 1701–1761) was an English mathematician, statistician, and Presbyterian minister. He is best known for Bayes’ theorem, which describes how probabilities can be updated when new evidence becomes available. His work was published posthumously in 1763 and later became the foundation of Bayesian statistics. Today, Bayesian methods are widely used in medicine, genetics, bioinformatics, machine learning, and many other scientific fields.\nFACT: His famous theorem was published after he died. His friend Richard Price found and edited Bayes’ unpublished work, which appeared in 1763."
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html#bayes-theorem",
-    "href": "bioinformatics/bayesian-statistics.html#bayes-theorem",
+    "objectID": "bioinformatics/bayesian-statistics.html#farmer-or-librarian",
+    "href": "bioinformatics/bayesian-statistics.html#farmer-or-librarian",
     "title": "Bayesian Statistics",
-    "section": "2. Bayes’ theorem",
-    "text": "2. Bayes’ theorem\n…"
+    "section": "3. Farmer or Librarian?",
+    "text": "3. Farmer or Librarian?\nYou and your friend are on a train from Bath to London. You notice a skinny man wearing glasses and reading a book. Your friend knows him personally and asks you to guess:\nIs he a farmer or a librarian?\nBased on his appearance, many people might immediately guess that he is a librarian.\nHowever, Daniel Kahneman, winner of the 2002 Nobel Memorial Prize in Economic Sciences, famously discussed how people often neglect base rates when making judgments like this.\nSuppose there are approximately 99,700 farmers and 47,800 librarians in the UK (UK government statistics, 2026). Before considering anything about the man’s appearance, randomly selecting a farmer would therefore be more likely than selecting a librarian.\nThis gives us our prior probability. But the base rate alone is not enough.\nWe also need to ask:\nHow likely would we be to see a skinny man wearing glasses and reading a book if he were a farmer, compared with if he were a librarian?\nThis is the likelihood.\nFor illustration, suppose:\n\n10% of farmers fit this description.\n80% of librarians fit this description.\n\nNote: These percentages are made-up data used only to illustrate Bayesian inference."
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html#prior-probability",
-    "href": "bioinformatics/bayesian-statistics.html#prior-probability",
+    "objectID": "bioinformatics/bayesian-statistics.html#the-boring-formula-of-probability",
+    "href": "bioinformatics/bayesian-statistics.html#the-boring-formula-of-probability",
     "title": "Bayesian Statistics",
-    "section": "3. Prior probability",
-    "text": "3. Prior probability\n…"
+    "section": "4. The boring formula of probability",
+    "text": "4. The boring formula of probability\nApplying Bayes’ Theorem\nNow let’s use our numbers to calculate the probability that the man is a librarian.\nWe have:\n\nFarmers: 99,700\nLibrarians: 47,800\n10% of farmers fit the description\n80% of librarians fit the description\n\nLet:\n\n\\(L\\) = the man is a librarian\n\\(F\\) = the man is a farmer\n\\(E\\) = the man is skinny, wears glasses, and is reading a book\n\nStep 1: Calculate the prior probabilities\nBefore looking at the man, the probability that a randomly selected person from these two groups is a librarian is:\n\\[\nP(L) = \\frac{47,800}{47,800 + 99,700}\n= 0.324\n\\]\nSo our prior probability of librarian is about 32.4%.\nSimilarly:\n\\[\nP(F) = \\frac{99,700}{47,800 + 99,700}\n= 0.676\n\\]\nThe prior probability of farmer is therefore 67.6%.\nSo, before seeing any other information, farmer is more likely.\n⸻\nStep 2: Add the likelihood\nWe assumed that:\n\\[\nP(E \\mid L) = 0.80\n\\]\nmeaning that 80% of librarians fit our description.\nFor farmers:\n\\[\nP(E \\mid F) = 0.10\n\\]\nmeaning that 10% of farmers fit the description.\nNow we have both the prior and the likelihood.\n⸻\nStep 3: Apply Bayes’ theorem\nWe want to calculate:\n\\[\nP(L \\mid E)\n\\]\nwhich means:\nWhat is the probability that the man is a librarian given that we observed this evidence?\nBayes’ theorem gives us:\n\\[\nP(L \\mid E)\n=\n\\frac{P(E \\mid L)P(L)}\n{P(E \\mid L)P(L) + P(E \\mid F)P(F)}\n\\]\nSubstituting our numbers:\n\\[\nP(L \\mid E)\n=\n\\frac{0.80 \\times 0.324}\n{(0.80 \\times 0.324) + (0.10 \\times 0.676)}\n\\]\n\\[\n\\frac{0.2592}\n{0.2592 + 0.0676}\n=\n0.793\n\\]\nTherefore:\n\\[\n\\boxed{P(L \\mid E) \\approx 79.3\\%}\n\\]\nThe posterior probability that the man is a farmer is:\n\\[\nP(F \\mid E) = 1 - 0.793 = 0.207\n\\]\nor approximately 20.7%.\nWhat happened?\nBefore observing the man:\nFarmer: 67.6% Librarian: 32.4%\nAfter observing the evidence:\nFarmer: 20.7% Librarian: 79.3%\nThe population numbers initially favour farmer. However, our hypothetical evidence is much more likely among librarians than farmers:\n\\[\n\\frac{P(E \\mid L)}{P(E \\mid F)}\n=\n\\frac{0.80}{0.10}\n=\n8\n\\]\nIn other words, this particular observation is 8 times more likely if the man is a librarian than if he is a farmer.\nThat evidence is strong enough to overcome the initial base-rate advantage of farmers.\nThis demonstrates the key idea of Bayesian inference:\nStart with a prior belief → observe evidence → update to a posterior belief.\nThe prior tells us what was plausible before seeing the evidence. The likelihood tells us how compatible the evidence is with each hypothesis. The posterior tells us what we should believe after combining both."
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html#likelihood",
-    "href": "bioinformatics/bayesian-statistics.html#likelihood",
+    "objectID": "bioinformatics/bayesian-statistics.html#the-perfect-example-of-bayes-theorem-poker",
+    "href": "bioinformatics/bayesian-statistics.html#the-perfect-example-of-bayes-theorem-poker",
     "title": "Bayesian Statistics",
-    "section": "4. Likelihood",
-    "text": "4. Likelihood\n…"
+    "section": "5. The perfect example of Bayes’ theorem: POKER 🃏",
+    "text": "5. The perfect example of Bayes’ theorem: POKER 🃏\nPoker to me is a perfect example of Bayesian thinking because you constantly update your beliefs with incomplete information.\nImagine you are playing Texas Hold’em. You cannot see your opponent’s cards, but based on their position, previous behaviour, and possible starting hands, you already have an initial idea of what they might hold. This is your prior.\nYour opponent suddenly makes a large raise. This is new evidence.\nYou now ask: How likely are they to make this raise with a strong hand? How likely are they to do it with a weak hand or a bluff? This is the likelihood.\nYou combine the prior with this evidence and update your belief about their hand. This updated belief is the posterior.\nThen another card appears, your opponent bets again, and you update again:\nPrior → Evidence → Posterior → New evidence → New posterior\nIn poker, as in Bayesian inference, the key question is:\nGiven what I already know, how much should this new information change what I believe?"
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html#posterior-probability",
-    "href": "bioinformatics/bayesian-statistics.html#posterior-probability",
+    "objectID": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-medicine",
+    "href": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-medicine",
     "title": "Bayesian Statistics",
-    "section": "5. Posterior probability",
-    "text": "5. Posterior probability\n…"
+    "section": "6. Bayes’ theorem in Medicine 🩺",
+    "text": "6. Bayes’ theorem in Medicine 🩺\nBayesian thinking is everywhere in medicine, particularly in diagnosis. Clinicians constantly start with an initial probability of disease, gather new evidence, and update that probability.\nDiagnostic tests\nA patient has a positive HIV test. Does this mean they definitely have HIV?\nNot necessarily.\nBefore testing, the patient has a pre-test probability of HIV based on factors such as prevalence and clinical context. The test result provides new evidence. Its sensitivity and specificity tell us how likely that result is in people with and without HIV.\nWe then update our probability:\nPre-test probability → Test result → Post-test probability\nIn Bayesian terms:\nPrior → Evidence → Posterior\n⸻\nPulmonary embolism\nA patient presents with shortness of breath and chest pain.\nBased on the history, examination, and a clinical prediction rule such as the Wells score, you estimate the probability of pulmonary embolism (PE).\nThis is your prior.\nYou perform a D-dimer test. A negative result provides new evidence and may substantially reduce the probability of PE.\nThe probability after considering the D-dimer is your posterior.\nThis explains an important principle in medicine:\nThe same test result can mean different things in patients with different pre-test probabilities.\n⸻\nMeningitis\nA patient presents with fever, headache, and neck stiffness.\nInitially, you consider several diagnoses, including bacterial meningitis, viral meningitis, and encephalitis. Your clinical assessment gives each diagnosis an initial probability.\nYou then perform a lumbar puncture.\nThe CSF shows:\n\nNeutrophilic pleocytosis\nLow glucose\nHigh protein\n\nThese findings are more compatible with bacterial meningitis, so you update your belief and assign a higher probability to that diagnosis.\nAgain:\nClinical suspicion → New evidence → Updated probability\n⸻\nSequential Bayesian updating\nIn real clinical practice, we rarely receive all the information at once.\nInstead, evidence arrives sequentially:\nHistory → Examination → Blood tests → Imaging → Microbiology → Treatment response\nAfter each new piece of information, we update our assessment.\nThe posterior from one step becomes the prior for the next.\nThis is Bayesian inference in everyday clinical medicine.\n\n\n\n\n\n\nTip\n\n\n\nClinical translation of Bayes’ theorem\nPrior = What did I think before the test?\nLikelihood = How compatible is this result with the disease?\nPosterior = What do I think after the test?\nOr, in familiar clinical language:\nPre-test probability → Diagnostic test → Post-test probability"
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html#a-simple-example",
-    "href": "bioinformatics/bayesian-statistics.html#a-simple-example",
+    "objectID": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-bioinformatics",
+    "href": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-bioinformatics",
     "title": "Bayesian Statistics",
-    "section": "A simple example",
-    "text": "A simple example\n…"
+    "section": "7. Bayes’ theorem in Bioinformatics 🧬",
+    "text": "7. Bayes’ theorem in Bioinformatics 🧬\nBayesian inference is widely used in bioinformatics because biological data are often incomplete, noisy, and uncertain.\nThe basic idea remains the same:\nPrior knowledge + Biological data → Updated probability\nPhylogenetics 🌳\nSuppose we have DNA sequences from several bacterial isolates and want to reconstruct their evolutionary history.\nThere are many possible phylogenetic trees.\nBefore examining the sequence data, our evolutionary model gives us some expectation about which trees and parameters are plausible. This represents our prior.\nWe then ask:\nHow likely are the observed DNA sequences if a particular tree and evolutionary model are correct?\nThis is the likelihood.\nCombining the prior and likelihood gives us the posterior probability of different trees and evolutionary parameters.\nPrior evolutionary assumptions → Sequence data → Posterior distribution of trees\nThis is the principle behind Bayesian phylogenetic programs such as BEAST and MrBayes.\n⸻\nMolecular dating ⏳\nBayesian inference can also be used to estimate when evolutionary events occurred.\nSuppose we have bacterial genomes collected at different dates.\nWe may have prior assumptions about the evolutionary rate. The observed genetic differences between isolates and their sampling dates provide the data.\nBayesian inference combines these to estimate posterior distributions for:\n\nevolutionary rate\ndates of ancestral nodes\ntime to the most recent common ancestor (tMRCA)\n\nInstead of simply saying:\n“This ancestor existed in 1900.”\nwe might estimate:\n“The most probable date is around 1900, with a credible interval representing our uncertainty.”\nTools such as BEAST and BactDating use Bayesian approaches for molecular dating.\n⸻\nVariant calling 🧬\nImagine sequencing a position in a genome where some reads contain A and others contain G.\nIs this a real genetic variant or simply sequencing error?\nA Bayesian variant caller can combine:\nPrior probability of a variant + observed sequencing reads → Posterior probability of a variant\nRead depth, base quality, sequencing error rates, and other information can contribute to the likelihood.\nThe result is a probability that a particular genotype or variant is actually present.\n⸻\nThe common pattern\nAlthough the biological questions are very different, the Bayesian logic is the same:\nApplication Prior Evidence Posterior Phylogenetics Evolutionary assumptions DNA sequences Probable trees Molecular dating Clock/model assumptions Sequences + sampling dates Ancestral dates and rates Variant calling Expected variant/genotype probabilities Sequencing reads Variant/genotype probabilities\nSo whether we are diagnosing a patient, playing poker, or reconstructing bacterial evolution, the underlying question is the same:\nGiven what I believed before, how should these new data change what I believe?"
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html#applications-in-bioinformatics",
-    "href": "bioinformatics/bayesian-statistics.html#applications-in-bioinformatics",
+    "objectID": "bioinformatics/bayesian-statistics.html#bactdating-bayesian-inference-in-action",
+    "href": "bioinformatics/bayesian-statistics.html#bactdating-bayesian-inference-in-action",
     "title": "Bayesian Statistics",
-    "section": "Applications in bioinformatics",
-    "text": "Applications in bioinformatics\n…"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#what-i-learned",
-    "href": "bioinformatics/bayesian-statistics.html#what-i-learned",
-    "title": "Bayesian Statistics",
-    "section": "What I learned",
-    "text": "What I learned\n…"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#references",
-    "href": "bioinformatics/bayesian-statistics.html#references",
-    "title": "Bayesian Statistics",
-    "section": "References",
-    "text": "References\n…\n← Back to Bioinformatics for “Dum me”"
+    "section": "8. BactDating: Bayesian Inference in Action 🦠⏳",
+    "text": "8. BactDating: Bayesian Inference in Action 🦠⏳\nBactDating is a tool used to estimate the timescale of bacterial evolution.\nImagine you have 500 E. coli genomes collected between 2000 and 2025. You have already reconstructed a phylogenetic tree from their genomic sequences. The tree tells you which isolates are related, but its branch lengths mainly represent genetic change, not calendar time.\nWhat you want to know is:\nWhen did their common ancestors exist?\nFor example, when did a particular lineage emerge? When did two bacterial populations diverge? When did the most recent common ancestor (MRCA) exist?\nThis is where BactDating uses Bayesian inference.\nWhat goes into BactDating?\nBactDating combines several sources of information:\n\na bacterial phylogenetic tree\nthe genetic branch lengths of that tree\nthe sampling date of each isolate\na model describing how bacterial evolution occurs through time\n\nThe sampling dates are especially important because they provide calendar-time information. If genomes collected many years apart tend to accumulate more genetic changes, BactDating can use this relationship to estimate an evolutionary rate.\nWhere does Bayes come in?\nThere are several unknown parameters that we want to estimate, such as the evolutionary rate and the dates of ancestral nodes.\nBayesian inference treats these unknown quantities as probability distributions.\nConceptually:\nPrior assumptions + observed phylogeny and sampling dates → Posterior distributions\nThe prior describes which parameter values are considered plausible before fully considering the observed data.\nThe likelihood asks:\nGiven a particular evolutionary rate, ancestral dates, and clock model, how likely is it that we would observe this phylogenetic tree with these branch lengths and sampling dates?\nBactDating then combines the prior and likelihood to obtain the posterior distribution.\nHow does BactDating find the posterior?\nThere are far too many possible combinations of evolutionary rates and ancestral dates to calculate them all directly.\nBactDating therefore uses Markov chain Monte Carlo (MCMC) to explore the possible parameter values.\nVery roughly:\nPropose evolutionary parameters → evaluate how well they explain the data → accept or reject them → repeat many times\nAfter many iterations, the values sampled by the MCMC approximate the posterior distribution.\nInstead of producing only one date for an ancestor, BactDating therefore gives us a distribution of plausible dates.\nFor example:\nEstimated plasmid arrival: 1864 95% credible interval: 1853–1872\nThe estimate around 1864 represents the inferred timing from the posterior distribution, while the credible interval represents the uncertainty around that estimate.\nSo the Bayesian workflow in BactDating can be simplified as:\nDated bacterial isolates + phylogenetic tree ↓ Evolutionary model + prior distributions ↓ Likelihood of the observed tree and dates ↓ MCMC sampling ↓ Posterior distributions ↓ Evolutionary rate + dated ancestral nodes + credible intervals\nIn short, BactDating does not simply convert genetic distance into years. It uses a Bayesian model to estimate the evolutionary timescale while explicitly representing uncertainty.\nIn the end, Bayesian thinking is simply the art of starting with what we know, learning from what we observe, and updating what we believe.\n← Back to Bioinformatics for “Dum me”"
   },
   {
     "objectID": "thoughts/Ask-more-questions-at-conferences.html",
@@ -266,11 +252,11 @@
     "text": "I’m Trieu.\nLê Phạm Tiến Triều\nPhD candidate - Researcher - Investor and Trader - Amateur Writer - Wannabe Pianist - Soon-to-be Polyglot\nResearch has taken me through different laboratories, universities, teams, conferences, and countries. This page is a collection of (some of) the people, places, and moments that have been part of that journey."
   },
   {
-    "objectID": "trieu-le.html#oucru-vietnam",
-    "href": "trieu-le.html#oucru-vietnam",
+    "objectID": "trieu-le.html#oxford-university-clinical-research-unit-oucru",
+    "href": "trieu-le.html#oxford-university-clinical-research-unit-oucru",
     "title": "My academic journey",
-    "section": "🇻🇳 OUCRU Vietnam",
-    "text": "🇻🇳 OUCRU Vietnam\nMy early research journey in infectious diseases and genomics at the Tuberculosis Research Team, Oxford University Clinical Research Unit (OUCRU) in Vietnam."
+    "section": "🔬 Oxford University Clinical Research Unit (OUCRU)",
+    "text": "🔬 Oxford University Clinical Research Unit (OUCRU)\nMy early research journey in infectious diseases and genomics at the Tuberculosis Research Team, Oxford University Clinical Research Unit (OUCRU) in Vietnam."
   },
   {
     "objectID": "trieu-le.html#josie-bryants-team",
@@ -401,13 +387,6 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Trieu Le",
-    "section": "",
-    "text": "I am a researcher interested in microbial genomics, antimicrobial resistance, and bacterial evolution."
-  },
-  {
-    "objectID": "index.html#microbial-genomics-plasmids-and-mobile-genetic-elements-infectious-diseases",
-    "href": "index.html#microbial-genomics-plasmids-and-mobile-genetic-elements-infectious-diseases",
     "title": "Trieu Le",
     "section": "",
     "text": "I am a researcher interested in microbial genomics, antimicrobial resistance, and bacterial evolution."
@@ -604,8 +583,8 @@
   {
     "objectID": "bioinformatics/index.html",
     "href": "bioinformatics/index.html",
-    "title": "Bioinformatics for Dum Me",
+    "title": "Bioinformatics for ‘Dum Me’",
     "section": "",
-    "text": "I am learning bioinformatics from first principles.\nThis series is my attempt to understand not only how to use bioinformatics tools, but also the mathematics, algorithms, and biological assumptions behind them.\nI write these notes primarily to consolidate my own understanding. Hopefully, they may also be useful to others learning bioinformatics.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Statistics\n\n\nUnderstanding probability, priors, likelihoods, and posteriors\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Build a Personal Website\n\n\nA practical guide to building and publishing a free personal website with Quarto + GitHub Pages\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\nNo matching items"
+    "text": "I am learning bioinformatics from first principles.\nThis series is my attempt to understand not only how to use bioinformatics tools, but also the mathematics, algorithms, and biological assumptions behind them.\nI write these notes primarily to consolidate my own understanding. Hopefully, they may also be useful to others learning bioinformatics.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Statistics\n\n\nMake you best guess, and then update it as you learn more.\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Build a Personal Website\n\n\nA practical guide to building and publishing a free personal website with Quarto + GitHub Pages\n\n\n\n\n\nSep 25, 2026\n\n\n\n\n\nNo matching items"
   }
 ]
