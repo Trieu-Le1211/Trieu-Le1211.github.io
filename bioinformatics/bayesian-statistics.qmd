@@ -207,13 +207,11 @@ What happened?
 
 Before observing the man:
 
-Farmer: 67.6%
-Librarian: 32.4%
+Farmer: 67.6%; Librarian: 32.4%
 
 After observing the evidence:
 
-Farmer: 20.7%
-Librarian: 79.3%
+**Farmer: 20.7; Librarian: 79.3%**
 
 The population numbers initially favour farmer. However, our hypothetical evidence is much more likely among librarians than farmers:
 
@@ -502,19 +500,37 @@ Estimated plasmid arrival: 1864
 
 The estimate around 1864 represents the inferred timing from the posterior distribution, while the credible interval represents the uncertainty around that estimate.
 
-So the Bayesian workflow in BactDating can be simplified as:
+### Bayesian workflow in BactDating
 
-Dated bacterial isolates + phylogenetic tree
+The Bayesian workflow in **BactDating** can be simplified as:
+
+<div style="text-align: center; font-size: 1.1em; line-height: 1.8;">
+
+**Dated bacterial isolates + Phylogenetic tree**
+
 ↓
-Evolutionary model + prior distributions
+
+**Evolutionary model + Prior distributions**
+
 ↓
-Likelihood of the observed tree and dates
+
+**Likelihood of the observed tree and sampling dates**
+
 ↓
-MCMC sampling
+
+**MCMC sampling**
+
 ↓
-Posterior distributions
+
+**Posterior distributions**
+
 ↓
-Evolutionary rate + dated ancestral nodes + credible intervals
+
+**Evolutionary rate + Dated ancestral nodes + Credible intervals**
+
+</div>
+
+
 
 In short, BactDating does not simply convert genetic distance into years. It uses a Bayesian model to estimate the evolutionary timescale while explicitly representing uncertainty.
 

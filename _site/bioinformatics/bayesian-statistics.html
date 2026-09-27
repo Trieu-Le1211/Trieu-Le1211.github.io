@@ -172,7 +172,10 @@ window.Quarto = {
   <li><a href="#the-perfect-example-of-bayes-theorem-poker" id="toc-the-perfect-example-of-bayes-theorem-poker" class="nav-link" data-scroll-target="#the-perfect-example-of-bayes-theorem-poker">5. The perfect example of Bayes’ theorem: POKER 🃏</a></li>
   <li><a href="#bayes-theorem-in-medicine" id="toc-bayes-theorem-in-medicine" class="nav-link" data-scroll-target="#bayes-theorem-in-medicine">6. Bayes’ theorem in Medicine 🩺</a></li>
   <li><a href="#bayes-theorem-in-bioinformatics" id="toc-bayes-theorem-in-bioinformatics" class="nav-link" data-scroll-target="#bayes-theorem-in-bioinformatics">7. Bayes’ theorem in Bioinformatics 🧬</a></li>
-  <li><a href="#bactdating-bayesian-inference-in-action" id="toc-bactdating-bayesian-inference-in-action" class="nav-link" data-scroll-target="#bactdating-bayesian-inference-in-action">8. BactDating: Bayesian Inference in Action 🦠⏳</a></li>
+  <li><a href="#bactdating-bayesian-inference-in-action" id="toc-bactdating-bayesian-inference-in-action" class="nav-link" data-scroll-target="#bactdating-bayesian-inference-in-action">8. BactDating: Bayesian Inference in Action 🦠⏳</a>
+  <ul class="collapse">
+  <li><a href="#bayesian-workflow-in-bactdating" id="toc-bayesian-workflow-in-bactdating" class="nav-link" data-scroll-target="#bayesian-workflow-in-bactdating">Bayesian workflow in BactDating</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -347,9 +350,9 @@ P(F \mid E) = 1 - 0.793 = 0.207
 <p>or approximately 20.7%.</p>
 <p>What happened?</p>
 <p>Before observing the man:</p>
-<p>Farmer: 67.6% Librarian: 32.4%</p>
+<p>Farmer: 67.6%; Librarian: 32.4%</p>
 <p>After observing the evidence:</p>
-<p>Farmer: 20.7% Librarian: 79.3%</p>
+<p><strong>Farmer: 20.7; Librarian: 79.3%</strong></p>
 <p>The population numbers initially favour farmer. However, our hypothetical evidence is much more likely among librarians than farmers:</p>
 <p><span class="math display">\[
 \frac{P(E \mid L)}{P(E \mid F)}
@@ -519,13 +522,28 @@ Tip
 <p>For example:</p>
 <p>Estimated plasmid arrival: 1864 95% credible interval: 1853–1872</p>
 <p>The estimate around 1864 represents the inferred timing from the posterior distribution, while the credible interval represents the uncertainty around that estimate.</p>
-<p>So the Bayesian workflow in BactDating can be simplified as:</p>
-<p>Dated bacterial isolates + phylogenetic tree ↓ Evolutionary model + prior distributions ↓ Likelihood of the observed tree and dates ↓ MCMC sampling ↓ Posterior distributions ↓ Evolutionary rate + dated ancestral nodes + credible intervals</p>
+<section id="bayesian-workflow-in-bactdating" class="level3">
+<h3 class="anchored" data-anchor-id="bayesian-workflow-in-bactdating">Bayesian workflow in BactDating</h3>
+<p>The Bayesian workflow in <strong>BactDating</strong> can be simplified as:</p>
+<div style="text-align: center; font-size: 1.1em; line-height: 1.8;">
+<p><strong>Dated bacterial isolates + Phylogenetic tree</strong></p>
+<p>↓</p>
+<p><strong>Evolutionary model + Prior distributions</strong></p>
+<p>↓</p>
+<p><strong>Likelihood of the observed tree and sampling dates</strong></p>
+<p>↓</p>
+<p><strong>MCMC sampling</strong></p>
+<p>↓</p>
+<p><strong>Posterior distributions</strong></p>
+<p>↓</p>
+<p><strong>Evolutionary rate + Dated ancestral nodes + Credible intervals</strong></p>
+</div>
 <p>In short, BactDating does not simply convert genetic distance into years. It uses a Bayesian model to estimate the evolutionary timescale while explicitly representing uncertainty.</p>
 <p><strong>In the end, Bayesian thinking is simply the art of starting with what we know, learning from what we observe, and updating what we believe.</strong></p>
 <p><a href="../bioinformatics/index.html">← Back to Bioinformatics for “Dum me”</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
