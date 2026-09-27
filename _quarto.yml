@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - google3c68375025568f0e.html
 
 website:
   title: "Trieu Le"
