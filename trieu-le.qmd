@@ -1,15 +1,17 @@
 ---
-title: "Trieu Le"
+title: "My academic journey"
 page-layout: full
-toc: false
+toc: true
 ---
 
 I'm Trieu.
 
 **Lê Phạm Tiến Triều**
 
+**PhD candidate - Researcher - Investor and Trader - Amateur Writer - Wannabe Pianist - Soon-to-be Polyglot**
+
 Research has taken me through different laboratories, universities, teams,
-conferences, and countries. This page is a collection of some of the people,
+conferences, and countries. This page is a collection of (some of) the people,
 places, and moments that have been part of that journey.
 
 <div class="logo-strip">
@@ -28,7 +30,7 @@ places, and moments that have been part of that journey.
 
 ## 🇻🇳 OUCRU Vietnam
 
-My early research journey in infectious diseases and genomics at the
+My early research journey in infectious diseases and genomics at the Tuberculosis Research Team,
 Oxford University Clinical Research Unit (OUCRU) in Vietnam.
 
 <div class="photo-grid">
@@ -50,6 +52,9 @@ Oxford University Clinical Research Unit (OUCRU) in Vietnam.
 Science is not only about experiments and data, but also about the people
 we work with and learn from.
 
+A year of learning genomics, bioinformatics, and computational biology,
+and an important transition in my journey towards genomic research.
+
 <div class="photo-grid">
 
 <img src="images/Josie Bryant's team/IMG_0133.jpeg">
@@ -65,8 +70,7 @@ we work with and learn from.
 
 ## 🎓 University of Cambridge
 
-A year of learning genomics, bioinformatics, and computational biology,
-and an important transition in my journey towards genomic research.
+One of my best academic experiences - networking with brilliant people, learning from inspiring mentors, and exploring the world of genomics and bioinformatics.
 
 <div class="photo-grid">
 

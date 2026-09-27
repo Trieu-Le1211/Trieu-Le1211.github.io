@@ -43,3 +43,188 @@
     max-width: 100px !important;
     object-fit: contain !important;
   }
+
+  /* ========================================
+   BOOKS THAT SHAPED MY THINKING
+   ======================================== */
+
+.book-entry {
+  margin: 2rem 0;
+}
+
+.book-entry img {
+  max-width: 130px;
+  height: auto;
+  display: block;
+}
+
+.book-entry h3 {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+
+.book-entry p {
+  line-height: 1.6;
+}
+
+/* =========================================================
+   BIOINFORMATICS LISTING
+   Desktop:
+   DATE | THUMBNAIL | TITLE + SUBTITLE
+   ========================================================= */
+
+   .quarto-listing-default .quarto-post {
+    display: grid !important;
+  
+    /* Date | Image | Title */
+    grid-template-columns: 120px 220px minmax(0, 1fr) !important;
+  
+    column-gap: 35px !important;
+  
+    /* Fixed row height */
+    height: 190px !important;
+  
+    align-items: center !important;
+  
+    padding: 20px 0 !important;
+    margin: 0 !important;
+  
+    border-bottom: 1px solid #e5e5e5 !important;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     DATE — COLUMN 1
+     --------------------------------------------------------- */
+  
+  .quarto-listing-default .quarto-post .metadata {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  
+    align-self: center !important;
+  }
+  
+  .quarto-listing-default .quarto-post .listing-date {
+    margin: 0 !important;
+    padding: 0 !important;
+  
+    font-size: 0.9rem !important;
+    color: #6c757d !important;
+    white-space: nowrap !important;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     THUMBNAIL — COLUMN 2
+     --------------------------------------------------------- */
+  
+  .quarto-listing-default .quarto-post .thumbnail {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  
+    width: 220px !important;
+    height: 130px !important;
+  
+    margin: 0 !important;
+    padding: 0 !important;
+  
+    align-self: center !important;
+  }
+  
+  .quarto-listing-default .quarto-post .thumbnail img {
+    width: 100% !important;
+    height: 100% !important;
+  
+    object-fit: contain !important;
+  
+    display: block !important;
+    margin: 0 !important;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     TITLE + SUBTITLE — COLUMN 3
+     --------------------------------------------------------- */
+  
+  .quarto-listing-default .quarto-post .body {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+  
+    width: 100% !important;
+  
+    margin: 0 !important;
+    padding: 0 !important;
+  
+    align-self: center !important;
+  }
+  
+  
+  /* Title */
+  
+  .quarto-listing-default .quarto-post .listing-title {
+    font-size: 1.35rem !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+  
+    margin: 0 0 8px 0 !important;
+  }
+  
+  
+  /* Subtitle */
+  
+  .quarto-listing-default .quarto-post .listing-subtitle,
+  .quarto-listing-default .quarto-post .listing-description {
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+  
+    color: #6c757d !important;
+  
+    margin: 0 !important;
+  
+    max-width: 850px !important;
+  }
+  
+  
+  /* ---------------------------------------------------------
+     MOBILE
+     --------------------------------------------------------- */
+  
+  @media (max-width: 768px) {
+  
+    .quarto-listing-default .quarto-post {
+      grid-template-columns: 1fr !important;
+      height: auto !important;
+  
+      row-gap: 12px !important;
+  
+      padding: 25px 0 !important;
+    }
+  
+    .quarto-listing-default .quarto-post .metadata {
+      grid-column: 1 !important;
+      grid-row: 1 !important;
+    }
+  
+    .quarto-listing-default .quarto-post .thumbnail {
+      grid-column: 1 !important;
+      grid-row: 2 !important;
+  
+      width: 100% !important;
+      max-width: 320px !important;
+      height: auto !important;
+    }
+  
+    .quarto-listing-default .quarto-post .thumbnail img {
+      height: auto !important;
+    }
+  
+    .quarto-listing-default .quarto-post .body {
+      grid-column: 1 !important;
+      grid-row: 3 !important;
+    }
+  }
+  

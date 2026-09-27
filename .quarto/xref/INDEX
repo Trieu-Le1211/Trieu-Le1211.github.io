@@ -46,5 +46,38 @@
   },
   "thoughts/preparation-for-a-conference.qmd": {
     "preparation-for-a-conference.html": "4941932e"
+  },
+  "thoughts/Just-start-writting.qmd": {
+    "Just-start-writting.html": "068ae049"
+  },
+  "thoughts/Ask-more-questions-at-conferences.qmd": {
+    "Ask-more-questions-at-conferences.html": "b6701e61"
+  },
+  "thoughts/make-the-most-from-meeting.qmd": {
+    "make-the-most-from-meeting.html": "6528992e"
+  },
+  "bioinformatics/how-to-use-github.qmd": {
+    "how-to-use-github.html": "d8a0ec74"
+  },
+  "bioinformatics/De-Bruijn-graphs-for-assembly.qmd": {
+    "De-Bruijn-graphs-for-assembly.html": "eaff1ac2"
+  },
+  "bioinformatics/metagenomics.qmd": {
+    "metagenomics.html": "9ef65e85"
+  },
+  "bioinformatics/Population-structure-from-phylogenies.qmd": {
+    "Population-structure-from-phylogenies.html": "653ef3e2"
+  },
+  "bioinformatics/GWAS.qmd": {
+    "GWAS.html": "7a2f33fc"
+  },
+  "contact.qmd": {
+    "contact.html": "6660db8a"
+  },
+  "bioinformatics/machine-learning-in-biology.qmd": {
+    "machine-learning-in-biology.html": "da972d27"
+  },
+  "bioinformatics/how_to_built_this.qmd": {
+    "how_to_built_this.html": "1187a46f"
   }
 }

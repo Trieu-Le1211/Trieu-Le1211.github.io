@@ -1,6 +1,6 @@
 ---
-title: "Bioinformatics for 'Dumb me'"
-description: "My notes on the mathematics, algorithms, and biological ideas behind bioinformatics."
+title: "Bioinformatics for Dum Me"
+description: "My notes on bioinformatics, mathematics, algorithms, and computational tools."
 
 listing:
   contents:
@@ -9,10 +9,10 @@ listing:
   sort: "date desc"
   type: default
   fields:
+    - date
+    - image
     - title
     - subtitle
-    - date
-    - categories
 
 page-layout: full
 toc: false

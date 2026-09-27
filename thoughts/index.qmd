@@ -1,6 +1,6 @@
 ---
 title: "Thoughts"
-description: "Reflections on science, research, medicine, and my PhD journey."
+description: "Reflections on science, research, and my PhD journey."
 
 listing:
   contents:
@@ -9,11 +9,12 @@ listing:
   sort: "date desc"
   type: default
   fields:
+    - date
+    - image
     - title
     - subtitle
-    - date
-    - categories
 
 page-layout: full
 toc: false
+
 ---

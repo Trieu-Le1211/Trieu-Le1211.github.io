@@ -1,0 +1,1227 @@
+---
+title: "How to Build a Personal Website"
+subtitle: "A practical guide to building and publishing a free personal website with Quarto + GitHub Pages"
+date: "2026-09-27"
+author: "Trieu Le"
+image: images/build_website_thumbnail.png
+categories:
+  - Quarto
+  - GitHub
+  - Web Development
+  - Research
+toc: true
+
+---
+[← Back to Bioinformatics for "Dum me"](index.qmd)
+
+Building a personal website may sound complicated if you have never worked with web development before. Fortunately, you do not need to know much HTML, CSS, or JavaScript to get started.
+
+One relatively simple approach is to use **Quarto + GitHub + GitHub Pages**.
+
+This is also how I built this website.
+
+The basic idea is:
+
+> **Write → Quarto → Git → GitHub → GitHub Pages**
+
+More specifically:
+
+```text
+Write .qmd files
+        ↓
+Quarto builds the website
+        ↓
+Git tracks your changes
+        ↓
+GitHub stores your project
+        ↓
+GitHub Pages publishes your website
+```
+
+This guide explains the whole process from the beginning, using my website as an example.
+
+---
+
+## 1. What do you need?
+
+There are five main components:
+
+| Tool | Purpose |
+|---|---|
+| **Quarto** | Converts `.qmd` files into webpages |
+| **VS Code** | A convenient editor for writing and managing the project |
+| **Git** | Tracks changes to your files |
+| **GitHub** | Stores your project online |
+| **GitHub Pages** | Hosts your public website |
+
+You do not need to understand all of them before starting.
+
+In fact, building a website is a good way to learn how these tools work together.
+
+### Check Quarto
+
+Open your terminal and run:
+
+```bash
+quarto --version
+```
+
+### Check Git
+
+```bash
+git --version
+```
+
+If both commands return version numbers, you are ready to continue.
+
+---
+
+## 2. Create a Quarto website
+
+Choose a name for your project.
+
+For a GitHub Pages personal website, a useful convention is:
+
+```text
+YOUR-USERNAME.github.io
+```
+
+Create the project:
+
+```bash
+quarto create project website YOUR-USERNAME.github.io
+```
+
+Then enter the project:
+
+```bash
+cd YOUR-USERNAME.github.io
+```
+
+### My example
+
+My GitHub username is:
+
+```text
+Trieu-Le1211
+```
+
+So my project is:
+
+```bash
+quarto create project website Trieu-Le1211.github.io
+```
+
+and the project directory is:
+
+```text
+Trieu-Le1211.github.io/
+```
+
+---
+
+## 3. Understand `_quarto.yml`
+
+One of the most important files in a Quarto website is:
+
+```text
+_quarto.yml
+```
+
+Think of this as the **configuration file for the whole website**.
+
+It can control:
+
+- Website title
+- Navigation bar
+- Theme
+- CSS
+- Page structure
+- Search
+- Social links
+- Other site-wide settings
+
+A simple example is:
+
+```yaml
+project:
+  type: website
+
+website:
+  title: "Your Name"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: publications.qmd
+        text: Publications
+      - href: blog/index.qmd
+        text: Blog
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+```
+
+### My example
+
+My website has sections for my academic background, publications, bioinformatics notes, and personal writing:
+
+```yaml
+project:
+  type: website
+
+website:
+  title: "Trieu Le"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About Me
+      - href: publications.qmd
+        text: Publications
+      - href: bioinformatics/index.qmd
+        text: Bioinformatics for Dummies
+      - href: thoughts/index.qmd
+        text: Thoughts
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+```
+
+Notice that the navigation links point to `.qmd` files.
+
+Quarto will convert them into the appropriate webpage links when the website is rendered.
+
+---
+
+## 4. Organise your website
+
+A small personal website might look like this:
+
+```text
+YOUR-USERNAME.github.io/
+│
+├── _quarto.yml
+├── index.qmd
+├── about.qmd
+├── publications.qmd
+├── styles.css
+│
+├── images/
+│
+└── blog/
+    ├── index.qmd
+    ├── article-1.qmd
+    └── article-2.qmd
+```
+
+My website has a similar structure:
+
+```text
+Trieu-Le1211.github.io/
+│
+├── _quarto.yml
+├── index.qmd
+├── about.qmd
+├── publications.qmd
+├── styles.css
+│
+├── images/
+│
+├── bioinformatics/
+│   ├── index.qmd
+│   └── bayesian-statistics.qmd
+│
+└── thoughts/
+    ├── index.qmd
+    ├── just-start-writing.qmd
+    └── science-through-the-lens-of-investing.qmd
+```
+
+The important idea is:
+
+> **One `.qmd` file can become one webpage.**
+
+For example:
+
+```text
+about.qmd
+```
+
+becomes:
+
+```text
+about.html
+```
+
+when Quarto renders the website.
+
+---
+
+## 5. Write your first `.qmd` page
+
+Quarto documents use a combination of **YAML** and **Markdown**.
+
+For example, create:
+
+```text
+about.qmd
+```
+
+and write:
+
+```markdown
+---
+title: "About Me"
+toc: false
+---
+
+## Hello, I'm Your Name
+
+I am a researcher interested in **your research interests here**.
+
+## Research interests
+
+- Research area 1
+- Research area 2
+- Research area 3
+- Research area 4
+```
+
+The part between:
+
+```text
+---
+...
+---
+```
+
+is the **YAML metadata**.
+
+For example:
+
+```yaml
+title: "About Me"
+toc: false
+```
+
+The rest is Markdown.
+
+Some basic Markdown syntax:
+
+```markdown
+# Main heading
+
+## Subheading
+
+### Smaller heading
+
+**bold**
+
+*italic*
+
+- Item 1
+- Item 2
+- Item 3
+
+[Link text](https://example.com)
+```
+
+You therefore do not need to write most of your website in HTML.
+
+---
+
+## 6. Create a blog
+
+One of the main reasons I wanted a personal website was to have somewhere to write.
+
+A useful way to organise a blog is to create a directory:
+
+```text
+blog/
+```
+
+Inside it:
+
+```text
+blog/
+├── index.qmd
+├── article-1.qmd
+├── article-2.qmd
+└── article-3.qmd
+```
+
+Each article gets its own `.qmd` file.
+
+For example:
+
+```text
+blog/my-first-article.qmd
+```
+
+with:
+
+```yaml
+---
+title: "My First Article"
+subtitle: "What this article is about"
+date: 2026-09-27
+author: "Your Name"
+categories:
+  - Research
+  - Reflections
+toc: false
+---
+```
+
+Then write the article below the YAML header.
+
+### My example
+
+I have a section called:
+
+```text
+thoughts/
+```
+
+where I write about research, my PhD, scientific writing, conferences, and other things I find interesting.
+
+For example:
+
+```text
+thoughts/just-start-writing.qmd
+```
+
+starts with:
+
+```yaml
+---
+title: "Just Start Writing"
+subtitle: "You have a report or thesis to write—what are you waiting for?"
+date: 2026-09-26
+categories:
+  - Research
+  - Writing
+author: "Trieu Le"
+toc: false
+---
+```
+
+The rest of the file contains the article.
+
+---
+
+## 7. Automatically list your articles
+
+You do not have to manually update your blog homepage every time you write something.
+
+Quarto can automatically find your articles and create a listing.
+
+For example, `blog/index.qmd` can contain:
+
+```yaml
+---
+title: "Blog"
+description: "My writing about research, science, and other things."
+
+listing:
+  contents:
+    - "*.qmd"
+    - "!index.qmd"
+  sort: "date desc"
+  type: default
+  fields:
+    - title
+    - subtitle
+    - date
+    - categories
+
+page-layout: full
+toc: false
+---
+```
+
+Now imagine you have:
+
+```text
+blog/
+├── index.qmd
+├── article-a.qmd
+├── article-b.qmd
+└── article-c.qmd
+```
+
+Quarto will automatically list:
+
+```text
+article-a
+article-b
+article-c
+```
+
+on the Blog page.
+
+If you add:
+
+```text
+article-d.qmd
+```
+
+you do not need to manually add it to `index.qmd`.
+
+Render the website again and Quarto will find it.
+
+### My example
+
+I use this system for two sections:
+
+```text
+thoughts/
+```
+
+and:
+
+```text
+bioinformatics/
+```
+
+This allows me to keep personal reflections and technical bioinformatics notes separate while using the same underlying system.
+
+---
+
+## 8. Add images
+
+Create an image directory:
+
+```text
+images/
+```
+
+For example:
+
+```text
+images/
+├── profile.jpg
+├── conference-timeline.png
+└── writing-science.jpg
+```
+
+You can insert an image into a `.qmd` document using:
+
+```markdown
+![Description of the image](images/example.png)
+```
+
+You can control its width and alignment:
+
+```markdown
+![Description of the image](images/example.png){fig-align="center" width="70%"}
+```
+
+### My example
+
+In one of my posts, I include a picture of a book using:
+
+```markdown
+!["Writing Science" by Joshua Schimel](images/writing_science.jpg){fig-align="center" width="40%"}
+```
+
+Quarto places the image exactly where I put that line in the article.
+
+### A small lesson I learned
+
+Try to use simple filenames:
+
+```text
+writing-science.jpg
+conference-timeline.png
+my-first-conference.jpg
+```
+
+rather than:
+
+```text
+My First Conference FINAL version 2.JPG
+```
+
+Lowercase filenames without spaces are easier to manage and reduce the risk of path problems when publishing online.
+
+---
+
+## 9. Customise the appearance with CSS
+
+Quarto controls the content and structure of the website, while CSS can be used to change its appearance.
+
+Create:
+
+```text
+styles.css
+```
+
+and tell Quarto to use it in `_quarto.yml`:
+
+```yaml
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+```
+
+For example:
+
+```css
+img {
+  border-radius: 8px;
+}
+```
+
+or:
+
+```css
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+}
+```
+
+This can be used to create a three-column photo gallery.
+
+You do not need much CSS when you first build the website. Start with one of Quarto's themes and customise things gradually.
+
+---
+
+## 10. Render the website
+
+Once you have written your pages, run:
+
+```bash
+quarto render
+```
+
+Quarto reads the source files and generates the website.
+
+The rendered website is normally placed in:
+
+```text
+_site/
+```
+
+For example:
+
+```text
+_site/
+├── index.html
+├── about.html
+├── publications.html
+├── blog/
+└── images/
+```
+
+The relationship is:
+
+```text
+index.qmd  → index.html
+about.qmd  → about.html
+```
+
+So remember:
+
+> **Edit the `.qmd` files, not the generated `.html` files.**
+
+---
+
+## 11. Preview the website locally
+
+Before publishing the website, check how it looks on your own computer.
+
+Quarto normally provides:
+
+```bash
+quarto preview
+```
+
+This renders the website and starts a local preview.
+
+Alternatively, after running:
+
+```bash
+quarto render
+```
+
+you can serve `_site/` using Python:
+
+```bash
+python3 -m http.server 8000 --directory _site
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+in your browser.
+
+A simple development workflow is therefore:
+
+```text
+Edit
+  ↓
+Save
+  ↓
+quarto render
+  ↓
+Check locally
+  ↓
+Edit again
+```
+
+Repeat until you are happy with the result.
+
+---
+
+## 12. Start tracking the project with Git
+
+Once the website is working locally, initialise Git.
+
+Go to your project:
+
+```bash
+cd path/to/YOUR-USERNAME.github.io
+```
+
+Then:
+
+```bash
+git init
+```
+
+Rename the main branch:
+
+```bash
+git branch -M main
+```
+
+Add your files:
+
+```bash
+git add .
+```
+
+Create your first commit:
+
+```bash
+git commit -m "Initial website"
+```
+
+A **commit** is essentially a saved checkpoint in the history of your project.
+
+---
+
+## 13. Configure your Git identity
+
+The first time you use Git, you may see:
+
+```text
+Author identity unknown
+```
+
+If so, configure your name:
+
+```bash
+git config --global user.name "Your Name"
+```
+
+and email:
+
+```bash
+git config --global user.email "your-email@example.com"
+```
+
+Check them:
+
+```bash
+git config --global user.name
+git config --global user.email
+```
+
+Then try committing again.
+
+---
+
+## 14. Create a GitHub repository
+
+Next, create a GitHub repository.
+
+For a personal GitHub Pages user site, name the repository:
+
+```text
+YOUR-USERNAME.github.io
+```
+
+For example, if your GitHub username is:
+
+```text
+alice
+```
+
+the repository would be:
+
+```text
+alice.github.io
+```
+
+and the website can be published at:
+
+```text
+https://alice.github.io
+```
+
+### My example
+
+My username is:
+
+```text
+Trieu-Le1211
+```
+
+so my repository is:
+
+```text
+Trieu-Le1211.github.io
+```
+
+and my website is:
+
+```text
+https://Trieu-Le1211.github.io
+```
+
+---
+
+## 15. Connect the local project to GitHub
+
+Git knows about the files on your computer, but it does not yet know where the GitHub repository is.
+
+Connect them with:
+
+```bash
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.git
+```
+
+Check:
+
+```bash
+git remote -v
+```
+
+You should see something like:
+
+```text
+origin  https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.git (fetch)
+origin  https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.git (push)
+```
+
+Then push the source files:
+
+```bash
+git push -u origin main
+```
+
+GitHub does not accept your normal GitHub account password for Git operations over HTTPS. Use a supported authentication method, such as GitHub authentication through your editor, a credential manager, or a personal access token.
+
+---
+
+## 16. Understand repository vs website
+
+This distinction confused me initially, but it is actually quite simple.
+
+Your **GitHub repository** contains things such as:
+
+```text
+index.qmd
+about.qmd
+_quarto.yml
+styles.css
+images/
+```
+
+It is the source of your website and contains the Git history.
+
+Your **GitHub Pages website** contains what visitors see in their browser.
+
+Conceptually:
+
+```text
+SOURCE
+
+.qmd
+.yml
+.css
+images
+   ↓
+ Quarto
+   ↓
+RENDERED WEBSITE
+
+.html
+CSS
+images
+```
+
+Then GitHub Pages makes the rendered website available on the internet.
+
+So:
+
+> **GitHub repository = project**
+
+> **GitHub Pages = public website**
+
+---
+
+## 17. Publish the website
+
+Once the website works locally, publish it with:
+
+```bash
+quarto publish gh-pages
+```
+
+Quarto creates or updates a Git branch called:
+
+```text
+gh-pages
+```
+
+Then open your GitHub repository and go to:
+
+```text
+Settings
+→ Pages
+```
+
+Choose:
+
+```text
+Source:
+Deploy from a branch
+
+Branch:
+gh-pages
+
+Folder:
+/ (root)
+```
+
+GitHub Pages will then publish the rendered website.
+
+For a user website, the address will normally be:
+
+```text
+https://YOUR-USERNAME.github.io
+```
+
+### My example
+
+Mine is:
+
+```text
+https://Trieu-Le1211.github.io
+```
+
+---
+
+## 18. The normal workflow after setup
+
+The long setup above only needs to be done once.
+
+After that, maintaining the website is much simpler.
+
+Imagine you create:
+
+```text
+blog/my-new-article.qmd
+```
+
+Write your article and then render:
+
+```bash
+quarto render
+```
+
+Check the website locally.
+
+When you are happy with it:
+
+```bash
+git add .
+```
+
+Commit the changes:
+
+```bash
+git commit -m "Add new article"
+```
+
+Push the source files to GitHub:
+
+```bash
+git push
+```
+
+Then publish the updated website:
+
+```bash
+quarto publish gh-pages
+```
+
+Your normal workflow therefore becomes:
+
+```text
+WRITE
+  ↓
+Edit .qmd files
+  ↓
+quarto render
+  ↓
+CHECK
+  ↓
+Preview locally
+  ↓
+SAVE VERSION
+  ↓
+git add .
+git commit
+git push
+  ↓
+PUBLISH
+  ↓
+quarto publish gh-pages
+  ↓
+PUBLIC WEBSITE
+```
+
+---
+
+## 19. The commands I use most often
+
+After everything is configured, I only use a small number of commands regularly.
+
+### Build
+
+```bash
+quarto render
+```
+
+### Preview
+
+```bash
+quarto preview
+```
+
+or:
+
+```bash
+python3 -m http.server 8000 --directory _site
+```
+
+### Check Git changes
+
+```bash
+git status
+```
+
+### Save changes
+
+```bash
+git add .
+git commit -m "Describe what I changed"
+```
+
+### Push to GitHub
+
+```bash
+git push
+```
+
+### Publish
+
+```bash
+quarto publish gh-pages
+```
+
+So although the initial setup may look complicated, the day-to-day workflow is actually quite small.
+
+---
+
+## 20. A few things I learned
+
+### Keep filenames simple
+
+Prefer:
+
+```text
+my-first-conference.qmd
+```
+
+over:
+
+```text
+My First Conference.qmd
+```
+
+I try to use:
+
+- lowercase letters
+- hyphens
+- no spaces
+- simple folder names
+
+This is particularly useful because web servers are often case-sensitive.
+
+For example:
+
+```text
+index.qmd
+```
+
+and:
+
+```text
+Index.qmd
+```
+
+may not behave as the same file after publication.
+
+### Separate content from appearance
+
+I keep:
+
+```text
+.qmd
+```
+
+for content and:
+
+```text
+styles.css
+```
+
+for appearance.
+
+This makes it much easier to change the design later without rewriting the content.
+
+### Render before publishing
+
+I normally run:
+
+```bash
+quarto render
+```
+
+and inspect the website locally before publishing.
+
+This catches many small problems, such as:
+
+- Broken image paths
+- Incorrect filenames
+- YAML errors
+- Layout problems
+- Missing pages
+
+### Commit regularly
+
+Git becomes much more useful when commits describe meaningful changes:
+
+```bash
+git commit -m "Add conference preparation article"
+```
+
+rather than:
+
+```bash
+git commit -m "update"
+```
+
+This makes the history of the website much easier to understand later.
+
+---
+
+## Key concepts
+
+| Concept | Meaning |
+|---|---|
+| **Quarto** | Converts `.qmd` content into webpages |
+| **VS Code** | Editor for writing and managing files |
+| **Git** | Tracks changes and versions |
+| **GitHub** | Stores the Git repository online |
+| **GitHub Pages** | Hosts the public website |
+| **`.qmd`** | Quarto source document |
+| **`.html`** | Rendered webpage |
+| **`_quarto.yml`** | Website-wide configuration |
+| **`styles.css`** | Custom appearance |
+| **`_site/`** | Rendered website |
+| **`main`** | Branch containing the source project |
+| **`gh-pages`** | Branch containing the published website |
+
+---
+
+## Putting everything together
+
+The whole process can be summarised as:
+
+```text
+          WRITE
+            │
+            ▼
+        .qmd files
+            │
+            ▼
+          QUARTO
+            │
+            ▼
+      Rendered website
+            │
+            ▼
+           GIT
+       Track changes
+            │
+            ▼
+          GITHUB
+      Store the project
+            │
+            ▼
+      GITHUB PAGES
+            │
+            ▼
+       PUBLIC WEBSITE
+```
+
+You do not need to master Quarto, Git, GitHub, Markdown, CSS, and web development before building your first website.
+
+I certainly did not.
+
+For me, building the website itself became part of the learning process. I started with a few `.qmd` files and gradually learned how Quarto, Git, GitHub, Markdown, CSS, and GitHub Pages fit together.
+
+The result is not only a personal website. It is also a useful way to practise **reproducible documentation, version control, scientific communication, and writing**.
+
+And once everything is set up, publishing something new can be as simple as:
+
+> **Write → Render → Commit → Push → Publish**
+
+[← Back to Bioinformatics for "Dum me"](index.qmd)

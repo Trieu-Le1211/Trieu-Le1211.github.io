@@ -17,6 +17,8 @@ website:
         text: Bioinformatics for "Dumb me"
       - href: thoughts/index.qmd
         text: Thoughts
+      - href: contact.qmd
+        text: My Contact
 
 
 format:

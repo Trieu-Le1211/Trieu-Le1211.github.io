@@ -10,6 +10,7 @@ categories:
 author: "Trieu Le"
 toc: false
 ---
+[← Back to Thoughts](index.qmd)
 
 I recently returned from a conference in Berlin, Germany. For me, it was a very successful conference, and I achieved the goals I had set for myself. But after observing and talking with many colleagues, I also came away with some interesting thoughts about modern scientific research.
 
@@ -72,3 +73,5 @@ Perhaps having a good idea is only part of the challenge. Another part is commun
 *P.S. This reflection is entirely about colleagues who are more senior and experienced than I am—it is not about me. These are simply my personal observations and interpretations from the conference.*
 
 **Have you noticed anything similar in your own field?**
+
+[← Back to Thoughts](index.qmd)
