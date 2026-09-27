@@ -83,6 +83,8 @@ For illustration, suppose:
 
 *Note: These percentages are made-up data used only to illustrate Bayesian inference.*
 
+![Farmers and Librarians that fit the appearance](images/farmers_vs_librarians.png){fig-align="center" width="90%"}
+
 
 ## 4. The boring formula of probability
 
