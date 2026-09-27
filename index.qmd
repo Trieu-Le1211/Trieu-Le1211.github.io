@@ -4,11 +4,8 @@ page-layout: full
 toc: false
 ---
 
-## · Microbial Genomics · Plasmids and mobile genetic elements · Infectious Diseases
-
 I am a researcher interested in microbial genomics, 
 antimicrobial resistance, and bacterial evolution.
-
 
 ---
 

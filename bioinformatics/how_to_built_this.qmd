@@ -1,7 +1,7 @@
 ---
 title: "How to Build a Personal Website"
 subtitle: "A practical guide to building and publishing a free personal website with Quarto + GitHub Pages"
-date: "2026-09-27"
+date: "2026-09-25"
 author: "Trieu Le"
 image: images/build_website_thumbnail.png
 categories:
