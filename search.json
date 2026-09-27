@@ -1,59 +1,290 @@
 [
   {
-    "objectID": "bioinformatics/index.html",
-    "href": "bioinformatics/index.html",
-    "title": "Bioinformatics for ‘Dumb me’",
+    "objectID": "bioinformatics/how_to_built_this.html",
+    "href": "bioinformatics/how_to_built_this.html",
+    "title": "How to Build a Personal Website",
     "section": "",
-    "text": "I am learning bioinformatics from first principles.\nThis series is my attempt to understand not only how to use bioinformatics tools, but also the mathematics, algorithms, and biological assumptions behind them.\nI write these notes primarily to consolidate my own understanding. Hopefully, they may also be useful to others learning bioinformatics.\n\n\n\n\n\n\n\n\n\nMolecular Clocks\n\n\nUnderstanding probability, priors, likelihoods, and posteriors\n\n\n\nStatistics\n\nProbability\n\nBayesian\n\n\n\n\n\n\nSep 22, 2026\n\n\n\n\n\n\n\nBayesian Statistics\n\n\nUnderstanding probability, priors, likelihoods, and posteriors\n\n\n\nStatistics\n\nProbability\n\nBayesian\n\n\n\n\n\n\nSep 22, 2026\n\n\n\n\n\nNo matching items"
+    "text": "← Back to Bioinformatics for “Dum me”\nBuilding a personal website may sound complicated if you have never worked with web development before. Fortunately, you do not need to know much HTML, CSS, or JavaScript to get started.\nOne relatively simple approach is to use Quarto + GitHub + GitHub Pages.\nThis is also how I built this website.\nThe basic idea is:\nMore specifically:\nThis guide explains the whole process from the beginning, using my website as an example."
   },
   {
-    "objectID": "bioinformatics/Molecular clocks.html",
-    "href": "bioinformatics/Molecular clocks.html",
-    "title": "Molecular Clocks",
+    "objectID": "bioinformatics/how_to_built_this.html#what-do-you-need",
+    "href": "bioinformatics/how_to_built_this.html#what-do-you-need",
+    "title": "How to Build a Personal Website",
+    "section": "1. What do you need?",
+    "text": "1. What do you need?\nThere are five main components:\n\n\n\n\n\n\n\nTool\nPurpose\n\n\n\n\nQuarto\nConverts .qmd files into webpages\n\n\nVS Code\nA convenient editor for writing and managing the project\n\n\nGit\nTracks changes to your files\n\n\nGitHub\nStores your project online\n\n\nGitHub Pages\nHosts your public website\n\n\n\nYou do not need to understand all of them before starting.\nIn fact, building a website is a good way to learn how these tools work together.\n\nCheck Quarto\nOpen your terminal and run:\nquarto --version\n\n\nCheck Git\ngit --version\nIf both commands return version numbers, you are ready to continue."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#create-a-quarto-website",
+    "href": "bioinformatics/how_to_built_this.html#create-a-quarto-website",
+    "title": "How to Build a Personal Website",
+    "section": "2. Create a Quarto website",
+    "text": "2. Create a Quarto website\nChoose a name for your project.\nFor a GitHub Pages personal website, a useful convention is:\nYOUR-USERNAME.github.io\nCreate the project:\nquarto create project website YOUR-USERNAME.github.io\nThen enter the project:\ncd YOUR-USERNAME.github.io\n\nMy example\nMy GitHub username is:\nTrieu-Le1211\nSo my project is:\nquarto create project website Trieu-Le1211.github.io\nand the project directory is:\nTrieu-Le1211.github.io/"
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#understand-_quarto.yml",
+    "href": "bioinformatics/how_to_built_this.html#understand-_quarto.yml",
+    "title": "How to Build a Personal Website",
+    "section": "3. Understand _quarto.yml",
+    "text": "3. Understand _quarto.yml\nOne of the most important files in a Quarto website is:\n_quarto.yml\nThink of this as the configuration file for the whole website.\nIt can control:\n\nWebsite title\nNavigation bar\nTheme\nCSS\nPage structure\nSearch\nSocial links\nOther site-wide settings\n\nA simple example is:\nproject:\n  type: website\n\nwebsite:\n  title: \"Your Name\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - href: about.qmd\n        text: About\n      - href: publications.qmd\n        text: Publications\n      - href: blog/index.qmd\n        text: Blog\n\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\n    toc: true\n\nMy example\nMy website has sections for my academic background, publications, bioinformatics notes, and personal writing:\nproject:\n  type: website\n\nwebsite:\n  title: \"Trieu Le\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n      - href: about.qmd\n        text: About Me\n      - href: publications.qmd\n        text: Publications\n      - href: bioinformatics/index.qmd\n        text: Bioinformatics for Dummies\n      - href: thoughts/index.qmd\n        text: Thoughts\n\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\n    toc: true\nNotice that the navigation links point to .qmd files.\nQuarto will convert them into the appropriate webpage links when the website is rendered."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#organise-your-website",
+    "href": "bioinformatics/how_to_built_this.html#organise-your-website",
+    "title": "How to Build a Personal Website",
+    "section": "4. Organise your website",
+    "text": "4. Organise your website\nA small personal website might look like this:\nYOUR-USERNAME.github.io/\n│\n├── _quarto.yml\n├── index.qmd\n├── about.qmd\n├── publications.qmd\n├── styles.css\n│\n├── images/\n│\n└── blog/\n    ├── index.qmd\n    ├── article-1.qmd\n    └── article-2.qmd\nMy website has a similar structure:\nTrieu-Le1211.github.io/\n│\n├── _quarto.yml\n├── index.qmd\n├── about.qmd\n├── publications.qmd\n├── styles.css\n│\n├── images/\n│\n├── bioinformatics/\n│   ├── index.qmd\n│   └── bayesian-statistics.qmd\n│\n└── thoughts/\n    ├── index.qmd\n    ├── just-start-writing.qmd\n    └── science-through-the-lens-of-investing.qmd\nThe important idea is:\n\nOne .qmd file can become one webpage.\n\nFor example:\nabout.qmd\nbecomes:\nabout.html\nwhen Quarto renders the website."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#write-your-first-.qmd-page",
+    "href": "bioinformatics/how_to_built_this.html#write-your-first-.qmd-page",
+    "title": "How to Build a Personal Website",
+    "section": "5. Write your first .qmd page",
+    "text": "5. Write your first .qmd page\nQuarto documents use a combination of YAML and Markdown.\nFor example, create:\nabout.qmd\nand write:\n---\ntitle: \"About Me\"\ntoc: false\n---\n\n## Hello, I'm Your Name\n\nI am a researcher interested in **your research interests here**.\n\n## Research interests\n\n- Research area 1\n- Research area 2\n- Research area 3\n- Research area 4\nThe part between:\n---\n...\n---\nis the YAML metadata.\nFor example:\ntitle: \"About Me\"\ntoc: false\nThe rest is Markdown.\nSome basic Markdown syntax:\n# Main heading\n\n## Subheading\n\n### Smaller heading\n\n**bold**\n\n*italic*\n\n- Item 1\n- Item 2\n- Item 3\n\n[Link text](https://example.com)\nYou therefore do not need to write most of your website in HTML."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#create-a-blog",
+    "href": "bioinformatics/how_to_built_this.html#create-a-blog",
+    "title": "How to Build a Personal Website",
+    "section": "6. Create a blog",
+    "text": "6. Create a blog\nOne of the main reasons I wanted a personal website was to have somewhere to write.\nA useful way to organise a blog is to create a directory:\nblog/\nInside it:\nblog/\n├── index.qmd\n├── article-1.qmd\n├── article-2.qmd\n└── article-3.qmd\nEach article gets its own .qmd file.\nFor example:\nblog/my-first-article.qmd\nwith:\n---\ntitle: \"My First Article\"\nsubtitle: \"What this article is about\"\ndate: 2026-09-27\nauthor: \"Your Name\"\ncategories:\n  - Research\n  - Reflections\ntoc: false\n---\nThen write the article below the YAML header.\n\nMy example\nI have a section called:\nthoughts/\nwhere I write about research, my PhD, scientific writing, conferences, and other things I find interesting.\nFor example:\nthoughts/just-start-writing.qmd\nstarts with:\n---\ntitle: \"Just Start Writing\"\nsubtitle: \"You have a report or thesis to write—what are you waiting for?\"\ndate: 2026-09-26\ncategories:\n  - Research\n  - Writing\nauthor: \"Trieu Le\"\ntoc: false\n---\nThe rest of the file contains the article."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#automatically-list-your-articles",
+    "href": "bioinformatics/how_to_built_this.html#automatically-list-your-articles",
+    "title": "How to Build a Personal Website",
+    "section": "7. Automatically list your articles",
+    "text": "7. Automatically list your articles\nYou do not have to manually update your blog homepage every time you write something.\nQuarto can automatically find your articles and create a listing.\nFor example, blog/index.qmd can contain:\n---\ntitle: \"Blog\"\ndescription: \"My writing about research, science, and other things.\"\n\nlisting:\n  contents:\n    - \"*.qmd\"\n    - \"!index.qmd\"\n  sort: \"date desc\"\n  type: default\n  fields:\n    - title\n    - subtitle\n    - date\n    - categories\n\npage-layout: full\ntoc: false\n---\nNow imagine you have:\nblog/\n├── index.qmd\n├── article-a.qmd\n├── article-b.qmd\n└── article-c.qmd\nQuarto will automatically list:\narticle-a\narticle-b\narticle-c\non the Blog page.\nIf you add:\narticle-d.qmd\nyou do not need to manually add it to index.qmd.\nRender the website again and Quarto will find it.\n\nMy example\nI use this system for two sections:\nthoughts/\nand:\nbioinformatics/\nThis allows me to keep personal reflections and technical bioinformatics notes separate while using the same underlying system."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#add-images",
+    "href": "bioinformatics/how_to_built_this.html#add-images",
+    "title": "How to Build a Personal Website",
+    "section": "8. Add images",
+    "text": "8. Add images\nCreate an image directory:\nimages/\nFor example:\nimages/\n├── profile.jpg\n├── conference-timeline.png\n└── writing-science.jpg\nYou can insert an image into a .qmd document using:\n![Description of the image](images/example.png)\nYou can control its width and alignment:\n![Description of the image](images/example.png){fig-align=\"center\" width=\"70%\"}\n\nMy example\nIn one of my posts, I include a picture of a book using:\n![\"Writing Science\" by Joshua Schimel](images/writing_science.jpg){fig-align=\"center\" width=\"40%\"}\nQuarto places the image exactly where I put that line in the article.\n\n\nA small lesson I learned\nTry to use simple filenames:\nwriting-science.jpg\nconference-timeline.png\nmy-first-conference.jpg\nrather than:\nMy First Conference FINAL version 2.JPG\nLowercase filenames without spaces are easier to manage and reduce the risk of path problems when publishing online."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#customise-the-appearance-with-css",
+    "href": "bioinformatics/how_to_built_this.html#customise-the-appearance-with-css",
+    "title": "How to Build a Personal Website",
+    "section": "9. Customise the appearance with CSS",
+    "text": "9. Customise the appearance with CSS\nQuarto controls the content and structure of the website, while CSS can be used to change its appearance.\nCreate:\nstyles.css\nand tell Quarto to use it in _quarto.yml:\nformat:\n  html:\n    theme: cosmo\n    css: styles.css\nFor example:\nimg {\n  border-radius: 8px;\n}\nor:\n.photo-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 15px;\n}\n\n.photo-grid img {\n  width: 100%;\n  height: auto;\n}\nThis can be used to create a three-column photo gallery.\nYou do not need much CSS when you first build the website. Start with one of Quarto’s themes and customise things gradually."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#render-the-website",
+    "href": "bioinformatics/how_to_built_this.html#render-the-website",
+    "title": "How to Build a Personal Website",
+    "section": "10. Render the website",
+    "text": "10. Render the website\nOnce you have written your pages, run:\nquarto render\nQuarto reads the source files and generates the website.\nThe rendered website is normally placed in:\n_site/\nFor example:\n_site/\n├── index.html\n├── about.html\n├── publications.html\n├── blog/\n└── images/\nThe relationship is:\nindex.qmd  → index.html\nabout.qmd  → about.html\nSo remember:\n\nEdit the .qmd files, not the generated .html files."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#preview-the-website-locally",
+    "href": "bioinformatics/how_to_built_this.html#preview-the-website-locally",
+    "title": "How to Build a Personal Website",
+    "section": "11. Preview the website locally",
+    "text": "11. Preview the website locally\nBefore publishing the website, check how it looks on your own computer.\nQuarto normally provides:\nquarto preview\nThis renders the website and starts a local preview.\nAlternatively, after running:\nquarto render\nyou can serve _site/ using Python:\npython3 -m http.server 8000 --directory _site\nThen open:\nhttp://localhost:8000\nin your browser.\nA simple development workflow is therefore:\nEdit\n  ↓\nSave\n  ↓\nquarto render\n  ↓\nCheck locally\n  ↓\nEdit again\nRepeat until you are happy with the result."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#start-tracking-the-project-with-git",
+    "href": "bioinformatics/how_to_built_this.html#start-tracking-the-project-with-git",
+    "title": "How to Build a Personal Website",
+    "section": "12. Start tracking the project with Git",
+    "text": "12. Start tracking the project with Git\nOnce the website is working locally, initialise Git.\nGo to your project:\ncd path/to/YOUR-USERNAME.github.io\nThen:\ngit init\nRename the main branch:\ngit branch -M main\nAdd your files:\ngit add .\nCreate your first commit:\ngit commit -m \"Initial website\"\nA commit is essentially a saved checkpoint in the history of your project."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#configure-your-git-identity",
+    "href": "bioinformatics/how_to_built_this.html#configure-your-git-identity",
+    "title": "How to Build a Personal Website",
+    "section": "13. Configure your Git identity",
+    "text": "13. Configure your Git identity\nThe first time you use Git, you may see:\nAuthor identity unknown\nIf so, configure your name:\ngit config --global user.name \"Your Name\"\nand email:\ngit config --global user.email \"your-email@example.com\"\nCheck them:\ngit config --global user.name\ngit config --global user.email\nThen try committing again."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#create-a-github-repository",
+    "href": "bioinformatics/how_to_built_this.html#create-a-github-repository",
+    "title": "How to Build a Personal Website",
+    "section": "14. Create a GitHub repository",
+    "text": "14. Create a GitHub repository\nNext, create a GitHub repository.\nFor a personal GitHub Pages user site, name the repository:\nYOUR-USERNAME.github.io\nFor example, if your GitHub username is:\nalice\nthe repository would be:\nalice.github.io\nand the website can be published at:\nhttps://alice.github.io\n\nMy example\nMy username is:\nTrieu-Le1211\nso my repository is:\nTrieu-Le1211.github.io\nand my website is:\nhttps://Trieu-Le1211.github.io"
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#connect-the-local-project-to-github",
+    "href": "bioinformatics/how_to_built_this.html#connect-the-local-project-to-github",
+    "title": "How to Build a Personal Website",
+    "section": "15. Connect the local project to GitHub",
+    "text": "15. Connect the local project to GitHub\nGit knows about the files on your computer, but it does not yet know where the GitHub repository is.\nConnect them with:\ngit remote add origin https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.git\nCheck:\ngit remote -v\nYou should see something like:\norigin  https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.git (fetch)\norigin  https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.git (push)\nThen push the source files:\ngit push -u origin main\nGitHub does not accept your normal GitHub account password for Git operations over HTTPS. Use a supported authentication method, such as GitHub authentication through your editor, a credential manager, or a personal access token."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#understand-repository-vs-website",
+    "href": "bioinformatics/how_to_built_this.html#understand-repository-vs-website",
+    "title": "How to Build a Personal Website",
+    "section": "16. Understand repository vs website",
+    "text": "16. Understand repository vs website\nThis distinction confused me initially, but it is actually quite simple.\nYour GitHub repository contains things such as:\nindex.qmd\nabout.qmd\n_quarto.yml\nstyles.css\nimages/\nIt is the source of your website and contains the Git history.\nYour GitHub Pages website contains what visitors see in their browser.\nConceptually:\nSOURCE\n\n.qmd\n.yml\n.css\nimages\n   ↓\n Quarto\n   ↓\nRENDERED WEBSITE\n\n.html\nCSS\nimages\nThen GitHub Pages makes the rendered website available on the internet.\nSo:\n\nGitHub repository = project\n\n\nGitHub Pages = public website"
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#publish-the-website",
+    "href": "bioinformatics/how_to_built_this.html#publish-the-website",
+    "title": "How to Build a Personal Website",
+    "section": "17. Publish the website",
+    "text": "17. Publish the website\nOnce the website works locally, publish it with:\nquarto publish gh-pages\nQuarto creates or updates a Git branch called:\ngh-pages\nThen open your GitHub repository and go to:\nSettings\n→ Pages\nChoose:\nSource:\nDeploy from a branch\n\nBranch:\ngh-pages\n\nFolder:\n/ (root)\nGitHub Pages will then publish the rendered website.\nFor a user website, the address will normally be:\nhttps://YOUR-USERNAME.github.io\n\nMy example\nMine is:\nhttps://Trieu-Le1211.github.io"
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#the-normal-workflow-after-setup",
+    "href": "bioinformatics/how_to_built_this.html#the-normal-workflow-after-setup",
+    "title": "How to Build a Personal Website",
+    "section": "18. The normal workflow after setup",
+    "text": "18. The normal workflow after setup\nThe long setup above only needs to be done once.\nAfter that, maintaining the website is much simpler.\nImagine you create:\nblog/my-new-article.qmd\nWrite your article and then render:\nquarto render\nCheck the website locally.\nWhen you are happy with it:\ngit add .\nCommit the changes:\ngit commit -m \"Add new article\"\nPush the source files to GitHub:\ngit push\nThen publish the updated website:\nquarto publish gh-pages\nYour normal workflow therefore becomes:\nWRITE\n  ↓\nEdit .qmd files\n  ↓\nquarto render\n  ↓\nCHECK\n  ↓\nPreview locally\n  ↓\nSAVE VERSION\n  ↓\ngit add .\ngit commit\ngit push\n  ↓\nPUBLISH\n  ↓\nquarto publish gh-pages\n  ↓\nPUBLIC WEBSITE"
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#the-commands-i-use-most-often",
+    "href": "bioinformatics/how_to_built_this.html#the-commands-i-use-most-often",
+    "title": "How to Build a Personal Website",
+    "section": "19. The commands I use most often",
+    "text": "19. The commands I use most often\nAfter everything is configured, I only use a small number of commands regularly.\n\nBuild\nquarto render\n\n\nPreview\nquarto preview\nor:\npython3 -m http.server 8000 --directory _site\n\n\nCheck Git changes\ngit status\n\n\nSave changes\ngit add .\ngit commit -m \"Describe what I changed\"\n\n\nPush to GitHub\ngit push\n\n\nPublish\nquarto publish gh-pages\nSo although the initial setup may look complicated, the day-to-day workflow is actually quite small."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#a-few-things-i-learned",
+    "href": "bioinformatics/how_to_built_this.html#a-few-things-i-learned",
+    "title": "How to Build a Personal Website",
+    "section": "20. A few things I learned",
+    "text": "20. A few things I learned\n\nKeep filenames simple\nPrefer:\nmy-first-conference.qmd\nover:\nMy First Conference.qmd\nI try to use:\n\nlowercase letters\nhyphens\nno spaces\nsimple folder names\n\nThis is particularly useful because web servers are often case-sensitive.\nFor example:\nindex.qmd\nand:\nIndex.qmd\nmay not behave as the same file after publication.\n\n\nSeparate content from appearance\nI keep:\n.qmd\nfor content and:\nstyles.css\nfor appearance.\nThis makes it much easier to change the design later without rewriting the content.\n\n\nRender before publishing\nI normally run:\nquarto render\nand inspect the website locally before publishing.\nThis catches many small problems, such as:\n\nBroken image paths\nIncorrect filenames\nYAML errors\nLayout problems\nMissing pages\n\n\n\nCommit regularly\nGit becomes much more useful when commits describe meaningful changes:\ngit commit -m \"Add conference preparation article\"\nrather than:\ngit commit -m \"update\"\nThis makes the history of the website much easier to understand later."
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#key-concepts",
+    "href": "bioinformatics/how_to_built_this.html#key-concepts",
+    "title": "How to Build a Personal Website",
+    "section": "Key concepts",
+    "text": "Key concepts\n\n\n\nConcept\nMeaning\n\n\n\n\nQuarto\nConverts .qmd content into webpages\n\n\nVS Code\nEditor for writing and managing files\n\n\nGit\nTracks changes and versions\n\n\nGitHub\nStores the Git repository online\n\n\nGitHub Pages\nHosts the public website\n\n\n.qmd\nQuarto source document\n\n\n.html\nRendered webpage\n\n\n_quarto.yml\nWebsite-wide configuration\n\n\nstyles.css\nCustom appearance\n\n\n_site/\nRendered website\n\n\nmain\nBranch containing the source project\n\n\ngh-pages\nBranch containing the published website"
+  },
+  {
+    "objectID": "bioinformatics/how_to_built_this.html#putting-everything-together",
+    "href": "bioinformatics/how_to_built_this.html#putting-everything-together",
+    "title": "How to Build a Personal Website",
+    "section": "Putting everything together",
+    "text": "Putting everything together\nThe whole process can be summarised as:\n          WRITE\n            │\n            ▼\n        .qmd files\n            │\n            ▼\n          QUARTO\n            │\n            ▼\n      Rendered website\n            │\n            ▼\n           GIT\n       Track changes\n            │\n            ▼\n          GITHUB\n      Store the project\n            │\n            ▼\n      GITHUB PAGES\n            │\n            ▼\n       PUBLIC WEBSITE\nYou do not need to master Quarto, Git, GitHub, Markdown, CSS, and web development before building your first website.\nI certainly did not.\nFor me, building the website itself became part of the learning process. I started with a few .qmd files and gradually learned how Quarto, Git, GitHub, Markdown, CSS, and GitHub Pages fit together.\nThe result is not only a personal website. It is also a useful way to practise reproducible documentation, version control, scientific communication, and writing.\nAnd once everything is set up, publishing something new can be as simple as:\n\nWrite → Render → Commit → Push → Publish\n\n← Back to Bioinformatics for “Dum me”"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html",
+    "href": "bioinformatics/bayesian-statistics.html",
+    "title": "Bayesian Statistics",
     "section": "",
-    "text": "← Back to Bioinformatics for Dummies"
+    "text": "← Back to Bioinformatics for “Dum me”"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#why-am-i-learning-this",
+    "href": "bioinformatics/bayesian-statistics.html#why-am-i-learning-this",
+    "title": "Bayesian Statistics",
+    "section": "Why am I learning this?",
+    "text": "Why am I learning this?\nBayesian statistics appears frequently in bioinformatics, from phylogenetic inference to genomic epidemiology.\nBefore using these methods, I want to understand what Bayesian inference actually means."
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#the-basic-idea",
+    "href": "bioinformatics/bayesian-statistics.html#the-basic-idea",
+    "title": "Bayesian Statistics",
+    "section": "1. The basic idea",
+    "text": "1. The basic idea\n…"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#bayes-theorem",
+    "href": "bioinformatics/bayesian-statistics.html#bayes-theorem",
+    "title": "Bayesian Statistics",
+    "section": "2. Bayes’ theorem",
+    "text": "2. Bayes’ theorem\n…"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#prior-probability",
+    "href": "bioinformatics/bayesian-statistics.html#prior-probability",
+    "title": "Bayesian Statistics",
+    "section": "3. Prior probability",
+    "text": "3. Prior probability\n…"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#likelihood",
+    "href": "bioinformatics/bayesian-statistics.html#likelihood",
+    "title": "Bayesian Statistics",
+    "section": "4. Likelihood",
+    "text": "4. Likelihood\n…"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#posterior-probability",
+    "href": "bioinformatics/bayesian-statistics.html#posterior-probability",
+    "title": "Bayesian Statistics",
+    "section": "5. Posterior probability",
+    "text": "5. Posterior probability\n…"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#a-simple-example",
+    "href": "bioinformatics/bayesian-statistics.html#a-simple-example",
+    "title": "Bayesian Statistics",
+    "section": "A simple example",
+    "text": "A simple example\n…"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#applications-in-bioinformatics",
+    "href": "bioinformatics/bayesian-statistics.html#applications-in-bioinformatics",
+    "title": "Bayesian Statistics",
+    "section": "Applications in bioinformatics",
+    "text": "Applications in bioinformatics\n…"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#what-i-learned",
+    "href": "bioinformatics/bayesian-statistics.html#what-i-learned",
+    "title": "Bayesian Statistics",
+    "section": "What I learned",
+    "text": "What I learned\n…"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#references",
+    "href": "bioinformatics/bayesian-statistics.html#references",
+    "title": "Bayesian Statistics",
+    "section": "References",
+    "text": "References\n…\n← Back to Bioinformatics for “Dum me”"
+  },
+  {
+    "objectID": "thoughts/Ask-more-questions-at-conferences.html",
+    "href": "thoughts/Ask-more-questions-at-conferences.html",
+    "title": "You should ask more questions at conferences",
+    "section": "",
+    "text": "← Back to Thoughts\nIf you ever feel like you have a hard time following talks in meetings or conferences, want to contribute more to discussions, but feel like you don’t have any “good” or “smart” questions to ask, you are not alone. Sometimes you may even feel lost in the middle of a talk despite trying your best to focus. I have been there many times, and I have always wondered how to improve that situation.\nAfter years in academia, including my Master’s and PhD, I have observed senior scientists being very comfortable during talks. They often ask great and highly relevant questions, even when the topic is not exactly within their expertise. I wanted to be able to do that too. I asked for advice from a few people, but most of the answers felt more like natural responses or behaviours: “just keep trying,” “read more,” “ask any questions if you don’t understand.” Those are fairly good suggestions, but I wanted something more practical. I wanted to ask relevant questions and feel like part of the discussion.\nPeople often talk about presentation skills, but not much about listening skills in science. I think both are equally important. Over time, I developed my own simple framework of questions (or tips) that helps me engage with talks more comfortably and understand them better without trying too hard to catch every detail on every slide.\n\n🎯 Keep the title or main topic in mind\nI cannot tell you how important this is. I also cannot tell you how many times I struggled to follow a talk simply because I missed the first slide. Once you know the main topic, you can allow yourself to skip some minor details, especially if they are distant from your expertise.\n\n\n🧠 Be more active while listening\nIt can massively improve your understanding of the talk. Keep asking yourself these questions: 1. What is the question? 2. Why is it important? 3. How did they answer it? 4. Do I believe the answer? 5. What can be done next?\n\n\n🔬 Things you could ask if the topic is close to your expertise\nQuestions about methodology, models, statistics, or experimental design are always valuable. These are often the foundation of the work and should be discussed thoroughly. They should also be presented clearly by the speaker. If something is unclear, chances are other people are wondering the same thing. And of course, specific questions about the results are usually the best questions. They show that you have been actively listening and thinking critically about the science.\n\n\n🚀 Other questions you could ask\n\n“Then what?” questions: What are the applications? If successful, what impact could this work have on the field or the wider world?\n⚖️ Counter questions: Why did they choose this method? What are the advantages and disadvantages? How does it compare with alternative approaches that may be cheaper, less invasive, faster, or more robust?\n⚠️ Limitations: What are the limitations of the study? Are there concerns about sample size, dataset selection, generalisability, or scalability?\n\n\n\n💬 Universal questions\nThese work for almost any talk, but I personally do not recommend them. They should only be used when there are no other questions and you want to help the speaker further explain their work. - What surprised you most during this project? - What was the biggest challenge you faced? - What result would have changed your conclusion? - What question are you most excited to answer next?\n\n\n🏆 After the talk\nJust go through these questions. If you feel like you can at least partially answer them yourself, congratulations—you have understood the talk and learned something new. These questions may seem simple, but they get straight to the heart of the science; not every speaker can answer them clearly. Asking them creates opportunities for useful discussion and clarification. And remember, the goal is NOT to understand every slide. The goal is to understand the key message and evaluate the work.\n\n\n📢 One final thought\nBased on my own experience and many people I know, I feel that some Vietnamese people (and perhaps Asians in general) are often a bit more hesitant to speak up in public. It could be language barriers, cultural factors, fear of being judged, or a combination of many things. I used to be like that too. So, I would really encourage fellow early-career researchers and scientists to SPEAK UP. Your question does not have to be perfect. It only needs to be genuine. This is by no means a solid protocol, and it is probably quite personal. But it has helped me a lot. If you read this far, I hope it might be useful to you as well in your next meeting or conference.\n\n\n\nListening in Science\n\n\n← Back to Thoughts"
   },
   {
     "objectID": "thoughts/science-through-the-lens-of-investing.html",
     "href": "thoughts/science-through-the-lens-of-investing.html",
     "title": "Science Through the Lens of Investing",
     "section": "",
-    "text": "I recently returned from a conference in Berlin, Germany. For me, it was a very successful conference, and I achieved the goals I had set for myself. But after observing and talking with many colleagues, I also came away with some interesting thoughts about modern scientific research.\nThey reminded me, surprisingly, of investing.\nI noticed that there were a few young researchers who were exceptionally good—arguably well ahead of their peers. But perhaps because they had gone so far, so quickly, some of their ideas were very new and difficult for both the panel and much of the audience to immediately grasp.\nJudging from the reactions of the audience and some of the more senior researchers, their presentations did not seem to receive as much recognition as I might have expected.\nMeanwhile, other colleagues—also very capable researchers—presented work that was somewhat more familiar. Some aspects might even have been slightly outdated, but the ideas were easier to understand and closer to what the audience already knew.\nTheir work received considerable recognition, and they were among those who really stood out at the conference."
+    "text": "← Back to Thoughts\nI recently returned from a conference in Berlin, Germany. For me, it was a very successful conference, and I achieved the goals I had set for myself. But after observing and talking with many colleagues, I also came away with some interesting thoughts about modern scientific research.\nThey reminded me, surprisingly, of investing.\nI noticed that there were a few young researchers who were exceptionally good—arguably well ahead of their peers. But perhaps because they had gone so far, so quickly, some of their ideas were very new and difficult for both the panel and much of the audience to immediately grasp.\nJudging from the reactions of the audience and some of the more senior researchers, their presentations did not seem to receive as much recognition as I might have expected.\nMeanwhile, other colleagues—also very capable researchers—presented work that was somewhat more familiar. Some aspects might even have been slightly outdated, but the ideas were easier to understand and closer to what the audience already knew.\nTheir work received considerable recognition, and they were among those who really stood out at the conference."
   },
   {
     "objectID": "thoughts/science-through-the-lens-of-investing.html#science-may-work-in-a-similar-way",
     "href": "thoughts/science-through-the-lens-of-investing.html#science-may-work-in-a-similar-way",
     "title": "Science Through the Lens of Investing",
     "section": "Science may work in a similar way",
-    "text": "Science may work in a similar way\nI think something similar can happen in science.\nThe researchers receiving recognition today are undoubtedly talented. But there are also excellent researchers working on ideas that are newer, less familiar, or simply different from the mainstream.\nTheir work may eventually receive the recognition it deserves, but that can require time:\n\ntime to accumulate evidence,\ntime for ideas to mature,\nand time for the wider field to catch up with a new way of thinking.\n\nIn investing, timing matters.\nIn research, communication and staying connected with your field matter too.\nPerhaps having a good idea is only part of the challenge. Another part is communicating that idea in a way that allows other people to understand why it matters.\n\nP.S. This reflection is entirely about colleagues who are more senior and experienced than I am—it is not about me. These are simply my personal observations and interpretations from the conference.\nHave you noticed anything similar in your own field?"
+    "text": "Science may work in a similar way\nI think something similar can happen in science.\nThe researchers receiving recognition today are undoubtedly talented. But there are also excellent researchers working on ideas that are newer, less familiar, or simply different from the mainstream.\nTheir work may eventually receive the recognition it deserves, but that can require time:\n\ntime to accumulate evidence,\ntime for ideas to mature,\nand time for the wider field to catch up with a new way of thinking.\n\nIn investing, timing matters.\nIn research, communication and staying connected with your field matter too.\nPerhaps having a good idea is only part of the challenge. Another part is communicating that idea in a way that allows other people to understand why it matters.\n\nP.S. This reflection is entirely about colleagues who are more senior and experienced than I am—it is not about me. These are simply my personal observations and interpretations from the conference.\nHave you noticed anything similar in your own field?\n← Back to Thoughts"
   },
   {
     "objectID": "trieu-le.html",
     "href": "trieu-le.html",
     "title": "Trieu Le",
     "section": "",
-    "text": "I’m Trieu.\nLê Phạm Tiến Triều\nResearch has taken me through different laboratories, universities, teams, conferences, and countries. This page is a collection of some of the people, places, and moments that have been part of that journey."
+    "text": "I’m Trieu.\nLê Phạm Tiến Triều\nPhD candidate - Researcher - Investor and Trader - Amateur Writer - Wannabe Pianist - Soon-to-be Polyglot\nResearch has taken me through different laboratories, universities, teams, conferences, and countries. This page is a collection of (some of) the people, places, and moments that have been part of that journey."
   },
   {
     "objectID": "trieu-le.html#oucru-vietnam",
     "href": "trieu-le.html#oucru-vietnam",
     "title": "Trieu Le",
     "section": "🇻🇳 OUCRU Vietnam",
-    "text": "🇻🇳 OUCRU Vietnam\nMy early research journey in infectious diseases and genomics at the Oxford University Clinical Research Unit (OUCRU) in Vietnam."
+    "text": "🇻🇳 OUCRU Vietnam\nMy early research journey in infectious diseases and genomics at the Tuberculosis Research Team, Oxford University Clinical Research Unit (OUCRU) in Vietnam."
   },
   {
     "objectID": "trieu-le.html#josie-bryants-team",
     "href": "trieu-le.html#josie-bryants-team",
     "title": "Trieu Le",
     "section": "🔬 Josie Bryant’s Team",
-    "text": "🔬 Josie Bryant’s Team\nScience is not only about experiments and data, but also about the people we work with and learn from."
+    "text": "🔬 Josie Bryant’s Team\nScience is not only about experiments and data, but also about the people we work with and learn from.\nA year of learning genomics, bioinformatics, and computational biology, and an important transition in my journey towards genomic research."
   },
   {
     "objectID": "trieu-le.html#university-of-cambridge",
     "href": "trieu-le.html#university-of-cambridge",
     "title": "Trieu Le",
     "section": "🎓 University of Cambridge",
-    "text": "🎓 University of Cambridge\nA year of learning genomics, bioinformatics, and computational biology, and an important transition in my journey towards genomic research."
+    "text": "🎓 University of Cambridge\nOne of my best academic experiences - networking with brilliant people, learning from inspiring mentors, and exploring the world of genomics and bioinformatics."
   },
   {
     "objectID": "trieu-le.html#wellcome-sanger-institute",
@@ -161,6 +392,13 @@
     "text": "Peer Review\nReviewer for:\n\nNature Communications\nMicrobial Genomics"
   },
   {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "My contact",
+    "section": "",
+    "text": "I’d be happy to hear from you.\nIf you have questions about my research, would like to discuss potential collaborations, or have comments or feedback about this website, feel free to get in touch.\n\nContact\nEmail: pttl20@bath.ac.uk\nLinkedIn: Trieu Le\nResearchGate: Trieu Le\nORCID: 0009-0000-2555-0496"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Trieu Le",
@@ -182,81 +420,95 @@
     "text": "Research Interests\n\n💻 Bioinformatics\n🧬 Microbial genomics\n🧫 Bacterial population genomics\n🔗 Plasmids and mobile genetic elements\n💊 Antimicrobial resistance\n🦠 Infectious diseases"
   },
   {
-    "objectID": "index.html#bioinformatics-for-dummies",
-    "href": "index.html#bioinformatics-for-dummies",
+    "objectID": "index.html#bioinformatics-for-dum-me",
+    "href": "index.html#bioinformatics-for-dum-me",
     "title": "Trieu Le",
-    "section": "Bioinformatics for Dummies",
-    "text": "Bioinformatics for Dummies\nLearning bioinformatics from first principles.\nI use this space to document what I learn about the mathematics, algorithms, and biological concepts behind modern genomic analysis.\nTopics include:\nProbability · Bayesian statistics · Sequencing · Alignment · Phylogenetics · Pangenomics · Population structure · GWAS · Metagenomics · Machine learning\nExplore Bioinformatics for “Dum me” →"
-  },
-  {
-    "objectID": "index.html#thoughts",
-    "href": "index.html#thoughts",
-    "title": "Trieu Le",
-    "section": "Thoughts",
-    "text": "Thoughts\nReflections on research, medicine, science, and my PhD journey.\nRead my thoughts →"
+    "section": "Bioinformatics for “Dum me”",
+    "text": "Bioinformatics for “Dum me”\nLearning bioinformatics from first principles.\nI use this space to document what I learn about the mathematics, algorithms, and biological concepts behind modern genomic analysis.\nTopics include:\nProbability · Bayesian statistics · Sequencing · Alignment · Phylogenetics · Pangenomics · Population structure · Metagenomics · Machine learning\nExplore Bioinformatics for “Dum me” →"
   },
   {
     "objectID": "index.html#publications",
     "href": "index.html#publications",
     "title": "Trieu Le",
     "section": "Publications",
-    "text": "Publications\nSelected publications and research outputs.\nView publications →"
+    "text": "Publications\nMy contribution to publications and research outputs.\nView publications →"
+  },
+  {
+    "objectID": "index.html#thoughts",
+    "href": "index.html#thoughts",
+    "title": "Trieu Le",
+    "section": "Thoughts",
+    "text": "Thoughts\nReflections on research, science, and my PhD journey.\nRead my thoughts →"
+  },
+  {
+    "objectID": "index.html#my-journey",
+    "href": "index.html#my-journey",
+    "title": "Trieu Le",
+    "section": "My Journey",
+    "text": "My Journey\nPeople, places, and moments that have been part of my journey.\nSee photos →"
+  },
+  {
+    "objectID": "index.html#my-contact",
+    "href": "index.html#my-contact",
+    "title": "Trieu Le",
+    "section": "My contact",
+    "text": "My contact\nContact me →"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "I am a researcher with interests in microbial genomics, antimicrobial resistance and bacterial evolution.\nMy research interests include:\n\nMicrobial genomics\nPlasmid evolution\nAntimicrobial resistance"
+    "text": "I am a researcher with interests in microbial genomics, antimicrobial resistance and bacterial evolution.\nMy research interests include:\n\nMicrobial genomics\nPlasmid evolution\nAntimicrobial resistance\nApplication of genomics and bioinformatics to clinical challenges"
   },
   {
     "objectID": "about.html#trieu-le",
     "href": "about.html#trieu-le",
     "title": "About Me",
     "section": "",
-    "text": "I am a researcher with interests in microbial genomics, antimicrobial resistance and bacterial evolution.\nMy research interests include:\n\nMicrobial genomics\nPlasmid evolution\nAntimicrobial resistance"
+    "text": "I am a researcher with interests in microbial genomics, antimicrobial resistance and bacterial evolution.\nMy research interests include:\n\nMicrobial genomics\nPlasmid evolution\nAntimicrobial resistance\nApplication of genomics and bioinformatics to clinical challenges"
   },
   {
-    "objectID": "about.html#profile",
-    "href": "about.html#profile",
+    "objectID": "about.html#profileßß",
+    "href": "about.html#profileßß",
     "title": "About Me",
-    "section": "Profile",
-    "text": "Profile\nI am a researcher with research interests in infectious diseases, antimicrobial resistance, microbial genomics, bacterial population genomics, and mobile genetic elements.\nMy current research focuses on using genomic and computational approaches to understand bacterial evolution and the dissemination of antimicrobial resistance."
+    "section": "Profileßß",
+    "text": "Profileßß\nI am a researcher with research interests in infectious diseases, antimicrobial resistance, microbial genomics, bacterial population genomics, and mobile genetic elements.\nMy current research focuses on using genomic and computational approaches to understand mobile genetic elements and bacterial evolution."
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
     "title": "About Me",
     "section": "Education",
-    "text": "Education\n\nPhD in Life Sciences\nUniversity of Bath, United Kingdom\n2024–2028\nResearch focus: microbial genomics, bacterial evolution, antimicrobial resistance, pangenomics, and mobile genetic elements.\n\n\n\nMPhil in Genomic Medicine\nUniversity of Cambridge / Wellcome Sanger Institute, United Kingdom\n2023–2024\nResearch and training in genomics, bioinformatics, and microbial genomics.\n\n\n\nBSc in Biology and Biotechnology\nUniversity of Science, Vietnam National University Ho Chi Minh City, Vietnam\n2014–2018"
+    "text": "Education\n\nPhD in Life Sciences\nUniversity of Bath, United Kingdom\n2024–2028\nResearch focus: microbial genomics, bacterial evolution, pangenomics, and mobile genetic elements.\nSupervised by:\nProfessor Zamin Iqbal link\nDr. Lauren Cowley link\n\n\n\nMPhil in Genomic Medicine\nUniversity of Cambridge / Wellcome Sanger Institute, United Kingdom\n2023–2024\nResearch focus: microbial genomics and mobile genetic elements in Mycobacteria abscessus.\nSupervised by:\nDr. Josie Bryant link\nProfessor Timothy M. Walker link\n\n\n\nBSc in Biology and Biotechnology\nUniversity of Science, Vietnam National University Ho Chi Minh City, Vietnam\n2014–2018\nResearch focus: Biotechnology, Stem cell biology and liver disesase.\nSupervised by: Dr. Truong Hai Nhung link"
   },
   {
     "objectID": "about.html#research-experience",
     "href": "about.html#research-experience",
     "title": "About Me",
     "section": "Research Experience",
-    "text": "Research Experience\n\nPhD Researcher\nUniversity of Bath\n2024–Present\nResearch in bacterial population genomics, antimicrobial resistance, plasmids, mobile genetic elements, and bacterial evolution.\nCurrent methodological interests include:\n\nLong-read bacterial genomics\nPangenomics\nPlasmid genomics\nPhylogenetics\nPopulation genomics\nAntimicrobial resistance\nMobile genetic elements\nBioinformatics algorithm development and application\n\n\n\n\nMPhil Student\nWellcome Sanger Institute / University of Cambridge\n2023–2024\nTraining and research in genomic science and bioinformatics, with a focus on microbial genomics.\n\n\n\nResearch Assistant — Tuberculosis Research Group\nOxford University Clinical Research Unit, Vietnam\n2018–2023\nResearch focused on Mycobacterium tuberculosis, tuberculosis diagnostics, antimicrobial resistance, and genomic approaches to infectious diseases.\nResearch activities included:\n\nTuberculosis microbiology\nDrug-resistance research\nMolecular and genomic diagnostics\nClinical research\nBacterial genomics\nResearch data analysis"
+    "text": "Research Experience\n\nPhD Researcher\nUniversity of Bath\n2024–Present\nResearch in bacterial population genomics, antimicrobial resistance, plasmids, mobile genetic elements, and bacterial evolution.\nCurrent methodological interests include:\n\nLong-read bacterial genomics\nPangenomics\nPlasmid genomics\nPhylogenetics\nPopulation genomics\nMobile genetic elements\nBioinformatics algorithm development and application\n\n\n\n\nMPhil Student\nWellcome Sanger Institute / University of Cambridge\n2023–2024\nTraining and research in genomic science and bioinformatics, with a focus on microbial genomics.\n\n\n\nResearch Assistant — Tuberculosis Research Group\nOxford University Clinical Research Unit, Vietnam\n2018–2023\nSupervised by:\nProfessor Nguyen Thuy Thuong Thuong link\nDr. Trinh Thi Bich Tram link\nMs Do Dang Anh Thu link\nResearch focused on Mycobacterium tuberculosis, tuberculosis diagnostics, antimicrobial resistance, and genomic approaches to infectious diseases.\nResearch activities included:\n\nTuberculosis microbiology\nDrug-resistance research\nMolecular and genomic diagnostics\nClinical research\nBacterial genomics"
   },
   {
     "objectID": "about.html#research-interests",
     "href": "about.html#research-interests",
     "title": "About Me",
     "section": "Research Interests",
-    "text": "Research Interests\n\nMicrobial genomics\nAntimicrobial resistance\nBacterial population genomics\nBacterial evolution\nPlasmids and mobile genetic elements\nPangenomics\nPhylogenetics\nLong-read sequencing\nBioinformatics\nInfectious diseases"
+    "text": "Research Interests\n\nMicrobial genomics\nAntimicrobial resistance\nBacterial evolution\nPlasmids and mobile genetic elements\nBioinformatics"
   },
   {
     "objectID": "about.html#selected-publications",
     "href": "about.html#selected-publications",
     "title": "About Me",
     "section": "Selected Publications",
-    "text": "Selected Publications\n\nPhylogenetic distribution and longitudinal persistence of plasmids in Mycobacterium abscessus\nTrieu Le, Josephine M. Bryant\nMicrobial Genomics, 2026.\nDOI\n\n\nAmira: detection of AMR genes directly from long reads using gene-space de Bruijn graphs\nDaniel Anderson, Leandro Lima, Trieu Le, Louise Judd, Ryan Wick, Zamin Iqbal\nPreprint, 2025.\nDOI\n\n\nInfection by Clonally Related Mycobacterium abscessus Isolates: The Role of Drinking Water\nRachel Thomson, et al.\nAmerican Journal of Respiratory and Critical Care Medicine, 2025.\nDOI\n\n\nRifampicin tolerance and growth fitness among isoniazid-resistant clinical Mycobacterium tuberculosis isolates from a longitudinal study\nSrinivasan Vijay, et al.\neLife, 2024.\nDOI\nView all publications →"
+    "text": "Selected Publications\n\nPhylogenetic distribution and longitudinal persistence of plasmids in Mycobacterium abscessus\nTrieu Le, Josephine M. Bryant\nMicrobial Genomics, 2026.\nDOI\n\n\nAmira: detection of AMR genes directly from long reads using gene-space de Bruijn graphs\nDaniel Anderson, Leandro Lima, Trieu Le, Louise Judd, Ryan Wick, Zamin Iqbal\nPreprint, 2025.\nDOI\n\n\nInfection by Clonally Related Mycobacterium abscessus Isolates: The Role of Drinking Water\nRachel Thomson, N. Wheeler, R. E. Stockwell, J. Bryant, S. L. Taylor, L. E. X. Leong, T. Le, G. B. Rogers, R. Carter, L. J. Sherrard, et al.\nAmerican Journal of Respiratory and Critical Care Medicine, 2025. American Journal of Respiratory and Critical Care Medicine, 2025.\nDOI\n\n\nTargeted sequencing from cerebrospinal fluid for rapid identification of drug-resistant tuberculous meningitis\nTrinh Thi Bich Tram, Le Pham Tien Trieu, Le Thanh Hoang Nhat, Do Dang Anh Thu, Nguyen Le Quang, Nguyen Duc Bang, Tran Thi Hong Chau, Guy E. Thwaites, Timothy M. Walker, Vu Thi Ngoc Ha, et al.\nJournal of Clinical Microbiology, 2024.\nDOI"
   },
   {
     "objectID": "about.html#technical-skills",
     "href": "about.html#technical-skills",
     "title": "About Me",
     "section": "Technical Skills",
-    "text": "Technical Skills\n\nGenomics & Bioinformatics\n\nBacterial whole-genome sequencing\nShort- and long-read sequencing analysis\nGenome assembly\nPangenome analysis\nPhylogenetic analysis\nPopulation genomics\nPlasmid analysis\nAntimicrobial resistance analysis\nMobile genetic element analysis\n\n\n\nComputational\n\nR\nCommand-line bioinformatics\nLinux / Unix\nGit and GitHub\nReproducible genomic workflows\n\n\n\nLaboratory & Research\n\nBacterial culture\nMycobacterium tuberculosis research\nBSL-3 laboratory work\nMolecular microbiology\nClinical research\nGood Clinical Laboratory Practice (GCLP)\nGood Clinical Practice (GCP)"
+    "text": "Technical Skills\n\nGenomics & Bioinformatics\n\nShort- and long-read bacterial genome sequencing analysis\nDe novo genome assembly and genome quality assessment\nBacterial pangenome and comparative genomic analysis\nPhylogenetic reconstruction and evolutionary analysis\nPopulation genomics and bacterial population structure\nPlasmid identification, typing, and structural comparative analysis\nAntimicrobial resistance gene and resistance-associated mutation detection\nIdentification and genomic characterisation of mobile genetic elements\n\n\n\nComputational\n\nR\nCommand-line bioinformatics\nLinux / Unix\nGit and GitHub\nReproducible genomic workflows\n\n\n\nLaboratory & Research\n\nBacterial culture\nMycobacterium tuberculosis research\nBSL-3 laboratory work\nMolecular microbiology\nClinical research\nGood Clinical Laboratory Practice (GCLP)\nGood Clinical Practice (GCP)\n\n\n\nOther activities\n\nSustainability and environmental engagement: contributing to the University of Bath Green Impact initiative to promote sustainable practices in research and everyday academic life\nScience communication and public engagement: scientific writing, blogging, and outreach, including Pint of Science\nTeaching: teaching assistant in bioinformatics and genomics\nPractical teaching and assessment: demonstrating and marking in microbiology and molecular biology practicals, cancer biology, and genomics"
   },
   {
     "objectID": "about.html#academic-service",
@@ -273,94 +525,87 @@
     "text": "Research Profiles\nORCID · GitHub - Microbial genomics - Bacterial population genomics - Plasmids and mobile genetic elements - Bioinformatics"
   },
   {
+    "objectID": "about.html#books-that-shaped-my-thinking",
+    "href": "about.html#books-that-shaped-my-thinking",
+    "title": "About Me",
+    "section": "Books That Shaped My Thinking",
+    "text": "Books That Shaped My Thinking\nThese books have influenced how I think about science, learning, decision-making, communication, money, and life.\n\n\n\n\n\n\nThinking, Fast and Slow\nDaniel Kahneman\nThis book made me more aware of how intuition, cognitive biases, and uncertainty influence our decisions. The distinction between fast, intuitive thinking and slower, deliberate reasoning has stayed with me, particularly when I think about scientific evidence and decision-making.\n\n\n\n\n\n\n\n\n\n\n\nThe Psychology of Money\nMorgan Housel\nThis book gave me a different perspective on how people make financial decisions and how strongly those decisions are shaped by behaviour, experience, and personal circumstances. It encouraged me to reflect on my own relationship with money and motivated me to build a more thoughtful, disciplined, and sustainable financial plan for the future.\n\n\n\n\n\n\n\n\n\n\n\nMindset\nCarol S. Dweck\nThis book changed how I think about ability and failure. It influenced how I approach learning, research, and new challenges, encouraging me to focus more on progress and improvement rather than being afraid of making mistakes.\n\n\n\n\n\n\n\n\n\n\n\nStorytelling with Data\nCole Nussbaumer Knaflic\nThis book changed how I think about presenting scientific results. I learned that a good figure is not simply one that displays the data accurately; it should also help the audience quickly understand the main message.\n\n\n\n\n\n\n\n\n\n\n\nThe 7 Habits of Highly Effective People\nStephen R. Covey\nThis book made me think more deliberately about how I organise my life and use my time. In particular, the ideas of beginning with the end in mind and putting first things first helped me connect everyday decisions with longer-term goals. It also reminded me that effectiveness is not simply about being productive, but about building good relationships, maintaining balance, and continuously investing in personal growth.\n\n\n\n\n\n\n\n\n\n\n\nThe Miracle of Mindfulness\nThich Nhat Hanh\nThis book introduced me to Buddhism not only as a religion, but also as a philosophy for understanding the mind, suffering, happiness, and our relationship with the world around us. Thich Nhat Hanh’s approach to mindfulness taught me to pay more attention to the present moment rather than constantly thinking about what comes next.\n\n\n\n\n\n\n\n\n\n\n\nTế Bào Gốc (in Vietnamese)\nPhan Kim Ngoc\nThis was the first scientific book I ever owned, a gift from my sister when I turned 17. It sparked my curiosity about stem cells and motivated me to join a stem cell research laboratory later, where I learned the fundamentals of scientific research and gained my first experience at the lab bench. It also encouraged me to think beyond experiments themselves—to consider how discoveries in the laboratory can be translated into biotechnology and real-world applications. Looking back, this book represents where my academic journey began and helped shape the way I think about science: from understanding fundamental biology to asking how that knowledge can ultimately be applied.\n\n\n\n\n\n\n\n\n\n\n\nHow to analyze data with R (in Vietnamese)\nNguyen Van Tuan\nBefore reading this book, I was almost entirely a wet-lab researcher and felt somewhat intimidated by coding and data analysis. This book helped me understand the logic behind data analysis and made R feel approachable rather than something to avoid. More importantly, it gave me the confidence and motivation to start learning independently and take greater ownership of my data. That small beginning eventually changed the direction of my research journey—today, I use R, coding, and computational tools almost every day."
+  },
+  {
     "objectID": "thoughts/preparation-for-a-conference.html",
     "href": "thoughts/preparation-for-a-conference.html",
     "title": "Preparation for a Conference",
     "section": "",
-    "text": "I recently returned from a conference in Berlin, Germany. For me, it was a very successful conference, and I achieved the goals I had set for myself. But after observing and talking with many colleagues, I also came away with some interesting thoughts about modern scientific research."
+    "text": "← Back to Thoughts\nFirst of all, I would like to give a shout-out to my supervisor, Zam, for being incredibly supportive and encouraging. He spent a lot of time helping me prepare for the talk, and through him, I have also had the opportunity to meet many intelligent and interesting people. I am very grateful for that.\nI recently gave my first conference talk during my PhD, and to my delight (and according to my colleagues who attended the conference), it went really well. I was very happy about that.\nAfterwards, I was invited to share my conference experience with my colleagues, so I thought I would write it down here as well. I am still learning, and this was only my first conference talk as a PhD student, but these are a few things that worked for me. I hope they might be useful to someone else preparing for their first conference."
+  },
+  {
+    "objectID": "thoughts/preparation-for-a-conference.html#the-most-important-thing-for-me-start-early",
+    "href": "thoughts/preparation-for-a-conference.html#the-most-important-thing-for-me-start-early",
+    "title": "Preparation for a Conference",
+    "section": "The most important thing for me: start early",
+    "text": "The most important thing for me: start early\nThe conference took place on 7th September, but my supervisor first told me about it in January.\nIt is not that we spent all that time thinking about the conference. Rather, attending and presenting at the conference was always somewhere on our list. One of our goals for the year was to have something ready to present there.\nThe abstract submission deadline 24th April, quite early I think; because we had already been thinking about the conference for several months, we were able to plan our work and submit the abstract on time.\nI think this made a big difference.\nStarting early does not mean that everything needs to be ready early. It means knowing where you want to go and giving yourself enough time to get there. You have more time to develop your work, think about what you want to present, get feedback, and improve it.\n\n\n\nStart early, spend lot of time on practicing and polishing the talk"
+  },
+  {
+    "objectID": "thoughts/preparation-for-a-conference.html#get-your-story-straight",
+    "href": "thoughts/preparation-for-a-conference.html#get-your-story-straight",
+    "title": "Preparation for a Conference",
+    "section": "Get your story straight",
+    "text": "Get your story straight\nOne thing I learned from preparing this talk is that having good results is not enough. You need to know what story you want to tell.\nAt the beginning, I had a lot of results and, naturally, I wanted to show everything. But a conference talk is short, and the audience does not know your project as well as you do. If you try to show too much, it is very easy to lose them.\nMy supervisor spent a lot of time discussing the story with me: What is the question? Why is it important? What do we know already? What did we find? And, most importantly, what do we want the audience to remember after the talk?\nOnce the story became clear, making the slides became much easier. Every slide needed to have a purpose and contribute to that story. Some results that I really liked had to be removed simply because they did not help move the story forward.\nI think this is something I will carry into future presentations: don’t start by asking, “What results should I show?” Start by asking, “What story do I want to tell?”"
+  },
+  {
+    "objectID": "thoughts/preparation-for-a-conference.html#dont-work-too-hard-at-the-last-minute",
+    "href": "thoughts/preparation-for-a-conference.html#dont-work-too-hard-at-the-last-minute",
+    "title": "Preparation for a Conference",
+    "section": "Don’t work too hard at the last minute",
+    "text": "Don’t work too hard at the last minute\nThis might sound strange because, in the few weeks before a conference, there is always something more you can do. You can generate more data, make new figures, run more analyses, or even develop a new pipeline.\nBut at some point, more results do not necessarily make a better talk. A presentation full of numbers is not necessarily a strong presentation. And more importantly, how confident are you in results that you generated in a hurry just before the conference?\nSince I started preparing early, I had time to go through several versions of the presentation, discuss them with my supervisor and colleagues, and practise many times with what I already had. In the last few days, the goal was no longer to completely change the talk or add more results. It was to become comfortable and confident with the story I was going to tell.\nI think this is important because going into a conference exhausted and stressed does not help. You need energy not only for your presentation, but also for listening to other talks, meeting people, having conversations, and enjoying the conference.\nSo my lesson is: do the hard work early, be confident in the results you present, and leave the last few days for polishing, practising, and resting."
+  },
+  {
+    "objectID": "thoughts/preparation-for-a-conference.html#practice-how-to-introduce-yourself-and-your-work",
+    "href": "thoughts/preparation-for-a-conference.html#practice-how-to-introduce-yourself-and-your-work",
+    "title": "Preparation for a Conference",
+    "section": "Practice how to introduce yourself and your work",
+    "text": "Practice how to introduce yourself and your work\nI prepared a lot for my talk, but I realised that there was another kind of preparation that was just as useful: knowing how to introduce myself and my research.\nAt a conference, people will ask you many versions of the same questions:\nWhat do you work on?\nWhat is your PhD about?\nWhat did you present today?\nThese conversations may happen during a coffee break, at lunch, after your talk, or while you are standing next to a poster. You often have only a minute or two to explain what you do.\nIt sounds easy, but I don’t think it is. Especially for those of us who speak English as a second language, it can be difficult to explain our work clearly and concisely on the spot. I found that practising these conversations beforehand made them much easier.\nExplaining several years of research in just a few sentences, especially to someone who works in a different field, takes practice. I found it useful to think beforehand about a simple way to describe my PhD: what problem am I interested in, what am I doing to study it, and why does it matter?\nYou don’t need to memorise a script. In fact, you will probably explain your work slightly differently depending on who you are talking to. But having a clear introduction in mind makes it much easier to start a conversation and gives you more confidence when meeting new people.\nAnd sometimes, that one-minute introduction can lead to a much longer and more interesting conversation."
+  },
+  {
+    "objectID": "thoughts/preparation-for-a-conference.html#enjoy-the-conference",
+    "href": "thoughts/preparation-for-a-conference.html#enjoy-the-conference",
+    "title": "Preparation for a Conference",
+    "section": "Enjoy the conference",
+    "text": "Enjoy the conference\nFinally, enjoy it.\nIt is very easy to become so focused on your own presentation that the conference starts to feel like an exam. Before the talk, you are nervous about presenting. After the talk, you start thinking about what you could have said better.\nBut the presentation is only a small part of the conference.\nOnce my talk was finished, I could relax much more. I listened to other people’s work, asked questions, met researchers I had previously only known through their papers, talked to people working on completely different problems, and had many interesting conversations.\nI think conferences are one of the few opportunities in research where so many people interested in similar questions are in the same place at the same time. It would be a shame to spend the whole conference worrying about your slides.\nOf course, presenting your work is important. But so is meeting people, hearing new ideas, discovering work you did not know about, and simply enjoying being part of the scientific community.\nLooking back, I am glad that my first PhD conference talk went well. But some of my favourite memories from the conference happened outside the lecture room.\nSo prepare well, tell your story, practise your talk—and when you get there, remember to enjoy the conference.\n← Back to Thoughts"
+  },
+  {
+    "objectID": "thoughts/Just-start-writting.html",
+    "href": "thoughts/Just-start-writting.html",
+    "title": "Just start writing",
+    "section": "",
+    "text": "← Back to Thoughts\nI am not in a position to tell anyone how to write or what the best way is. I am an apprentice in writing, and I am still learning myself. But I have finished my Bachelor’s thesis, my MPhil thesis, and I have written several reports and papers during my PhD journey. Along the way, I have learned a few things about writing, and I want to share them here.\nLet’s start with what I find most challenging when I talk to people about writing: getting started.\nWhy is it so hard to start?\nPeople often wait for the right moment, the right time, the right mood, or the right inspiration. But the truth is, there is no right moment. And even when they have started, many struggle with the first sentence or paragraph. They want to write the best paragraph right from the beginning.\nI totally understand that.\nAs English is not my first language, getting started is even more challenging. I have spent hours, sometimes days, thinking about the first sentence. I have written and rewritten the first paragraph many times before moving on.\nBut I have learned that it is not important to write the best paragraph at the beginning. It is more important to have something on the page.\nYour first draft will not be your final draft. At least in scientific writing, almost nothing is submitted exactly as it was first written. You revise it yourself, send it to your supervisors or colleagues, receive feedback, revise it again, and probably repeat the process several times.\nSo why expect the first draft to be perfect?\nYou can always improve something that has been written. You cannot improve a blank page."
+  },
+  {
+    "objectID": "thoughts/Just-start-writting.html#start-with-an-outline",
+    "href": "thoughts/Just-start-writting.html#start-with-an-outline",
+    "title": "Just start writing",
+    "section": "Start with an outline",
+    "text": "Start with an outline\nOne thing that helps me overcome this is having a strong outline.\nBefore writing, discuss the structure with your supervisors or colleagues. Once you are happy with the overall outline, make it more detailed. Then make it even more detailed—to the point where you know roughly what you want to say in each section.\nFor example, instead of starting with:\n\nDiscussion\n\nbreak it down into:\n\nDiscussion\n- What is the main finding?\n- How does it compare with previous studies?\n- What could explain the finding?\n- What are the limitations?\n- Why does it matter?\n\nAt that point, you are no longer facing an empty page and wondering, What should I write? You already know what you want to say.\nThen, just start writing.\nIn my first draft, I don’t even care too much about grammar, spelling, or punctuation. I just try to put my ideas into words. I know I can come back and revise them later.\nFor me, separating writing from editing makes starting much easier."
+  },
+  {
+    "objectID": "thoughts/Just-start-writting.html#a-book-that-changed-how-i-think-about-writing",
+    "href": "thoughts/Just-start-writting.html#a-book-that-changed-how-i-think-about-writing",
+    "title": "Just start writing",
+    "section": "A book that changed how I think about writing",
+    "text": "A book that changed how I think about writing\nOne of the books that has truly inspired me is Writing Science by Joshua Schimel.\nI highly recommend it to anyone who wants to improve their scientific writing. It teaches not only how to write clearly and concisely, but also how to think about scientific writing as storytelling—how to build an argument, guide the reader, and communicate why your science matters.\nMany of the ideas in the book have become embedded in the way I think about writing.\nOne sentence from the beginning of the book has particularly stayed with me:\n\n“As a scientist, you are a professional writer.”\n\n\n\n\n“Writing Science” by Joshua Schimel\n\n\nThat sentence changed my perspective. Writing is not something separate from doing science. Papers, reports, grants, theses, presentations—our ability to communicate our work is part of being a scientist.\nI am still learning how to write, and I expect I always will be. But one lesson has already made writing much easier for me:\nDon’t try to write the perfect first draft. Just start writing.\n← Back to Thoughts"
   },
   {
     "objectID": "thoughts/index.html",
     "href": "thoughts/index.html",
     "title": "Thoughts",
     "section": "",
-    "text": "Preparation for a Conference\n\n\nA reflection on recognition, timing, and communication in research\n\n\n\nResearch\n\nPhD\n\nReflections\n\nInvesting\n\n\n\n\n\n\nSep 22, 2026\n\n\n\n\n\n\n\nScience Through the Lens of Investing\n\n\nA reflection on recognition, timing, and communication in research\n\n\n\nResearch\n\nPhD\n\nReflections\n\nInvesting\n\n\n\n\n\n\nSep 11, 2026\n\n\n\n\n\nNo matching items"
+    "text": "Preparation for a Conference\n\n\nHow I prepared for a conference and what I learned from it\n\n\n\n\n\nSep 26, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nScience Through the Lens of Investing\n\n\nA reflection on recognition, timing, and communication in research\n\n\n\n\n\nSep 11, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nJust start writing\n\n\nYou have a report or thesis to write—what are you waiting for?\n\n\n\n\n\nJul 15, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nYou should ask more questions at conferences\n\n\nListening in Science is as important as presenting\n\n\n\n\n\nJun 6, 2026\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html",
-    "href": "bioinformatics/bayesian-statistics.html",
-    "title": "Bayesian Statistics",
+    "objectID": "bioinformatics/index.html",
+    "href": "bioinformatics/index.html",
+    "title": "Bioinformatics for Dum Me",
     "section": "",
-    "text": "← Back to Bioinformatics for “Dum me”"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#why-am-i-learning-this",
-    "href": "bioinformatics/bayesian-statistics.html#why-am-i-learning-this",
-    "title": "Bayesian Statistics",
-    "section": "Why am I learning this?",
-    "text": "Why am I learning this?\nBayesian statistics appears frequently in bioinformatics, from phylogenetic inference to genomic epidemiology.\nBefore using these methods, I want to understand what Bayesian inference actually means."
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#the-basic-idea",
-    "href": "bioinformatics/bayesian-statistics.html#the-basic-idea",
-    "title": "Bayesian Statistics",
-    "section": "1. The basic idea",
-    "text": "1. The basic idea\n…"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#bayes-theorem",
-    "href": "bioinformatics/bayesian-statistics.html#bayes-theorem",
-    "title": "Bayesian Statistics",
-    "section": "2. Bayes’ theorem",
-    "text": "2. Bayes’ theorem\n…"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#prior-probability",
-    "href": "bioinformatics/bayesian-statistics.html#prior-probability",
-    "title": "Bayesian Statistics",
-    "section": "3. Prior probability",
-    "text": "3. Prior probability\n…"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#likelihood",
-    "href": "bioinformatics/bayesian-statistics.html#likelihood",
-    "title": "Bayesian Statistics",
-    "section": "4. Likelihood",
-    "text": "4. Likelihood\n…"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#posterior-probability",
-    "href": "bioinformatics/bayesian-statistics.html#posterior-probability",
-    "title": "Bayesian Statistics",
-    "section": "5. Posterior probability",
-    "text": "5. Posterior probability\n…"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#a-simple-example",
-    "href": "bioinformatics/bayesian-statistics.html#a-simple-example",
-    "title": "Bayesian Statistics",
-    "section": "A simple example",
-    "text": "A simple example\n…"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#applications-in-bioinformatics",
-    "href": "bioinformatics/bayesian-statistics.html#applications-in-bioinformatics",
-    "title": "Bayesian Statistics",
-    "section": "Applications in bioinformatics",
-    "text": "Applications in bioinformatics\n…"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#what-i-learned",
-    "href": "bioinformatics/bayesian-statistics.html#what-i-learned",
-    "title": "Bayesian Statistics",
-    "section": "What I learned",
-    "text": "What I learned\n…"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#references",
-    "href": "bioinformatics/bayesian-statistics.html#references",
-    "title": "Bayesian Statistics",
-    "section": "References",
-    "text": "References\n…"
+    "text": "I am learning bioinformatics from first principles.\nThis series is my attempt to understand not only how to use bioinformatics tools, but also the mathematics, algorithms, and biological assumptions behind them.\nI write these notes primarily to consolidate my own understanding. Hopefully, they may also be useful to others learning bioinformatics.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Statistics\n\n\nUnderstanding probability, priors, likelihoods, and posteriors\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Build a Personal Website\n\n\nA practical guide to building and publishing a free personal website with Quarto + GitHub Pages\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\nNo matching items"
   }
 ]
