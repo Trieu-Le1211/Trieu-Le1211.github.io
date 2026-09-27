@@ -20,6 +20,6 @@ toc: false
 
 I am learning bioinformatics from first principles.
 
-This series is my attempt to understand not only **how to use bioinformatics tools**, but also the mathematics, algorithms, and biological assumptions behind them.
+This series is my attempt to understand not only how to use bioinformatics tools, but also the **mathematics, algorithms, and biological assumptions** behind them.
 
 I write these notes primarily to consolidate my own understanding. Hopefully, they may also be useful to others learning bioinformatics.
