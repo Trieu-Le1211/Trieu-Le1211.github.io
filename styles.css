@@ -227,4 +227,32 @@
       grid-row: 3 !important;
     }
   }
-  
+
+  /* Circular profile photo on homepage */
+.home-profile-photo {
+  float: right;
+  margin: 0 0 2rem 3rem;
+}
+
+.home-profile-photo img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .home-profile-photo {
+    float: none;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 2rem auto;
+  }
+
+  .home-profile-photo img {
+    width: 140px;
+    height: 140px;
+  }
+}
