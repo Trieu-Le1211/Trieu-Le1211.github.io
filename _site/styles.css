@@ -228,30 +228,44 @@
     }
   }
 
-  /* Circular profile photo on homepage */
-  .home-profile-photo {
-    float: right;
-    margin: 0 0 2rem 3rem;
-  }
-  
-  .home-profile-photo img {
-    width: 100px !important;
-    height: 100px !important;
-    max-width: 100px !important;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+/* Circular profile photo on homepage */
+.home-profile-photo {
+  float: right;
+  width: 120px;
+  height: 120px;
+  margin: 0 0 1.5rem 2rem;
+}
 
+.home-profile-photo img {
+  width: 200px !important;
+  height: 200px !important;
+  max-width: 200px !important;
+  max-height: 200px !important;
+  min-width: 200px !important;
+  min-height: 200px !important;
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+
+  display: block;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .home-profile-photo {
-    float: none;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 2rem auto;
+    float: right;
+    width: 70px;
+    height: 70px;
+    margin: 0 0 1rem 1.5rem;
   }
 
   .home-profile-photo img {
-    width: 140px;
-    height: 140px;
+    width: 70px !important;
+    height: 70px !important;
+    max-width: 70px !important;
+    max-height: 70px !important;
+    min-width: 70px !important;
+    min-height: 70px !important;
   }
 }
