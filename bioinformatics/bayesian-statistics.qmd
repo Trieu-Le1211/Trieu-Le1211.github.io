@@ -11,7 +11,7 @@ categories:
 toc: true
 ---
 
-[← Back to Bioinformatics for "Dum me"](index.qmd)
+[← Back to Bioinformatics for "Dumb Me"](index.qmd)
 
 **Why am I learning this?**
 
@@ -540,4 +540,4 @@ In short, BactDating does not simply convert genetic distance into years. It use
 
 
 
-[← Back to Bioinformatics for "Dum me"](index.qmd)
+[← Back to Bioinformatics for "Dumb Me"](index.qmd)

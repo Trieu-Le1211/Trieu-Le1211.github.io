@@ -12,7 +12,7 @@ categories:
 toc: true
 
 ---
-[← Back to Bioinformatics for "Dum me"](index.qmd)
+[← Back to Bioinformatics for "Dumb Me"](index.qmd)
 
 Building a personal website may sound complicated if you have never worked with web development before. Fortunately, you do not need to know much HTML, CSS, or JavaScript to get started.
 
@@ -1224,4 +1224,4 @@ And once everything is set up, publishing something new can be as simple as:
 
 > **Write → Render → Commit → Push → Publish**
 
-[← Back to Bioinformatics for "Dum me"](index.qmd)
+[← Back to Bioinformatics for "Dumb Me"](index.qmd)

@@ -1,5 +1,5 @@
 ---
-title: "Bioinformatics for 'Dum Me'"
+title: "Bioinformatics for 'Dumb Me'"
 description: "My notes on bioinformatics, mathematics, algorithms, and computational tools."
 
 listing:

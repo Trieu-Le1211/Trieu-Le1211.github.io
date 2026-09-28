@@ -25,7 +25,7 @@ antimicrobial resistance, and bacterial evolution.
 
 ---
 
-## Bioinformatics for "Dum me"
+## Bioinformatics for "Dumb me"
 
 **Learning bioinformatics from first principles.**
 
@@ -38,7 +38,7 @@ Topics include:
 Phylogenetics · Pangenomics · Population structure · 
 Metagenomics · Machine learning**
 
-[Explore Bioinformatics for "Dum me" →](bioinformatics/index.html)
+[Explore Bioinformatics for "Dumb me" →](bioinformatics/index.html)
 
 ---
 
