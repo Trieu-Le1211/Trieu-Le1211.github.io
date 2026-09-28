@@ -4,6 +4,10 @@ page-layout: full
 toc: false
 ---
 
+<div class="home-profile-photo">
+  <img src="images/profile.jpeg" alt="Trieu Le">
+</div>
+
 I am a researcher interested in microbial genomics, 
 antimicrobial resistance, and bacterial evolution.
 
