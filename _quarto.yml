@@ -9,6 +9,7 @@ website:
   site-url: "https://trieu-le1211.github.io/"
   description: "Personal academic website of Trieu Le, researcher working in bioinformatics, bacterial genomics, antimicrobial resistance, and plasmid evolution."
 
+
   navbar:
     title: false
     left:
@@ -32,3 +33,7 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+
+comments:
+  giscus:
+    repo: Trieu-Le1211/Trieu-Le1211.github.io
