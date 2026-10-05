@@ -14,6 +14,8 @@ toc: true
 comments:
   giscus:
     repo: Trieu-Le1211/Trieu-Le1211.github.io
+    mapping: pathname
+    reactions-enabled: true
 ---
 [← Back to Bioinformatics for "Dumb Me"](index.qmd)
 
