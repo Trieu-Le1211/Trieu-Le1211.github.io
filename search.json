@@ -161,277 +161,88 @@
     "text": "Putting everything together\nThe whole process can be summarised as:\n          WRITE\n            │\n            ▼\n        .qmd files\n            │\n            ▼\n          QUARTO\n            │\n            ▼\n      Rendered website\n            │\n            ▼\n           GIT\n       Track changes\n            │\n            ▼\n          GITHUB\n      Store the project\n            │\n            ▼\n      GITHUB PAGES\n            │\n            ▼\n       PUBLIC WEBSITE\nYou do not need to master Quarto, Git, GitHub, Markdown, CSS, and web development before building your first website.\nI certainly did not.\nFor me, building the website itself became part of the learning process. I started with a few .qmd files and gradually learned how Quarto, Git, GitHub, Markdown, CSS, and GitHub Pages fit together.\nThe result is not only a personal website. It is also a useful way to practise reproducible documentation, version control, scientific communication, and writing.\nAnd once everything is set up, publishing something new can be as simple as:\n\nWrite → Render → Commit → Push → Publish\n\n← Back to Bioinformatics for “Dumb Me”"
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html",
-    "href": "bioinformatics/bayesian-statistics.html",
-    "title": "Bayesian Statistics",
+    "objectID": "bioinformatics/index.html",
+    "href": "bioinformatics/index.html",
+    "title": "Bioinformatics for ‘Dumb Me’",
     "section": "",
-    "text": "← Back to Bioinformatics for “Dumb Me”\nWhy am I learning this?\nBayesian statistics appears frequently in bioinformatics, from phylogenetic inference to genomic epidemiology.\nAs someone whose background is in biology, I have often found the terms confusing and intimidating.\nSo, let change that."
+    "text": "I am learning bioinformatics from first principles.\nThis series is my attempt to understand not only how to use bioinformatics tools, but also the mathematics, algorithms, and biological assumptions behind them.\nI write these notes primarily to consolidate my own understanding. Hopefully, they may also be useful to others learning bioinformatics.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFantastic Tree-Building Tools and How to Choose Them\n\n\nIQ-TREE, RAxML, FastTree and the confusing world of phylogenetic inference.\n\n\n\n\n\nOct 2, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Statistics\n\n\nMake you best guess, and then update it as you learn more.\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Build a Personal Website\n\n\nA practical guide to building and publishing a free personal website with Quarto + GitHub Pages\n\n\n\n\n\nSep 25, 2026\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "bioinformatics/bayesian-statistics.html#is-it-a-crocodile-or-a-aligator",
-    "href": "bioinformatics/bayesian-statistics.html#is-it-a-crocodile-or-a-aligator",
-    "title": "Bayesian Statistics",
-    "section": "1. Is it a crocodile or a aligator? 🐊",
-    "text": "1. Is it a crocodile or a aligator? 🐊\nImagine you are blindfolded and asked to identify an animal. You somehow safely touch it and feel its rough skin. You are told that it is either a crocodile or an alligator.\nThese two animals are very similar, but they have some differences. For example, crocodiles generally have a V-shaped snout, while alligators have a broader, U-shaped snout.\nRight now, with the limited information you have, you are not sure whether it is a crocodile or an alligator. You can only make a guess. For simplicity, you assume that they are equally likely.\nWhat is a prior?\nIn Bayesian statistics, a prior represents our initial belief about the probability of something before observing new evidence.\nIn the crocodile vs. alligator example, our prior belief is that either animal is equally likely because we do not yet have enough information to favour one over the other.\nAs we gather more evidence, we can update our prior belief to form a posterior—our updated belief after taking the new evidence into account.\nAdditional information\nYou realise that you are standing in the United States, where alligators are much more common than crocodiles (with ratio 2500:1). Now you are leaning towards the animal being an alligator. You can update your initial belief based on this new information.\nBut then your friend tells you that the animal was captured from the Nile River in Africa and brought to the United States. Nile crocodiles inhabit freshwater rivers, lakes, and marshes across sub-Saharan Africa, including parts of the Nile River. Now you are leaning towards the animal being a crocodile. Once again, you update your belief based on the latest information. If you followed that reasoning, then you have just used Bayesian inference in action.\nYou started with a prior belief, gathered new evidence, and updated your belief to form a posterior belief. As more evidence becomes available, you can continue updating what you believe."
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#who-is-bayes",
-    "href": "bioinformatics/bayesian-statistics.html#who-is-bayes",
-    "title": "Bayesian Statistics",
-    "section": "2. Who is Bayes?",
-    "text": "2. Who is Bayes?\nThomas Bayes (c. 1701–1761) was an English mathematician, statistician, and Presbyterian minister. He is best known for Bayes’ theorem, which describes how probabilities can be updated when new evidence becomes available. His work was published posthumously in 1763 and later became the foundation of Bayesian statistics. Today, Bayesian methods are widely used in medicine, genetics, bioinformatics, machine learning, and many other scientific fields.\nFACT: His famous theorem was published after he died. His friend Richard Price found and edited Bayes’ unpublished work, which appeared in 1763."
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#farmer-or-librarian",
-    "href": "bioinformatics/bayesian-statistics.html#farmer-or-librarian",
-    "title": "Bayesian Statistics",
-    "section": "3. Farmer or Librarian?",
-    "text": "3. Farmer or Librarian?\nYou and your friend are on a train from Bath to London. You notice a skinny man wearing glasses and reading a book. Your friend knows him personally and asks you to guess:\nIs he a farmer or a librarian?\nBased on his appearance, many people might immediately guess that he is a librarian.\nHowever, Daniel Kahneman, winner of the 2002 Nobel Memorial Prize in Economic Sciences, famously discussed how people often neglect base rates when making judgments like this.\nSuppose there are approximately 99,700 farmers and 47,800 librarians in the UK (UK government statistics, 2026). Before considering anything about the man’s appearance, randomly selecting a farmer would therefore be more likely than selecting a librarian.\nThis gives us our prior probability. But the base rate alone is not enough.\nWe also need to ask:\nHow likely would we be to see a skinny man wearing glasses and reading a book if he were a farmer, compared with if he were a librarian?\nThis is the likelihood.\nFor illustration, suppose:\n\n10% of farmers fit this description.\n80% of librarians fit this description.\n\nNote: These percentages are made-up data used only to illustrate Bayesian inference.\n\n\n\nFarmers and Librarians that fit the appearance"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#the-boring-formula-of-probability",
-    "href": "bioinformatics/bayesian-statistics.html#the-boring-formula-of-probability",
-    "title": "Bayesian Statistics",
-    "section": "4. The boring formula of probability",
-    "text": "4. The boring formula of probability\nApplying Bayes’ Theorem\nNow let’s use our numbers to calculate the probability that the man is a librarian.\nWe have:\n\nFarmers: 99,700\nLibrarians: 47,800\n10% of farmers fit the description\n80% of librarians fit the description\n\nLet:\n\n\\(L\\) = the man is a librarian\n\\(F\\) = the man is a farmer\n\\(E\\) = the man is skinny, wears glasses, and is reading a book\n\nStep 1: Calculate the prior probabilities\nBefore looking at the man, the probability that a randomly selected person from these two groups is a librarian is:\n\\[\nP(L) = \\frac{47,800}{47,800 + 99,700}\n= 0.324\n\\]\nSo our prior probability of librarian is about 32.4%.\nSimilarly:\n\\[\nP(F) = \\frac{99,700}{47,800 + 99,700}\n= 0.676\n\\]\nThe prior probability of farmer is therefore 67.6%.\nSo, before seeing any other information, farmer is more likely.\n⸻\nStep 2: Add the likelihood\nWe assumed that:\n\\[\nP(E \\mid L) = 0.80\n\\]\nmeaning that 80% of librarians fit our description.\nFor farmers:\n\\[\nP(E \\mid F) = 0.10\n\\]\nmeaning that 10% of farmers fit the description.\nNow we have both the prior and the likelihood.\n⸻\nStep 3: Apply Bayes’ theorem\nWe want to calculate:\n\\[\nP(L \\mid E)\n\\]\nwhich means:\nWhat is the probability that the man is a librarian given that we observed this evidence?\nBayes’ theorem gives us:\n\\[\nP(L \\mid E)\n=\n\\frac{P(E \\mid L)P(L)}\n{P(E \\mid L)P(L) + P(E \\mid F)P(F)}\n\\]\nSubstituting our numbers:\n\\[\nP(L \\mid E)\n=\n\\frac{0.80 \\times 0.324}\n{(0.80 \\times 0.324) + (0.10 \\times 0.676)}\n\\]\n\\[\n\\frac{0.2592}\n{0.2592 + 0.0676}\n=\n0.793\n\\]\nTherefore:\n\\[\n\\boxed{P(L \\mid E) \\approx 79.3\\%}\n\\]\nThe posterior probability that the man is a farmer is:\n\\[\nP(F \\mid E) = 1 - 0.793 = 0.207\n\\]\nor approximately 20.7%.\nWhat happened?\nBefore observing the man:\nFarmer: 67.6%; Librarian: 32.4%\nAfter observing the evidence:\nFarmer: 20.7; Librarian: 79.3%\nThe population numbers initially favour farmer. However, our hypothetical evidence is much more likely among librarians than farmers:\n\\[\n\\frac{P(E \\mid L)}{P(E \\mid F)}\n=\n\\frac{0.80}{0.10}\n=\n8\n\\]\nIn other words, this particular observation is 8 times more likely if the man is a librarian than if he is a farmer.\nThat evidence is strong enough to overcome the initial base-rate advantage of farmers.\nThis demonstrates the key idea of Bayesian inference:\nStart with a prior belief → observe evidence → update to a posterior belief.\nThe prior tells us what was plausible before seeing the evidence. The likelihood tells us how compatible the evidence is with each hypothesis. The posterior tells us what we should believe after combining both."
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#the-perfect-example-of-bayes-theorem-poker",
-    "href": "bioinformatics/bayesian-statistics.html#the-perfect-example-of-bayes-theorem-poker",
-    "title": "Bayesian Statistics",
-    "section": "5. The perfect example of Bayes’ theorem: POKER 🃏",
-    "text": "5. The perfect example of Bayes’ theorem: POKER 🃏\nPoker to me is a perfect example of Bayesian thinking because you constantly update your beliefs with incomplete information.\nImagine you are playing Texas Hold’em. You cannot see your opponent’s cards, but based on their position, previous behaviour, and possible starting hands, you already have an initial idea of what they might hold. This is your prior.\nYour opponent suddenly makes a large raise. This is new evidence.\nYou now ask: How likely are they to make this raise with a strong hand? How likely are they to do it with a weak hand or a bluff? This is the likelihood.\nYou combine the prior with this evidence and update your belief about their hand. This updated belief is the posterior.\nThen another card appears, your opponent bets again, and you update again:\nPrior → Evidence → Posterior → New evidence → New posterior\nIn poker, as in Bayesian inference, the key question is:\nGiven what I already know, how much should this new information change what I believe?"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-medicine",
-    "href": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-medicine",
-    "title": "Bayesian Statistics",
-    "section": "6. Bayes’ theorem in Medicine 🩺",
-    "text": "6. Bayes’ theorem in Medicine 🩺\nBayesian thinking is everywhere in medicine, particularly in diagnosis. Clinicians constantly start with an initial probability of disease, gather new evidence, and update that probability.\nDiagnostic tests\nA patient has a positive HIV test. Does this mean they definitely have HIV?\nNot necessarily.\nBefore testing, the patient has a pre-test probability of HIV based on factors such as prevalence and clinical context. The test result provides new evidence. Its sensitivity and specificity tell us how likely that result is in people with and without HIV.\nWe then update our probability:\nPre-test probability → Test result → Post-test probability\nIn Bayesian terms:\nPrior → Evidence → Posterior\n⸻\nPulmonary embolism\nA patient presents with shortness of breath and chest pain.\nBased on the history, examination, and a clinical prediction rule such as the Wells score, you estimate the probability of pulmonary embolism (PE).\nThis is your prior.\nYou perform a D-dimer test. A negative result provides new evidence and may substantially reduce the probability of PE.\nThe probability after considering the D-dimer is your posterior.\nThis explains an important principle in medicine:\nThe same test result can mean different things in patients with different pre-test probabilities.\n⸻\nMeningitis\nA patient presents with fever, headache, and neck stiffness.\nInitially, you consider several diagnoses, including bacterial meningitis, viral meningitis, and encephalitis. Your clinical assessment gives each diagnosis an initial probability.\nYou then perform a lumbar puncture.\nThe CSF shows:\n\nNeutrophilic pleocytosis\nLow glucose\nHigh protein\n\nThese findings are more compatible with bacterial meningitis, so you update your belief and assign a higher probability to that diagnosis.\nAgain:\nClinical suspicion → New evidence → Updated probability\n⸻\nSequential Bayesian updating\nIn real clinical practice, we rarely receive all the information at once.\nInstead, evidence arrives sequentially:\nHistory → Examination → Blood tests → Imaging → Microbiology → Treatment response\nAfter each new piece of information, we update our assessment.\nThe posterior from one step becomes the prior for the next.\nThis is Bayesian inference in everyday clinical medicine.\n\n\n\n\n\n\nTip\n\n\n\nClinical translation of Bayes’ theorem\nPrior = What did I think before the test?\nLikelihood = How compatible is this result with the disease?\nPosterior = What do I think after the test?\nOr, in familiar clinical language:\nPre-test probability → Diagnostic test → Post-test probability"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-bioinformatics",
-    "href": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-bioinformatics",
-    "title": "Bayesian Statistics",
-    "section": "7. Bayes’ theorem in Bioinformatics 🧬",
-    "text": "7. Bayes’ theorem in Bioinformatics 🧬\nBayesian inference is widely used in bioinformatics because biological data are often incomplete, noisy, and uncertain.\nThe basic idea remains the same:\nPrior knowledge + Biological data → Updated probability\nPhylogenetics 🌳\nSuppose we have DNA sequences from several bacterial isolates and want to reconstruct their evolutionary history.\nThere are many possible phylogenetic trees.\nBefore examining the sequence data, our evolutionary model gives us some expectation about which trees and parameters are plausible. This represents our prior.\nWe then ask:\nHow likely are the observed DNA sequences if a particular tree and evolutionary model are correct?\nThis is the likelihood.\nCombining the prior and likelihood gives us the posterior probability of different trees and evolutionary parameters.\nPrior evolutionary assumptions → Sequence data → Posterior distribution of trees\nThis is the principle behind Bayesian phylogenetic programs such as BEAST and MrBayes.\n⸻\nMolecular dating ⏳\nBayesian inference can also be used to estimate when evolutionary events occurred.\nSuppose we have bacterial genomes collected at different dates.\nWe may have prior assumptions about the evolutionary rate. The observed genetic differences between isolates and their sampling dates provide the data.\nBayesian inference combines these to estimate posterior distributions for:\n\nevolutionary rate\ndates of ancestral nodes\ntime to the most recent common ancestor (tMRCA)\n\nInstead of simply saying:\n“This ancestor existed in 1900.”\nwe might estimate:\n“The most probable date is around 1900, with a credible interval representing our uncertainty.”\nTools such as BEAST and BactDating use Bayesian approaches for molecular dating.\n⸻\nVariant calling 🧬\nImagine sequencing a position in a genome where some reads contain A and others contain G.\nIs this a real genetic variant or simply sequencing error?\nA Bayesian variant caller can combine:\nPrior probability of a variant + observed sequencing reads → Posterior probability of a variant\nRead depth, base quality, sequencing error rates, and other information can contribute to the likelihood.\nThe result is a probability that a particular genotype or variant is actually present.\n⸻\nThe common pattern\nAlthough the biological questions are very different, the Bayesian logic is the same:\nApplication Prior Evidence Posterior Phylogenetics Evolutionary assumptions DNA sequences Probable trees Molecular dating Clock/model assumptions Sequences + sampling dates Ancestral dates and rates Variant calling Expected variant/genotype probabilities Sequencing reads Variant/genotype probabilities\nSo whether we are diagnosing a patient, playing poker, or reconstructing bacterial evolution, the underlying question is the same:\nGiven what I believed before, how should these new data change what I believe?"
-  },
-  {
-    "objectID": "bioinformatics/bayesian-statistics.html#bactdating-bayesian-inference-in-action",
-    "href": "bioinformatics/bayesian-statistics.html#bactdating-bayesian-inference-in-action",
-    "title": "Bayesian Statistics",
-    "section": "8. BactDating: Bayesian Inference in Action 🦠⏳",
-    "text": "8. BactDating: Bayesian Inference in Action 🦠⏳\nBactDating is a tool used to estimate the timescale of bacterial evolution.\nImagine you have 500 E. coli genomes collected between 2000 and 2025. You have already reconstructed a phylogenetic tree from their genomic sequences. The tree tells you which isolates are related, but its branch lengths mainly represent genetic change, not calendar time.\nWhat you want to know is:\nWhen did their common ancestors exist?\nFor example, when did a particular lineage emerge? When did two bacterial populations diverge? When did the most recent common ancestor (MRCA) exist?\nThis is where BactDating uses Bayesian inference.\nWhat goes into BactDating?\nBactDating combines several sources of information:\n\na bacterial phylogenetic tree\nthe genetic branch lengths of that tree\nthe sampling date of each isolate\na model describing how bacterial evolution occurs through time\n\nThe sampling dates are especially important because they provide calendar-time information. If genomes collected many years apart tend to accumulate more genetic changes, BactDating can use this relationship to estimate an evolutionary rate.\nWhere does Bayes come in?\nThere are several unknown parameters that we want to estimate, such as the evolutionary rate and the dates of ancestral nodes.\nBayesian inference treats these unknown quantities as probability distributions.\nConceptually:\nPrior assumptions + observed phylogeny and sampling dates → Posterior distributions\nThe prior describes which parameter values are considered plausible before fully considering the observed data.\nThe likelihood asks:\nGiven a particular evolutionary rate, ancestral dates, and clock model, how likely is it that we would observe this phylogenetic tree with these branch lengths and sampling dates?\nBactDating then combines the prior and likelihood to obtain the posterior distribution.\nHow does BactDating find the posterior?\nThere are far too many possible combinations of evolutionary rates and ancestral dates to calculate them all directly.\nBactDating therefore uses Markov chain Monte Carlo (MCMC) to explore the possible parameter values.\nVery roughly:\nPropose evolutionary parameters → evaluate how well they explain the data → accept or reject them → repeat many times\nAfter many iterations, the values sampled by the MCMC approximate the posterior distribution.\nInstead of producing only one date for an ancestor, BactDating therefore gives us a distribution of plausible dates.\nFor example:\nEstimated plasmid arrival: 1864 95% credible interval: 1853–1872\nThe estimate around 1864 represents the inferred timing from the posterior distribution, while the credible interval represents the uncertainty around that estimate.\n\nBayesian workflow in BactDating\nThe Bayesian workflow in BactDating can be simplified as:\n\nDated bacterial isolates + Phylogenetic tree\n↓\nEvolutionary model + Prior distributions\n↓\nLikelihood of the observed tree and sampling dates\n↓\nMCMC sampling\n↓\nPosterior distributions\n↓\nEvolutionary rate + Dated ancestral nodes + Credible intervals\n\nIn short, BactDating does not simply convert genetic distance into years. It uses a Bayesian model to estimate the evolutionary timescale while explicitly representing uncertainty.\nIn the end, Bayesian thinking is simply the art of starting with what we know, learning from what we observe, and updating what we believe.\n← Back to Bioinformatics for “Dumb Me”"
-  },
-  {
-    "objectID": "thoughts/Ask-more-questions-at-conferences.html",
-    "href": "thoughts/Ask-more-questions-at-conferences.html",
-    "title": "You should ask more questions at conferences",
+    "objectID": "thoughts/index.html",
+    "href": "thoughts/index.html",
+    "title": "Thoughts",
     "section": "",
-    "text": "← Back to Thoughts\nIf you ever feel like you have a hard time following talks in meetings or conferences, want to contribute more to discussions, but feel like you don’t have any “good” or “smart” questions to ask, you are not alone. Sometimes you may even feel lost in the middle of a talk despite trying your best to focus. I have been there many times, and I have always wondered how to improve that situation.\nAfter years in academia, including my Master’s and PhD, I have observed senior scientists being very comfortable during talks. They often ask great and highly relevant questions, even when the topic is not exactly within their expertise. I wanted to be able to do that too. I asked for advice from a few people, but most of the answers felt more like natural responses or behaviours: “just keep trying,” “read more,” “ask any questions if you don’t understand.” Those are fairly good suggestions, but I wanted something more practical. I wanted to ask relevant questions and feel like part of the discussion.\nPeople often talk about presentation skills, but not much about listening skills in science. I think both are equally important. Over time, I developed my own simple framework of questions (or tips) that helps me engage with talks more comfortably and understand them better without trying too hard to catch every detail on every slide.\n\n🎯 Keep the title or main topic in mind\nI cannot tell you how important this is. I also cannot tell you how many times I struggled to follow a talk simply because I missed the first slide. Once you know the main topic, you can allow yourself to skip some minor details, especially if they are distant from your expertise.\n\n\n🧠 Be more active while listening\nIt can massively improve your understanding of the talk. Keep asking yourself these questions: 1. What is the question? 2. Why is it important? 3. How did they answer it? 4. Do I believe the answer? 5. What can be done next?\n\n\n🔬 Things you could ask if the topic is close to your expertise\nQuestions about methodology, models, statistics, or experimental design are always valuable. These are often the foundation of the work and should be discussed thoroughly. They should also be presented clearly by the speaker. If something is unclear, chances are other people are wondering the same thing. And of course, specific questions about the results are usually the best questions. They show that you have been actively listening and thinking critically about the science.\n\n\n🚀 Other questions you could ask\n\n“Then what?” questions: What are the applications? If successful, what impact could this work have on the field or the wider world?\n⚖️ Counter questions: Why did they choose this method? What are the advantages and disadvantages? How does it compare with alternative approaches that may be cheaper, less invasive, faster, or more robust?\n⚠️ Limitations: What are the limitations of the study? Are there concerns about sample size, dataset selection, generalisability, or scalability?\n\n\n\n💬 Universal questions\nThese work for almost any talk, but I personally do not recommend them. They should only be used when there are no other questions and you want to help the speaker further explain their work. - What surprised you most during this project? - What was the biggest challenge you faced? - What result would have changed your conclusion? - What question are you most excited to answer next?\n\n\n🏆 After the talk\nJust go through these questions. If you feel like you can at least partially answer them yourself, congratulations—you have understood the talk and learned something new. These questions may seem simple, but they get straight to the heart of the science; not every speaker can answer them clearly. Asking them creates opportunities for useful discussion and clarification. And remember, the goal is NOT to understand every slide. The goal is to understand the key message and evaluate the work.\n\n\n📢 One final thought\nBased on my own experience and many people I know, I feel that some Vietnamese people (and perhaps Asians in general) are often a bit more hesitant to speak up in public. It could be language barriers, cultural factors, fear of being judged, or a combination of many things. I used to be like that too. So, I would really encourage fellow early-career researchers and scientists to SPEAK UP. Your question does not have to be perfect. It only needs to be genuine. This is by no means a solid protocol, and it is probably quite personal. But it has helped me a lot. If you read this far, I hope it might be useful to you as well in your next meeting or conference.\n\n\n\nListening in Science\n\n\n← Back to Thoughts"
+    "text": "Preparation for a Conference\n\n\nHow I prepared for a conference and what I learned from it\n\n\n\n\n\nSep 26, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nScience Through the Lens of Investing\n\n\nA reflection on recognition, timing, and communication in research\n\n\n\n\n\nSep 11, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nJust start writing\n\n\nYou have a report or thesis to write—what are you waiting for?\n\n\n\n\n\nJul 15, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nYou should ask more questions at conferences\n\n\nListening in Science is as important as presenting\n\n\n\n\n\nJun 6, 2026\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "thoughts/science-through-the-lens-of-investing.html",
-    "href": "thoughts/science-through-the-lens-of-investing.html",
-    "title": "Science Through the Lens of Investing",
+    "objectID": "thoughts/Just-start-writting.html",
+    "href": "thoughts/Just-start-writting.html",
+    "title": "Just start writing",
     "section": "",
-    "text": "← Back to Thoughts\nI recently returned from a conference in Berlin, Germany. For me, it was a very successful conference, and I achieved the goals I had set for myself. But after observing and talking with many colleagues, I also came away with some interesting thoughts about modern scientific research.\nThey reminded me, surprisingly, of investing.\nI noticed that there were a few young researchers who were exceptionally good—arguably well ahead of their peers. But perhaps because they had gone so far, so quickly, some of their ideas were very new and difficult for both the panel and much of the audience to immediately grasp.\nJudging from the reactions of the audience and some of the more senior researchers, their presentations did not seem to receive as much recognition as I might have expected.\nMeanwhile, other colleagues—also very capable researchers—presented work that was somewhat more familiar. Some aspects might even have been slightly outdated, but the ideas were easier to understand and closer to what the audience already knew.\nTheir work received considerable recognition, and they were among those who really stood out at the conference."
+    "text": "← Back to Thoughts\nI am not in a position to tell anyone how to write or what the best way is. I am an apprentice in writing, and I am still learning myself. But I have finished my Bachelor’s thesis, my MPhil thesis, and I have written several reports and papers during my PhD journey. Along the way, I have learned a few things about writing, and I want to share them here.\nLet’s start with what I find most challenging when I talk to people about writing: getting started.\nWhy is it so hard to start?\nPeople often wait for the right moment, the right time, the right mood, or the right inspiration. But the truth is, there is no right moment. And even when they have started, many struggle with the first sentence or paragraph. They want to write the best paragraph right from the beginning.\nI totally understand that.\nAs English is not my first language, getting started is even more challenging. I have spent hours, sometimes days, thinking about the first sentence. I have written and rewritten the first paragraph many times before moving on.\nBut I have learned that it is not important to write the best paragraph at the beginning. It is more important to have something on the page.\nYour first draft will not be your final draft. At least in scientific writing, almost nothing is submitted exactly as it was first written. You revise it yourself, send it to your supervisors or colleagues, receive feedback, revise it again, and probably repeat the process several times.\nSo why expect the first draft to be perfect?\nYou can always improve something that has been written. You cannot improve a blank page."
   },
   {
-    "objectID": "thoughts/science-through-the-lens-of-investing.html#science-may-work-in-a-similar-way",
-    "href": "thoughts/science-through-the-lens-of-investing.html#science-may-work-in-a-similar-way",
-    "title": "Science Through the Lens of Investing",
-    "section": "Science may work in a similar way",
-    "text": "Science may work in a similar way\nI think something similar can happen in science.\nThe researchers receiving recognition today are undoubtedly talented. But there are also excellent researchers working on ideas that are newer, less familiar, or simply different from the mainstream.\nTheir work may eventually receive the recognition it deserves, but that can require time:\n\ntime to accumulate evidence,\ntime for ideas to mature,\nand time for the wider field to catch up with a new way of thinking.\n\nIn investing, timing matters.\nIn research, communication and staying connected with your field matter too.\nPerhaps having a good idea is only part of the challenge. Another part is communicating that idea in a way that allows other people to understand why it matters.\n\nP.S. This reflection is entirely about colleagues who are more senior and experienced than I am—it is not about me. These are simply my personal observations and interpretations from the conference.\nHave you noticed anything similar in your own field?\n← Back to Thoughts"
+    "objectID": "thoughts/Just-start-writting.html#start-with-an-outline",
+    "href": "thoughts/Just-start-writting.html#start-with-an-outline",
+    "title": "Just start writing",
+    "section": "Start with an outline",
+    "text": "Start with an outline\nOne thing that helps me overcome this is having a strong outline.\nBefore writing, discuss the structure with your supervisors or colleagues. Once you are happy with the overall outline, make it more detailed. Then make it even more detailed—to the point where you know roughly what you want to say in each section.\nFor example, instead of starting with:\n\nDiscussion\n\nbreak it down into:\n\nDiscussion\n- What is the main finding?\n- How does it compare with previous studies?\n- What could explain the finding?\n- What are the limitations?\n- Why does it matter?\n\nAt that point, you are no longer facing an empty page and wondering, What should I write? You already know what you want to say.\nThen, just start writing.\nIn my first draft, I don’t even care too much about grammar, spelling, or punctuation. I just try to put my ideas into words. I know I can come back and revise them later.\nFor me, separating writing from editing makes starting much easier."
   },
   {
-    "objectID": "trieu-le.html",
-    "href": "trieu-le.html",
-    "title": "My academic journey",
+    "objectID": "thoughts/Just-start-writting.html#a-book-that-changed-how-i-think-about-writing",
+    "href": "thoughts/Just-start-writting.html#a-book-that-changed-how-i-think-about-writing",
+    "title": "Just start writing",
+    "section": "A book that changed how I think about writing",
+    "text": "A book that changed how I think about writing\nOne of the books that has truly inspired me is Writing Science by Joshua Schimel.\nI highly recommend it to anyone who wants to improve their scientific writing. It teaches not only how to write clearly and concisely, but also how to think about scientific writing as storytelling—how to build an argument, guide the reader, and communicate why your science matters.\nMany of the ideas in the book have become embedded in the way I think about writing.\nOne sentence from the beginning of the book has particularly stayed with me:\n\n“As a scientist, you are a professional writer.”\n\n\n\n\n“Writing Science” by Joshua Schimel\n\n\nThat sentence changed my perspective. Writing is not something separate from doing science. Papers, reports, grants, theses, presentations—our ability to communicate our work is part of being a scientist.\nI am still learning how to write, and I expect I always will be. But one lesson has already made writing much easier for me:\nDon’t try to write the perfect first draft. Just start writing.\n← Back to Thoughts"
+  },
+  {
+    "objectID": "thoughts/preparation-for-a-conference.html",
+    "href": "thoughts/preparation-for-a-conference.html",
+    "title": "Preparation for a Conference",
     "section": "",
-    "text": "I’m Trieu.\nLê Phạm Tiến Triều\nPhD candidate - Researcher - Investor and Trader - Amateur Writer - Wannabe Pianist - Soon-to-be Polyglot\nResearch has taken me through different laboratories, universities, teams, conferences, and countries. This page is a collection of (some of) the people, places, and moments that have been part of that journey."
+    "text": "← Back to Thoughts\nFirst of all, I would like to give a shout-out to my supervisor, Zam, for being incredibly supportive and encouraging. He spent a lot of time helping me prepare for the talk, and through him, I have also had the opportunity to meet many intelligent and interesting people. I am very grateful for that.\nI recently gave my first conference talk during my PhD, and to my delight (and according to my colleagues who attended the conference), it went really well. I was very happy about that.\nAfterwards, I was invited to share my conference experience with my colleagues, so I thought I would write it down here as well. I am still learning, and this was only my first conference talk as a PhD student, but these are a few things that worked for me. I hope they might be useful to someone else preparing for their first conference."
   },
   {
-    "objectID": "trieu-le.html#oxford-university-clinical-research-unit-oucru",
-    "href": "trieu-le.html#oxford-university-clinical-research-unit-oucru",
-    "title": "My academic journey",
-    "section": "🔬 Oxford University Clinical Research Unit (OUCRU)",
-    "text": "🔬 Oxford University Clinical Research Unit (OUCRU)\nMy early research journey in infectious diseases and genomics at the Tuberculosis Research Team, Oxford University Clinical Research Unit (OUCRU) in Vietnam."
+    "objectID": "thoughts/preparation-for-a-conference.html#the-most-important-thing-for-me-start-early",
+    "href": "thoughts/preparation-for-a-conference.html#the-most-important-thing-for-me-start-early",
+    "title": "Preparation for a Conference",
+    "section": "The most important thing for me: start early",
+    "text": "The most important thing for me: start early\nThe conference took place on 7th September, but my supervisor first told me about it in January.\nIt is not that we spent all that time thinking about the conference. Rather, attending and presenting at the conference was always somewhere on our list. One of our goals for the year was to have something ready to present there.\nThe abstract submission deadline 24th April, quite early I think; because we had already been thinking about the conference for several months, we were able to plan our work and submit the abstract on time.\nI think this made a big difference.\nStarting early does not mean that everything needs to be ready early. It means knowing where you want to go and giving yourself enough time to get there. You have more time to develop your work, think about what you want to present, get feedback, and improve it.\n\n\n\nStart early, spend lot of time on practicing and polishing the talk"
   },
   {
-    "objectID": "trieu-le.html#josie-bryants-team",
-    "href": "trieu-le.html#josie-bryants-team",
-    "title": "My academic journey",
-    "section": "🔬 Josie Bryant’s Team",
-    "text": "🔬 Josie Bryant’s Team\nScience is not only about experiments and data, but also about the people we work with and learn from.\nA year of learning genomics, bioinformatics, and computational biology, and an important transition in my journey towards genomic research."
+    "objectID": "thoughts/preparation-for-a-conference.html#get-your-story-straight",
+    "href": "thoughts/preparation-for-a-conference.html#get-your-story-straight",
+    "title": "Preparation for a Conference",
+    "section": "Get your story straight",
+    "text": "Get your story straight\nOne thing I learned from preparing this talk is that having good results is not enough. You need to know what story you want to tell.\nAt the beginning, I had a lot of results and, naturally, I wanted to show everything. But a conference talk is short, and the audience does not know your project as well as you do. If you try to show too much, it is very easy to lose them.\nMy supervisor spent a lot of time discussing the story with me: What is the question? Why is it important? What do we know already? What did we find? And, most importantly, what do we want the audience to remember after the talk?\nOnce the story became clear, making the slides became much easier. Every slide needed to have a purpose and contribute to that story. Some results that I really liked had to be removed simply because they did not help move the story forward.\nI think this is something I will carry into future presentations: don’t start by asking, “What results should I show?” Start by asking, “What story do I want to tell?”"
   },
   {
-    "objectID": "trieu-le.html#university-of-cambridge",
-    "href": "trieu-le.html#university-of-cambridge",
-    "title": "My academic journey",
-    "section": "🎓 University of Cambridge",
-    "text": "🎓 University of Cambridge\nOne of my best academic experiences - networking with brilliant people, learning from inspiring mentors, and exploring the world of genomics and bioinformatics."
+    "objectID": "thoughts/preparation-for-a-conference.html#dont-work-too-hard-at-the-last-minute",
+    "href": "thoughts/preparation-for-a-conference.html#dont-work-too-hard-at-the-last-minute",
+    "title": "Preparation for a Conference",
+    "section": "Don’t work too hard at the last minute",
+    "text": "Don’t work too hard at the last minute\nThis might sound strange because, in the few weeks before a conference, there is always something more you can do. You can generate more data, make new figures, run more analyses, or even develop a new pipeline.\nBut at some point, more results do not necessarily make a better talk. A presentation full of numbers is not necessarily a strong presentation. And more importantly, how confident are you in results that you generated in a hurry just before the conference?\nSince I started preparing early, I had time to go through several versions of the presentation, discuss them with my supervisor and colleagues, and practise many times with what I already had. In the last few days, the goal was no longer to completely change the talk or add more results. It was to become comfortable and confident with the story I was going to tell.\nI think this is important because going into a conference exhausted and stressed does not help. You need energy not only for your presentation, but also for listening to other talks, meeting people, having conversations, and enjoying the conference.\nSo my lesson is: do the hard work early, be confident in the results you present, and leave the last few days for polishing, practising, and resting."
   },
   {
-    "objectID": "trieu-le.html#wellcome-sanger-institute",
-    "href": "trieu-le.html#wellcome-sanger-institute",
-    "title": "My academic journey",
-    "section": "🧬 Wellcome Sanger Institute",
-    "text": "🧬 Wellcome Sanger Institute\nSome memories from my time at the Wellcome Sanger Institute — a place where I was surrounded by genomics, computational biology, and people working at the forefront of genomic research."
+    "objectID": "thoughts/preparation-for-a-conference.html#practice-how-to-introduce-yourself-and-your-work",
+    "href": "thoughts/preparation-for-a-conference.html#practice-how-to-introduce-yourself-and-your-work",
+    "title": "Preparation for a Conference",
+    "section": "Practice how to introduce yourself and your work",
+    "text": "Practice how to introduce yourself and your work\nI prepared a lot for my talk, but I realised that there was another kind of preparation that was just as useful: knowing how to introduce myself and my research.\nAt a conference, people will ask you many versions of the same questions:\nWhat do you work on?\nWhat is your PhD about?\nWhat did you present today?\nThese conversations may happen during a coffee break, at lunch, after your talk, or while you are standing next to a poster. You often have only a minute or two to explain what you do.\nIt sounds easy, but I don’t think it is. Especially for those of us who speak English as a second language, it can be difficult to explain our work clearly and concisely on the spot. I found that practising these conversations beforehand made them much easier.\nExplaining several years of research in just a few sentences, especially to someone who works in a different field, takes practice. I found it useful to think beforehand about a simple way to describe my PhD: what problem am I interested in, what am I doing to study it, and why does it matter?\nYou don’t need to memorise a script. In fact, you will probably explain your work slightly differently depending on who you are talking to. But having a clear introduction in mind makes it much easier to start a conversation and gives you more confidence when meeting new people.\nAnd sometimes, that one-minute introduction can lead to a much longer and more interesting conversation."
   },
   {
-    "objectID": "trieu-le.html#university-of-bath",
-    "href": "trieu-le.html#university-of-bath",
-    "title": "My academic journey",
-    "section": "🎓 University of Bath",
-    "text": "🎓 University of Bath\nThe next chapter of the journey — my PhD.\nMy research focuses on bacterial genomics and evolution, particularly the role of plasmids and other mobile genetic elements in the spread of antimicrobial resistance."
+    "objectID": "thoughts/preparation-for-a-conference.html#have-in-mind-people-you-would-like-to-meet",
+    "href": "thoughts/preparation-for-a-conference.html#have-in-mind-people-you-would-like-to-meet",
+    "title": "Preparation for a Conference",
+    "section": "Have in mind people you would like to meet",
+    "text": "Have in mind people you would like to meet\nThere are many people at a conference, and sometimes it can be quite difficult to approach someone you really want to talk to, especially senior researchers.\nBefore the conference, it can be helpful to make a short list of people you would like to meet. Think about why you want to talk to them: Is there something you want to ask about their research? Do you want their advice? Is there a potential opportunity for collaboration? Spend a little time reading their profiles and recent work beforehand. You don’t need to know everything they have published, but having a basic understanding of their research makes it much easier to start a meaningful conversation.\nIt is also useful to prepare a few questions for the talks you plan to attend. Asking a question after a talk can be a natural way to introduce yourself and start a conversation with the speaker afterwards. Your supervisors can also be very helpful. Ask them who they think you should meet and, if possible, ask them to introduce you. A simple introduction from someone you already know can make approaching a senior researcher much easier.\nHowever, don’t focus too much on meeting specific people. The person you want to meet may be busy, already talking to someone else, or simply not have much time. That’s completely normal. Some of the most interesting conversations at conferences happen unexpectedly — while having coffee, waiting for the next session, sitting next to someone at lunch, or talking to someone whose research you knew nothing about beforehand.\nSo have a plan, but stay flexible. Know who you would like to meet, but be open to who you might meet. A conference is not only about networking with the “right” people; it is also an opportunity to discover new ideas, hear different perspectives, and learn from people you did not expect to meet."
   },
   {
-    "objectID": "trieu-le.html#zamin-iqbals-team",
-    "href": "trieu-le.html#zamin-iqbals-team",
-    "title": "My academic journey",
-    "section": "🧬 Zamin Iqbal’s Team",
-    "text": "🧬 Zamin Iqbal’s Team\nResearch is rarely a solitary journey. I am fortunate to work with people from whom I can learn about bacterial genomics, pangenomics, algorithms, evolution, and much more."
-  },
-  {
-    "objectID": "trieu-le.html#conferences",
-    "href": "trieu-le.html#conferences",
-    "title": "My academic journey",
-    "section": "🌍 Conferences",
-    "text": "🌍 Conferences\nOne of the parts of research I enjoy most is meeting people with different ideas and perspectives.\nConferences have given me opportunities to present my work, discover new research, discuss ideas, and meet researchers from around the world."
-  },
-  {
-    "objectID": "trieu-le.html#visiting-the-old-lab",
-    "href": "trieu-le.html#visiting-the-old-lab",
-    "title": "My academic journey",
-    "section": "🔬 Visiting the Old Lab",
-    "text": "🔬 Visiting the Old Lab\nSometimes moving forward also means returning to where part of the journey began."
-  },
-  {
-    "objectID": "trieu-le.html#vietsocs",
-    "href": "trieu-le.html#vietsocs",
-    "title": "My academic journey",
-    "section": "🇻🇳 Vietsocs",
-    "text": "🇻🇳 Vietsocs\nLife beyond research matters too.\nCommunity, friendships, shared experiences, and staying connected with Vietnam have also been an important part of my life in the UK."
-  },
-  {
-    "objectID": "trieu-le.html#along-the-way",
-    "href": "trieu-le.html#along-the-way",
-    "title": "My academic journey",
-    "section": "Along the Way",
-    "text": "Along the Way\nScience is more than experiments, code, data, papers, and results.\nIt is also about the people we meet, the places we go, the ideas we encounter, and the experiences that gradually shape how we think.\nThis page is a growing collection of those moments.\nMore to come."
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "My research spans microbial genomics, antimicrobial resistance, tuberculosis, and infectious diseases.\nORCID"
-  },
-  {
-    "objectID": "publications.html#section",
-    "href": "publications.html#section",
-    "title": "Publications",
-    "section": "2026",
-    "text": "2026\n\nPhylogenetic distribution and longitudinal persistence of plasmids in Mycobacterium abscessus\nTrieu Le, Josephine M. Bryant\nMicrobial Genomics, 2026.\nDOI"
-  },
-  {
-    "objectID": "publications.html#section-1",
-    "href": "publications.html#section-1",
-    "title": "Publications",
-    "section": "2025",
-    "text": "2025\n\nAmira: detection of AMR genes directly from long reads using gene-space de Bruijn graphs\nDaniel Anderson, Leandro Lima, Trieu Le, Louise Judd, Ryan Wick, Zamin Iqbal\nPreprint, 2025.\nPreprint\n\n\n\nInfection by Clonally Related Mycobacterium abscessus Isolates: The Role of Drinking Water\nRachel Thomson, N. Wheeler, R. E. Stockwell, J. Bryant, S. L. Taylor, L. E. X. Leong, T. Le, G. B. Rogers, R. Carter, L. J. Sherrard, et al.\nAmerican Journal of Respiratory and Critical Care Medicine, 2025.\nDOI · PubMed"
-  },
-  {
-    "objectID": "publications.html#section-2",
-    "href": "publications.html#section-2",
-    "title": "Publications",
-    "section": "2024",
-    "text": "2024\n\nRifampicin tolerance and growth fitness among isoniazid-resistant clinical Mycobacterium tuberculosis isolates from a longitudinal study\nSrinivasan Vijay, Nguyen Le Hoai Bao, Dao Nguyen Vinh, Le Thanh Hoang Nhat, Do Dang Anh Thu, Nguyen Le Quang, Le Pham Tien Trieu, Hoang Ngoc Nhung, Vu Thi Ngoc Ha, Phan Vuong Khac Thai, et al.\neLife, 2024.\nDOI\n\n\n\nRifampicin resistant Mycobacterium tuberculosis in Vietnam, 2020–2022\nHung Van Nguyen, Hoa Binh Nguyen, Doan Thu Ha, Dinh Thi Huong, Vu Ngoc Trung, Khieu Thi Thuy Ngoc, Tran Huyen Trang, Ha Vu Thi Ngoc, Tram Trinh Thi Bich, Trieu Le Pham Tien, et al.\nJournal of Clinical Tuberculosis and Other Mycobacterial Diseases, 2024.\nDOI\n\n\n\nTargeted sequencing from cerebrospinal fluid for rapid identification of drug-resistant tuberculous meningitis\nTrinh Thi Bich Tram, Le Pham Tien Trieu, Le Thanh Hoang Nhat, Do Dang Anh Thu, Nguyen Le Quang, Nguyen Duc Bang, Tran Thi Hong Chau, Guy E. Thwaites, Timothy M. Walker, Vu Thi Ngoc Ha, et al.\nJournal of Clinical Microbiology, 2024.\nDOI\n\n\n\nA modified decontamination and storage method for sputum from patients with tuberculosis\nNguyen Le Quang, Do Dang Anh Thu, Le Pham Tien Trieu, Nguyen Hong Hanh, Nguyen Huu Lan, Dang Thi Minh Ha, Guy Thwaites, Nguyen Thuy Thuong Thuong, Timothy M. Walker\nWellcome Open Research, 2024.\nDOI"
-  },
-  {
-    "objectID": "publications.html#section-3",
-    "href": "publications.html#section-3",
-    "title": "Publications",
-    "section": "2023",
-    "text": "2023\n\nFLASH-TB: an Application of Next-Generation CRISPR to Detect Drug Resistant Tuberculosis from Direct Sputum\nTrinh Thi Bich Tram, Vu Thi Ngoc Ha, Le Pham Tien Trieu, Philip M. Ashton, Emily D. Crawford, Do Dang Anh Thu, Nguyen Le Quang, Guy E. Thwaites, Timothy M. Walker, Catherine Anscombe, et al.\nJournal of Clinical Microbiology, 2023.\nDOI"
-  },
-  {
-    "objectID": "publications.html#section-4",
-    "href": "publications.html#section-4",
-    "title": "Publications",
-    "section": "2021",
-    "text": "2021\n\nMost-Probable-Number-Based Minimum Duration of Killing Assay for Determining the Spectrum of Rifampicin Susceptibility in Clinical Mycobacterium tuberculosis Isolates\nSrinivasan Vijay, Hoang Ngoc Nhung, Nguyen Le Hoai Bao, Do Dang Anh Thu, Le Pham Tien Trieu, Nguyen Hoan Phu, Guy E. Thwaites, Babak Javid, Nguyen T. T. Thuong\nAntimicrobial Agents and Chemotherapy, 2021.\nDOI"
-  },
-  {
-    "objectID": "publications.html#section-5",
-    "href": "publications.html#section-5",
-    "title": "Publications",
-    "section": "2019",
-    "text": "2019\n\nRecombinant human granulocyte colony-stimulating factor alleviates liver fibrosis in bile duct-ligated mice\nHuy Quang Do, Trinh Van Le, Minh Thanh Dang, Tien-Trieu Pham-Le, Luan Van Tran, Khon Chan Huynh, Ai-Xuan Le Holterman, Nhung Hai Truong\nBiomedical Research and Therapy, 2019.\nDOI"
-  },
-  {
-    "objectID": "publications.html#peer-review",
-    "href": "publications.html#peer-review",
-    "title": "Publications",
-    "section": "Peer Review",
-    "text": "Peer Review\nReviewer for:\n\nNature Communications\nMicrobial Genomics"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "My contact",
-    "section": "",
-    "text": "I’d be happy to hear from you.\nIf you have questions about my research, would like to discuss potential collaborations, or have comments or feedback about this website, feel free to get in touch.\n\nContact\nEmail: pttl20@bath.ac.uk\nLinkedIn: Trieu Le\nResearchGate: Trieu Le\nORCID: 0009-0000-2555-0496"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Trieu Le",
-    "section": "",
-    "text": "I am a researcher interested in microbial genomics, antimicrobial resistance, and bacterial evolution."
-  },
-  {
-    "objectID": "index.html#research-interests",
-    "href": "index.html#research-interests",
-    "title": "Trieu Le",
-    "section": "Research Interests",
-    "text": "Research Interests\n\n💻 Bioinformatics\n🧬 Microbial genomics\n🧫 Bacterial population genomics\n🔗 Plasmids and mobile genetic elements\n💊 Antimicrobial resistance\n🦠 Infectious diseases"
-  },
-  {
-    "objectID": "index.html#bioinformatics-for-dumb-me",
-    "href": "index.html#bioinformatics-for-dumb-me",
-    "title": "Trieu Le",
-    "section": "Bioinformatics for “Dumb me”",
-    "text": "Bioinformatics for “Dumb me”\nLearning bioinformatics from first principles.\nI use this space to document what I learn about the mathematics, algorithms, and biological concepts behind modern genomic analysis.\nTopics include:\nProbability · Bayesian statistics · Sequencing · Alignment · Phylogenetics · Pangenomics · Population structure · Metagenomics · Machine learning\nExplore Bioinformatics for “Dumb me” →"
-  },
-  {
-    "objectID": "index.html#publications",
-    "href": "index.html#publications",
-    "title": "Trieu Le",
-    "section": "Publications",
-    "text": "Publications\nMy contribution to publications and research outputs.\nView publications →"
-  },
-  {
-    "objectID": "index.html#thoughts",
-    "href": "index.html#thoughts",
-    "title": "Trieu Le",
-    "section": "Thoughts",
-    "text": "Thoughts\nReflections on research, science, and my PhD journey.\nRead my thoughts →"
-  },
-  {
-    "objectID": "index.html#my-journey",
-    "href": "index.html#my-journey",
-    "title": "Trieu Le",
-    "section": "My Journey",
-    "text": "My Journey\nPeople, places, and moments that have been part of my journey.\nSee photos →"
-  },
-  {
-    "objectID": "index.html#my-contact",
-    "href": "index.html#my-contact",
-    "title": "Trieu Le",
-    "section": "My contact",
-    "text": "My contact\nContact me →"
+    "objectID": "thoughts/preparation-for-a-conference.html#enjoy-the-conference",
+    "href": "thoughts/preparation-for-a-conference.html#enjoy-the-conference",
+    "title": "Preparation for a Conference",
+    "section": "Enjoy the conference",
+    "text": "Enjoy the conference\nFinally, enjoy it.\nIt is very easy to become so focused on your own presentation that the conference starts to feel like an exam. Before the talk, you are nervous about presenting. After the talk, you start thinking about what you could have said better.\nBut the presentation is only a small part of the conference.\nOnce my talk was finished, I could relax much more. I listened to other people’s work, asked questions, met researchers I had previously only known through their papers, talked to people working on completely different problems, and had many interesting conversations.\nI think conferences are one of the few opportunities in research where so many people interested in similar questions are in the same place at the same time. It would be a shame to spend the whole conference worrying about your slides.\nOf course, presenting your work is important. But so is meeting people, hearing new ideas, discovering work you did not know about, and simply enjoying being part of the scientific community.\nLooking back, I am glad that my first PhD conference talk went well. But some of my favourite memories from the conference happened outside the lecture room.\nSo prepare well, tell your story, practise your talk—and when you get there, remember to enjoy the conference.\n← Back to Thoughts"
   },
   {
     "objectID": "about.html",
@@ -511,87 +322,283 @@
     "text": "Books That Shaped My Thinking\nThese books have influenced how I think about science, learning, decision-making, communication, money, and life.\n\n\n\n\n\n\nThinking, Fast and Slow\nDaniel Kahneman\nThis book made me more aware of how intuition, cognitive biases, and uncertainty influence our decisions. The distinction between fast, intuitive thinking and slower, deliberate reasoning has stayed with me, particularly when I think about scientific evidence and decision-making.\n\n\n\n\n\n\n\n\n\n\n\nThe Psychology of Money\nMorgan Housel\nThis book gave me a different perspective on how people make financial decisions and how strongly those decisions are shaped by behaviour, experience, and personal circumstances. It encouraged me to reflect on my own relationship with money and motivated me to build a more thoughtful, disciplined, and sustainable financial plan for the future.\n\n\n\n\n\n\n\n\n\n\n\nMindset\nCarol S. Dweck\nThis book changed how I think about ability and failure. It influenced how I approach learning, research, and new challenges, encouraging me to focus more on progress and improvement rather than being afraid of making mistakes.\n\n\n\n\n\n\n\n\n\n\n\nStorytelling with Data\nCole Nussbaumer Knaflic\nThis book changed how I think about presenting scientific results. I learned that a good figure is not simply one that displays the data accurately; it should also help the audience quickly understand the main message.\n\n\n\n\n\n\n\n\n\n\n\nThe 7 Habits of Highly Effective People\nStephen R. Covey\nThis book made me think more deliberately about how I organise my life and use my time. In particular, the ideas of beginning with the end in mind and putting first things first helped me connect everyday decisions with longer-term goals. It also reminded me that effectiveness is not simply about being productive, but about building good relationships, maintaining balance, and continuously investing in personal growth.\n\n\n\n\n\n\n\n\n\n\n\nThe Miracle of Mindfulness\nThich Nhat Hanh\nThis book introduced me to Buddhism not only as a religion, but also as a philosophy for understanding the mind, suffering, happiness, and our relationship with the world around us. Thich Nhat Hanh’s approach to mindfulness taught me to pay more attention to the present moment rather than constantly thinking about what comes next.\n\n\n\n\n\n\n\n\n\n\n\nTế Bào Gốc (in Vietnamese)\nPhan Kim Ngoc\nThis was the first scientific book I ever owned, a gift from my sister when I turned 17. It sparked my curiosity about stem cells and motivated me to join a stem cell research laboratory later, where I learned the fundamentals of scientific research and gained my first experience at the lab bench. It also encouraged me to think beyond experiments themselves—to consider how discoveries in the laboratory can be translated into biotechnology and real-world applications. Looking back, this book represents where my academic journey began and helped shape the way I think about science: from understanding fundamental biology to asking how that knowledge can ultimately be applied.\n\n\n\n\n\n\n\n\n\n\n\nHow to analyze data with R (in Vietnamese)\nNguyen Van Tuan\nBefore reading this book, I was almost entirely a wet-lab researcher and felt somewhat intimidated by coding and data analysis. This book helped me understand the logic behind data analysis and made R feel approachable rather than something to avoid. More importantly, it gave me the confidence and motivation to start learning independently and take greater ownership of my data. That small beginning eventually changed the direction of my research journey—today, I use R, coding, and computational tools almost every day."
   },
   {
-    "objectID": "thoughts/preparation-for-a-conference.html",
-    "href": "thoughts/preparation-for-a-conference.html",
-    "title": "Preparation for a Conference",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Trieu Le",
     "section": "",
-    "text": "← Back to Thoughts\nFirst of all, I would like to give a shout-out to my supervisor, Zam, for being incredibly supportive and encouraging. He spent a lot of time helping me prepare for the talk, and through him, I have also had the opportunity to meet many intelligent and interesting people. I am very grateful for that.\nI recently gave my first conference talk during my PhD, and to my delight (and according to my colleagues who attended the conference), it went really well. I was very happy about that.\nAfterwards, I was invited to share my conference experience with my colleagues, so I thought I would write it down here as well. I am still learning, and this was only my first conference talk as a PhD student, but these are a few things that worked for me. I hope they might be useful to someone else preparing for their first conference."
+    "text": "I am a researcher interested in microbial genomics, antimicrobial resistance, and bacterial evolution."
   },
   {
-    "objectID": "thoughts/preparation-for-a-conference.html#the-most-important-thing-for-me-start-early",
-    "href": "thoughts/preparation-for-a-conference.html#the-most-important-thing-for-me-start-early",
-    "title": "Preparation for a Conference",
-    "section": "The most important thing for me: start early",
-    "text": "The most important thing for me: start early\nThe conference took place on 7th September, but my supervisor first told me about it in January.\nIt is not that we spent all that time thinking about the conference. Rather, attending and presenting at the conference was always somewhere on our list. One of our goals for the year was to have something ready to present there.\nThe abstract submission deadline 24th April, quite early I think; because we had already been thinking about the conference for several months, we were able to plan our work and submit the abstract on time.\nI think this made a big difference.\nStarting early does not mean that everything needs to be ready early. It means knowing where you want to go and giving yourself enough time to get there. You have more time to develop your work, think about what you want to present, get feedback, and improve it.\n\n\n\nStart early, spend lot of time on practicing and polishing the talk"
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Trieu Le",
+    "section": "Research Interests",
+    "text": "Research Interests\n\n💻 Bioinformatics\n🧬 Microbial genomics\n🧫 Bacterial population genomics\n🔗 Plasmids and mobile genetic elements\n💊 Antimicrobial resistance\n🦠 Infectious diseases"
   },
   {
-    "objectID": "thoughts/preparation-for-a-conference.html#get-your-story-straight",
-    "href": "thoughts/preparation-for-a-conference.html#get-your-story-straight",
-    "title": "Preparation for a Conference",
-    "section": "Get your story straight",
-    "text": "Get your story straight\nOne thing I learned from preparing this talk is that having good results is not enough. You need to know what story you want to tell.\nAt the beginning, I had a lot of results and, naturally, I wanted to show everything. But a conference talk is short, and the audience does not know your project as well as you do. If you try to show too much, it is very easy to lose them.\nMy supervisor spent a lot of time discussing the story with me: What is the question? Why is it important? What do we know already? What did we find? And, most importantly, what do we want the audience to remember after the talk?\nOnce the story became clear, making the slides became much easier. Every slide needed to have a purpose and contribute to that story. Some results that I really liked had to be removed simply because they did not help move the story forward.\nI think this is something I will carry into future presentations: don’t start by asking, “What results should I show?” Start by asking, “What story do I want to tell?”"
+    "objectID": "index.html#bioinformatics-for-dumb-me",
+    "href": "index.html#bioinformatics-for-dumb-me",
+    "title": "Trieu Le",
+    "section": "Bioinformatics for “Dumb me”",
+    "text": "Bioinformatics for “Dumb me”\nLearning bioinformatics from first principles.\nI use this space to document what I learn about the mathematics, algorithms, and biological concepts behind modern genomic analysis.\nTopics include:\nProbability · Bayesian statistics · Sequencing · Alignment · Phylogenetics · Pangenomics · Population structure · Metagenomics · Machine learning\nExplore Bioinformatics for “Dumb me” →"
   },
   {
-    "objectID": "thoughts/preparation-for-a-conference.html#dont-work-too-hard-at-the-last-minute",
-    "href": "thoughts/preparation-for-a-conference.html#dont-work-too-hard-at-the-last-minute",
-    "title": "Preparation for a Conference",
-    "section": "Don’t work too hard at the last minute",
-    "text": "Don’t work too hard at the last minute\nThis might sound strange because, in the few weeks before a conference, there is always something more you can do. You can generate more data, make new figures, run more analyses, or even develop a new pipeline.\nBut at some point, more results do not necessarily make a better talk. A presentation full of numbers is not necessarily a strong presentation. And more importantly, how confident are you in results that you generated in a hurry just before the conference?\nSince I started preparing early, I had time to go through several versions of the presentation, discuss them with my supervisor and colleagues, and practise many times with what I already had. In the last few days, the goal was no longer to completely change the talk or add more results. It was to become comfortable and confident with the story I was going to tell.\nI think this is important because going into a conference exhausted and stressed does not help. You need energy not only for your presentation, but also for listening to other talks, meeting people, having conversations, and enjoying the conference.\nSo my lesson is: do the hard work early, be confident in the results you present, and leave the last few days for polishing, practising, and resting."
+    "objectID": "index.html#publications",
+    "href": "index.html#publications",
+    "title": "Trieu Le",
+    "section": "Publications",
+    "text": "Publications\nMy contribution to publications and research outputs.\nView publications →"
   },
   {
-    "objectID": "thoughts/preparation-for-a-conference.html#practice-how-to-introduce-yourself-and-your-work",
-    "href": "thoughts/preparation-for-a-conference.html#practice-how-to-introduce-yourself-and-your-work",
-    "title": "Preparation for a Conference",
-    "section": "Practice how to introduce yourself and your work",
-    "text": "Practice how to introduce yourself and your work\nI prepared a lot for my talk, but I realised that there was another kind of preparation that was just as useful: knowing how to introduce myself and my research.\nAt a conference, people will ask you many versions of the same questions:\nWhat do you work on?\nWhat is your PhD about?\nWhat did you present today?\nThese conversations may happen during a coffee break, at lunch, after your talk, or while you are standing next to a poster. You often have only a minute or two to explain what you do.\nIt sounds easy, but I don’t think it is. Especially for those of us who speak English as a second language, it can be difficult to explain our work clearly and concisely on the spot. I found that practising these conversations beforehand made them much easier.\nExplaining several years of research in just a few sentences, especially to someone who works in a different field, takes practice. I found it useful to think beforehand about a simple way to describe my PhD: what problem am I interested in, what am I doing to study it, and why does it matter?\nYou don’t need to memorise a script. In fact, you will probably explain your work slightly differently depending on who you are talking to. But having a clear introduction in mind makes it much easier to start a conversation and gives you more confidence when meeting new people.\nAnd sometimes, that one-minute introduction can lead to a much longer and more interesting conversation."
+    "objectID": "index.html#thoughts",
+    "href": "index.html#thoughts",
+    "title": "Trieu Le",
+    "section": "Thoughts",
+    "text": "Thoughts\nReflections on research, science, and my PhD journey.\nRead my thoughts →"
   },
   {
-    "objectID": "thoughts/preparation-for-a-conference.html#have-in-mind-people-you-would-like-to-meet",
-    "href": "thoughts/preparation-for-a-conference.html#have-in-mind-people-you-would-like-to-meet",
-    "title": "Preparation for a Conference",
-    "section": "Have in mind people you would like to meet",
-    "text": "Have in mind people you would like to meet\nThere are many people at a conference, and sometimes it can be quite difficult to approach someone you really want to talk to, especially senior researchers.\nBefore the conference, it can be helpful to make a short list of people you would like to meet. Think about why you want to talk to them: Is there something you want to ask about their research? Do you want their advice? Is there a potential opportunity for collaboration? Spend a little time reading their profiles and recent work beforehand. You don’t need to know everything they have published, but having a basic understanding of their research makes it much easier to start a meaningful conversation.\nIt is also useful to prepare a few questions for the talks you plan to attend. Asking a question after a talk can be a natural way to introduce yourself and start a conversation with the speaker afterwards. Your supervisors can also be very helpful. Ask them who they think you should meet and, if possible, ask them to introduce you. A simple introduction from someone you already know can make approaching a senior researcher much easier.\nHowever, don’t focus too much on meeting specific people. The person you want to meet may be busy, already talking to someone else, or simply not have much time. That’s completely normal. Some of the most interesting conversations at conferences happen unexpectedly — while having coffee, waiting for the next session, sitting next to someone at lunch, or talking to someone whose research you knew nothing about beforehand.\nSo have a plan, but stay flexible. Know who you would like to meet, but be open to who you might meet. A conference is not only about networking with the “right” people; it is also an opportunity to discover new ideas, hear different perspectives, and learn from people you did not expect to meet."
+    "objectID": "index.html#my-journey",
+    "href": "index.html#my-journey",
+    "title": "Trieu Le",
+    "section": "My Journey",
+    "text": "My Journey\nPeople, places, and moments that have been part of my journey.\nSee photos →"
   },
   {
-    "objectID": "thoughts/preparation-for-a-conference.html#enjoy-the-conference",
-    "href": "thoughts/preparation-for-a-conference.html#enjoy-the-conference",
-    "title": "Preparation for a Conference",
-    "section": "Enjoy the conference",
-    "text": "Enjoy the conference\nFinally, enjoy it.\nIt is very easy to become so focused on your own presentation that the conference starts to feel like an exam. Before the talk, you are nervous about presenting. After the talk, you start thinking about what you could have said better.\nBut the presentation is only a small part of the conference.\nOnce my talk was finished, I could relax much more. I listened to other people’s work, asked questions, met researchers I had previously only known through their papers, talked to people working on completely different problems, and had many interesting conversations.\nI think conferences are one of the few opportunities in research where so many people interested in similar questions are in the same place at the same time. It would be a shame to spend the whole conference worrying about your slides.\nOf course, presenting your work is important. But so is meeting people, hearing new ideas, discovering work you did not know about, and simply enjoying being part of the scientific community.\nLooking back, I am glad that my first PhD conference talk went well. But some of my favourite memories from the conference happened outside the lecture room.\nSo prepare well, tell your story, practise your talk—and when you get there, remember to enjoy the conference.\n← Back to Thoughts"
+    "objectID": "index.html#my-contact",
+    "href": "index.html#my-contact",
+    "title": "Trieu Le",
+    "section": "My contact",
+    "text": "My contact\nContact me →"
   },
   {
-    "objectID": "thoughts/Just-start-writting.html",
-    "href": "thoughts/Just-start-writting.html",
-    "title": "Just start writing",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "My contact",
     "section": "",
-    "text": "← Back to Thoughts\nI am not in a position to tell anyone how to write or what the best way is. I am an apprentice in writing, and I am still learning myself. But I have finished my Bachelor’s thesis, my MPhil thesis, and I have written several reports and papers during my PhD journey. Along the way, I have learned a few things about writing, and I want to share them here.\nLet’s start with what I find most challenging when I talk to people about writing: getting started.\nWhy is it so hard to start?\nPeople often wait for the right moment, the right time, the right mood, or the right inspiration. But the truth is, there is no right moment. And even when they have started, many struggle with the first sentence or paragraph. They want to write the best paragraph right from the beginning.\nI totally understand that.\nAs English is not my first language, getting started is even more challenging. I have spent hours, sometimes days, thinking about the first sentence. I have written and rewritten the first paragraph many times before moving on.\nBut I have learned that it is not important to write the best paragraph at the beginning. It is more important to have something on the page.\nYour first draft will not be your final draft. At least in scientific writing, almost nothing is submitted exactly as it was first written. You revise it yourself, send it to your supervisors or colleagues, receive feedback, revise it again, and probably repeat the process several times.\nSo why expect the first draft to be perfect?\nYou can always improve something that has been written. You cannot improve a blank page."
+    "text": "I’d be happy to hear from you.\nIf you have questions about my research, would like to discuss potential collaborations, or have comments or feedback about this website, feel free to get in touch.\n\nContact\nEmail: pttl20@bath.ac.uk\nLinkedIn: Trieu Le\nResearchGate: Trieu Le\nORCID: 0009-0000-2555-0496"
   },
   {
-    "objectID": "thoughts/Just-start-writting.html#start-with-an-outline",
-    "href": "thoughts/Just-start-writting.html#start-with-an-outline",
-    "title": "Just start writing",
-    "section": "Start with an outline",
-    "text": "Start with an outline\nOne thing that helps me overcome this is having a strong outline.\nBefore writing, discuss the structure with your supervisors or colleagues. Once you are happy with the overall outline, make it more detailed. Then make it even more detailed—to the point where you know roughly what you want to say in each section.\nFor example, instead of starting with:\n\nDiscussion\n\nbreak it down into:\n\nDiscussion\n- What is the main finding?\n- How does it compare with previous studies?\n- What could explain the finding?\n- What are the limitations?\n- Why does it matter?\n\nAt that point, you are no longer facing an empty page and wondering, What should I write? You already know what you want to say.\nThen, just start writing.\nIn my first draft, I don’t even care too much about grammar, spelling, or punctuation. I just try to put my ideas into words. I know I can come back and revise them later.\nFor me, separating writing from editing makes starting much easier."
-  },
-  {
-    "objectID": "thoughts/Just-start-writting.html#a-book-that-changed-how-i-think-about-writing",
-    "href": "thoughts/Just-start-writting.html#a-book-that-changed-how-i-think-about-writing",
-    "title": "Just start writing",
-    "section": "A book that changed how I think about writing",
-    "text": "A book that changed how I think about writing\nOne of the books that has truly inspired me is Writing Science by Joshua Schimel.\nI highly recommend it to anyone who wants to improve their scientific writing. It teaches not only how to write clearly and concisely, but also how to think about scientific writing as storytelling—how to build an argument, guide the reader, and communicate why your science matters.\nMany of the ideas in the book have become embedded in the way I think about writing.\nOne sentence from the beginning of the book has particularly stayed with me:\n\n“As a scientist, you are a professional writer.”\n\n\n\n\n“Writing Science” by Joshua Schimel\n\n\nThat sentence changed my perspective. Writing is not something separate from doing science. Papers, reports, grants, theses, presentations—our ability to communicate our work is part of being a scientist.\nI am still learning how to write, and I expect I always will be. But one lesson has already made writing much easier for me:\nDon’t try to write the perfect first draft. Just start writing.\n← Back to Thoughts"
-  },
-  {
-    "objectID": "thoughts/index.html",
-    "href": "thoughts/index.html",
-    "title": "Thoughts",
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
     "section": "",
-    "text": "Preparation for a Conference\n\n\nHow I prepared for a conference and what I learned from it\n\n\n\n\n\nSep 26, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nScience Through the Lens of Investing\n\n\nA reflection on recognition, timing, and communication in research\n\n\n\n\n\nSep 11, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nJust start writing\n\n\nYou have a report or thesis to write—what are you waiting for?\n\n\n\n\n\nJul 15, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nYou should ask more questions at conferences\n\n\nListening in Science is as important as presenting\n\n\n\n\n\nJun 6, 2026\n\n\n\n\n\nNo matching items"
+    "text": "My research spans microbial genomics, antimicrobial resistance, tuberculosis, and infectious diseases.\nORCID"
   },
   {
-    "objectID": "bioinformatics/index.html",
-    "href": "bioinformatics/index.html",
-    "title": "Bioinformatics for ‘Dumb Me’",
+    "objectID": "publications.html#section",
+    "href": "publications.html#section",
+    "title": "Publications",
+    "section": "2026",
+    "text": "2026\n\nPhylogenetic distribution and longitudinal persistence of plasmids in Mycobacterium abscessus\nTrieu Le, Josephine M. Bryant\nMicrobial Genomics, 2026.\nDOI"
+  },
+  {
+    "objectID": "publications.html#section-1",
+    "href": "publications.html#section-1",
+    "title": "Publications",
+    "section": "2025",
+    "text": "2025\n\nAmira: detection of AMR genes directly from long reads using gene-space de Bruijn graphs\nDaniel Anderson, Leandro Lima, Trieu Le, Louise Judd, Ryan Wick, Zamin Iqbal\nPreprint, 2025.\nPreprint\n\n\n\nInfection by Clonally Related Mycobacterium abscessus Isolates: The Role of Drinking Water\nRachel Thomson, N. Wheeler, R. E. Stockwell, J. Bryant, S. L. Taylor, L. E. X. Leong, T. Le, G. B. Rogers, R. Carter, L. J. Sherrard, et al.\nAmerican Journal of Respiratory and Critical Care Medicine, 2025.\nDOI · PubMed"
+  },
+  {
+    "objectID": "publications.html#section-2",
+    "href": "publications.html#section-2",
+    "title": "Publications",
+    "section": "2024",
+    "text": "2024\n\nRifampicin tolerance and growth fitness among isoniazid-resistant clinical Mycobacterium tuberculosis isolates from a longitudinal study\nSrinivasan Vijay, Nguyen Le Hoai Bao, Dao Nguyen Vinh, Le Thanh Hoang Nhat, Do Dang Anh Thu, Nguyen Le Quang, Le Pham Tien Trieu, Hoang Ngoc Nhung, Vu Thi Ngoc Ha, Phan Vuong Khac Thai, et al.\neLife, 2024.\nDOI\n\n\n\nRifampicin resistant Mycobacterium tuberculosis in Vietnam, 2020–2022\nHung Van Nguyen, Hoa Binh Nguyen, Doan Thu Ha, Dinh Thi Huong, Vu Ngoc Trung, Khieu Thi Thuy Ngoc, Tran Huyen Trang, Ha Vu Thi Ngoc, Tram Trinh Thi Bich, Trieu Le Pham Tien, et al.\nJournal of Clinical Tuberculosis and Other Mycobacterial Diseases, 2024.\nDOI\n\n\n\nTargeted sequencing from cerebrospinal fluid for rapid identification of drug-resistant tuberculous meningitis\nTrinh Thi Bich Tram, Le Pham Tien Trieu, Le Thanh Hoang Nhat, Do Dang Anh Thu, Nguyen Le Quang, Nguyen Duc Bang, Tran Thi Hong Chau, Guy E. Thwaites, Timothy M. Walker, Vu Thi Ngoc Ha, et al.\nJournal of Clinical Microbiology, 2024.\nDOI\n\n\n\nA modified decontamination and storage method for sputum from patients with tuberculosis\nNguyen Le Quang, Do Dang Anh Thu, Le Pham Tien Trieu, Nguyen Hong Hanh, Nguyen Huu Lan, Dang Thi Minh Ha, Guy Thwaites, Nguyen Thuy Thuong Thuong, Timothy M. Walker\nWellcome Open Research, 2024.\nDOI"
+  },
+  {
+    "objectID": "publications.html#section-3",
+    "href": "publications.html#section-3",
+    "title": "Publications",
+    "section": "2023",
+    "text": "2023\n\nFLASH-TB: an Application of Next-Generation CRISPR to Detect Drug Resistant Tuberculosis from Direct Sputum\nTrinh Thi Bich Tram, Vu Thi Ngoc Ha, Le Pham Tien Trieu, Philip M. Ashton, Emily D. Crawford, Do Dang Anh Thu, Nguyen Le Quang, Guy E. Thwaites, Timothy M. Walker, Catherine Anscombe, et al.\nJournal of Clinical Microbiology, 2023.\nDOI"
+  },
+  {
+    "objectID": "publications.html#section-4",
+    "href": "publications.html#section-4",
+    "title": "Publications",
+    "section": "2021",
+    "text": "2021\n\nMost-Probable-Number-Based Minimum Duration of Killing Assay for Determining the Spectrum of Rifampicin Susceptibility in Clinical Mycobacterium tuberculosis Isolates\nSrinivasan Vijay, Hoang Ngoc Nhung, Nguyen Le Hoai Bao, Do Dang Anh Thu, Le Pham Tien Trieu, Nguyen Hoan Phu, Guy E. Thwaites, Babak Javid, Nguyen T. T. Thuong\nAntimicrobial Agents and Chemotherapy, 2021.\nDOI"
+  },
+  {
+    "objectID": "publications.html#section-5",
+    "href": "publications.html#section-5",
+    "title": "Publications",
+    "section": "2019",
+    "text": "2019\n\nRecombinant human granulocyte colony-stimulating factor alleviates liver fibrosis in bile duct-ligated mice\nHuy Quang Do, Trinh Van Le, Minh Thanh Dang, Tien-Trieu Pham-Le, Luan Van Tran, Khon Chan Huynh, Ai-Xuan Le Holterman, Nhung Hai Truong\nBiomedical Research and Therapy, 2019.\nDOI"
+  },
+  {
+    "objectID": "publications.html#peer-review",
+    "href": "publications.html#peer-review",
+    "title": "Publications",
+    "section": "Peer Review",
+    "text": "Peer Review\nReviewer for:\n\nNature Communications\nMicrobial Genomics"
+  },
+  {
+    "objectID": "trieu-le.html",
+    "href": "trieu-le.html",
+    "title": "My academic journey",
     "section": "",
-    "text": "I am learning bioinformatics from first principles.\nThis series is my attempt to understand not only how to use bioinformatics tools, but also the mathematics, algorithms, and biological assumptions behind them.\nI write these notes primarily to consolidate my own understanding. Hopefully, they may also be useful to others learning bioinformatics.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBayesian Statistics\n\n\nMake you best guess, and then update it as you learn more.\n\n\n\n\n\nSep 27, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Build a Personal Website\n\n\nA practical guide to building and publishing a free personal website with Quarto + GitHub Pages\n\n\n\n\n\nSep 25, 2026\n\n\n\n\n\nNo matching items"
+    "text": "I’m Trieu.\nLê Phạm Tiến Triều\nPhD candidate - Researcher - Investor and Trader - Amateur Writer - Wannabe Pianist - Soon-to-be Polyglot\nResearch has taken me through different laboratories, universities, teams, conferences, and countries. This page is a collection of (some of) the people, places, and moments that have been part of that journey."
+  },
+  {
+    "objectID": "trieu-le.html#oxford-university-clinical-research-unit-oucru",
+    "href": "trieu-le.html#oxford-university-clinical-research-unit-oucru",
+    "title": "My academic journey",
+    "section": "🔬 Oxford University Clinical Research Unit (OUCRU)",
+    "text": "🔬 Oxford University Clinical Research Unit (OUCRU)\nMy early research journey in infectious diseases and genomics at the Tuberculosis Research Team, Oxford University Clinical Research Unit (OUCRU) in Vietnam."
+  },
+  {
+    "objectID": "trieu-le.html#josie-bryants-team",
+    "href": "trieu-le.html#josie-bryants-team",
+    "title": "My academic journey",
+    "section": "🔬 Josie Bryant’s Team",
+    "text": "🔬 Josie Bryant’s Team\nScience is not only about experiments and data, but also about the people we work with and learn from.\nA year of learning genomics, bioinformatics, and computational biology, and an important transition in my journey towards genomic research."
+  },
+  {
+    "objectID": "trieu-le.html#university-of-cambridge",
+    "href": "trieu-le.html#university-of-cambridge",
+    "title": "My academic journey",
+    "section": "🎓 University of Cambridge",
+    "text": "🎓 University of Cambridge\nOne of my best academic experiences - networking with brilliant people, learning from inspiring mentors, and exploring the world of genomics and bioinformatics."
+  },
+  {
+    "objectID": "trieu-le.html#wellcome-sanger-institute",
+    "href": "trieu-le.html#wellcome-sanger-institute",
+    "title": "My academic journey",
+    "section": "🧬 Wellcome Sanger Institute",
+    "text": "🧬 Wellcome Sanger Institute\nSome memories from my time at the Wellcome Sanger Institute — a place where I was surrounded by genomics, computational biology, and people working at the forefront of genomic research."
+  },
+  {
+    "objectID": "trieu-le.html#university-of-bath",
+    "href": "trieu-le.html#university-of-bath",
+    "title": "My academic journey",
+    "section": "🎓 University of Bath",
+    "text": "🎓 University of Bath\nThe next chapter of the journey — my PhD.\nMy research focuses on bacterial genomics and evolution, particularly the role of plasmids and other mobile genetic elements in the spread of antimicrobial resistance."
+  },
+  {
+    "objectID": "trieu-le.html#zamin-iqbals-team",
+    "href": "trieu-le.html#zamin-iqbals-team",
+    "title": "My academic journey",
+    "section": "🧬 Zamin Iqbal’s Team",
+    "text": "🧬 Zamin Iqbal’s Team\nResearch is rarely a solitary journey. I am fortunate to work with people from whom I can learn about bacterial genomics, pangenomics, algorithms, evolution, and much more."
+  },
+  {
+    "objectID": "trieu-le.html#conferences",
+    "href": "trieu-le.html#conferences",
+    "title": "My academic journey",
+    "section": "🌍 Conferences",
+    "text": "🌍 Conferences\nOne of the parts of research I enjoy most is meeting people with different ideas and perspectives.\nConferences have given me opportunities to present my work, discover new research, discuss ideas, and meet researchers from around the world."
+  },
+  {
+    "objectID": "trieu-le.html#visiting-the-old-lab",
+    "href": "trieu-le.html#visiting-the-old-lab",
+    "title": "My academic journey",
+    "section": "🔬 Visiting the Old Lab",
+    "text": "🔬 Visiting the Old Lab\nSometimes moving forward also means returning to where part of the journey began."
+  },
+  {
+    "objectID": "trieu-le.html#vietsocs",
+    "href": "trieu-le.html#vietsocs",
+    "title": "My academic journey",
+    "section": "🇻🇳 Vietsocs",
+    "text": "🇻🇳 Vietsocs\nLife beyond research matters too.\nCommunity, friendships, shared experiences, and staying connected with Vietnam have also been an important part of my life in the UK."
+  },
+  {
+    "objectID": "trieu-le.html#along-the-way",
+    "href": "trieu-le.html#along-the-way",
+    "title": "My academic journey",
+    "section": "Along the Way",
+    "text": "Along the Way\nScience is more than experiments, code, data, papers, and results.\nIt is also about the people we meet, the places we go, the ideas we encounter, and the experiences that gradually shape how we think.\nThis page is a growing collection of those moments.\nMore to come."
+  },
+  {
+    "objectID": "thoughts/science-through-the-lens-of-investing.html",
+    "href": "thoughts/science-through-the-lens-of-investing.html",
+    "title": "Science Through the Lens of Investing",
+    "section": "",
+    "text": "← Back to Thoughts\nI recently returned from a conference in Berlin, Germany. For me, it was a very successful conference, and I achieved the goals I had set for myself. But after observing and talking with many colleagues, I also came away with some interesting thoughts about modern scientific research.\nThey reminded me, surprisingly, of investing.\nI noticed that there were a few young researchers who were exceptionally good—arguably well ahead of their peers. But perhaps because they had gone so far, so quickly, some of their ideas were very new and difficult for both the panel and much of the audience to immediately grasp.\nJudging from the reactions of the audience and some of the more senior researchers, their presentations did not seem to receive as much recognition as I might have expected.\nMeanwhile, other colleagues—also very capable researchers—presented work that was somewhat more familiar. Some aspects might even have been slightly outdated, but the ideas were easier to understand and closer to what the audience already knew.\nTheir work received considerable recognition, and they were among those who really stood out at the conference."
+  },
+  {
+    "objectID": "thoughts/science-through-the-lens-of-investing.html#science-may-work-in-a-similar-way",
+    "href": "thoughts/science-through-the-lens-of-investing.html#science-may-work-in-a-similar-way",
+    "title": "Science Through the Lens of Investing",
+    "section": "Science may work in a similar way",
+    "text": "Science may work in a similar way\nI think something similar can happen in science.\nThe researchers receiving recognition today are undoubtedly talented. But there are also excellent researchers working on ideas that are newer, less familiar, or simply different from the mainstream.\nTheir work may eventually receive the recognition it deserves, but that can require time:\n\ntime to accumulate evidence,\ntime for ideas to mature,\nand time for the wider field to catch up with a new way of thinking.\n\nIn investing, timing matters.\nIn research, communication and staying connected with your field matter too.\nPerhaps having a good idea is only part of the challenge. Another part is communicating that idea in a way that allows other people to understand why it matters.\n\nP.S. This reflection is entirely about colleagues who are more senior and experienced than I am—it is not about me. These are simply my personal observations and interpretations from the conference.\nHave you noticed anything similar in your own field?\n← Back to Thoughts"
+  },
+  {
+    "objectID": "thoughts/Ask-more-questions-at-conferences.html",
+    "href": "thoughts/Ask-more-questions-at-conferences.html",
+    "title": "You should ask more questions at conferences",
+    "section": "",
+    "text": "← Back to Thoughts\nIf you ever feel like you have a hard time following talks in meetings or conferences, want to contribute more to discussions, but feel like you don’t have any “good” or “smart” questions to ask, you are not alone. Sometimes you may even feel lost in the middle of a talk despite trying your best to focus. I have been there many times, and I have always wondered how to improve that situation.\nAfter years in academia, including my Master’s and PhD, I have observed senior scientists being very comfortable during talks. They often ask great and highly relevant questions, even when the topic is not exactly within their expertise. I wanted to be able to do that too. I asked for advice from a few people, but most of the answers felt more like natural responses or behaviours: “just keep trying,” “read more,” “ask any questions if you don’t understand.” Those are fairly good suggestions, but I wanted something more practical. I wanted to ask relevant questions and feel like part of the discussion.\nPeople often talk about presentation skills, but not much about listening skills in science. I think both are equally important. Over time, I developed my own simple framework of questions (or tips) that helps me engage with talks more comfortably and understand them better without trying too hard to catch every detail on every slide.\n\n🎯 Keep the title or main topic in mind\nI cannot tell you how important this is. I also cannot tell you how many times I struggled to follow a talk simply because I missed the first slide. Once you know the main topic, you can allow yourself to skip some minor details, especially if they are distant from your expertise.\n\n\n🧠 Be more active while listening\nIt can massively improve your understanding of the talk. Keep asking yourself these questions: 1. What is the question? 2. Why is it important? 3. How did they answer it? 4. Do I believe the answer? 5. What can be done next?\n\n\n🔬 Things you could ask if the topic is close to your expertise\nQuestions about methodology, models, statistics, or experimental design are always valuable. These are often the foundation of the work and should be discussed thoroughly. They should also be presented clearly by the speaker. If something is unclear, chances are other people are wondering the same thing. And of course, specific questions about the results are usually the best questions. They show that you have been actively listening and thinking critically about the science.\n\n\n🚀 Other questions you could ask\n\n“Then what?” questions: What are the applications? If successful, what impact could this work have on the field or the wider world?\n⚖️ Counter questions: Why did they choose this method? What are the advantages and disadvantages? How does it compare with alternative approaches that may be cheaper, less invasive, faster, or more robust?\n⚠️ Limitations: What are the limitations of the study? Are there concerns about sample size, dataset selection, generalisability, or scalability?\n\n\n\n💬 Universal questions\nThese work for almost any talk, but I personally do not recommend them. They should only be used when there are no other questions and you want to help the speaker further explain their work. - What surprised you most during this project? - What was the biggest challenge you faced? - What result would have changed your conclusion? - What question are you most excited to answer next?\n\n\n🏆 After the talk\nJust go through these questions. If you feel like you can at least partially answer them yourself, congratulations—you have understood the talk and learned something new. These questions may seem simple, but they get straight to the heart of the science; not every speaker can answer them clearly. Asking them creates opportunities for useful discussion and clarification. And remember, the goal is NOT to understand every slide. The goal is to understand the key message and evaluate the work.\n\n\n📢 One final thought\nBased on my own experience and many people I know, I feel that some Vietnamese people (and perhaps Asians in general) are often a bit more hesitant to speak up in public. It could be language barriers, cultural factors, fear of being judged, or a combination of many things. I used to be like that too. So, I would really encourage fellow early-career researchers and scientists to SPEAK UP. Your question does not have to be perfect. It only needs to be genuine. This is by no means a solid protocol, and it is probably quite personal. But it has helped me a lot. If you read this far, I hope it might be useful to you as well in your next meeting or conference.\n\n\n\nListening in Science\n\n\n← Back to Thoughts"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html",
+    "href": "bioinformatics/bayesian-statistics.html",
+    "title": "Bayesian Statistics",
+    "section": "",
+    "text": "← Back to Bioinformatics for “Dumb Me”\nWhy am I learning this?\nBayesian statistics appears frequently in bioinformatics, from phylogenetic inference to genomic epidemiology.\nAs someone whose background is in biology, I have often found the terms confusing and intimidating.\nSo, let change that."
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#is-it-a-crocodile-or-a-aligator",
+    "href": "bioinformatics/bayesian-statistics.html#is-it-a-crocodile-or-a-aligator",
+    "title": "Bayesian Statistics",
+    "section": "1. Is it a crocodile or a aligator? 🐊",
+    "text": "1. Is it a crocodile or a aligator? 🐊\nImagine you are blindfolded and asked to identify an animal. You somehow safely touch it and feel its rough skin. You are told that it is either a crocodile or an alligator.\nThese two animals are very similar, but they have some differences. For example, crocodiles generally have a V-shaped snout, while alligators have a broader, U-shaped snout.\nRight now, with the limited information you have, you are not sure whether it is a crocodile or an alligator. You can only make a guess. For simplicity, you assume that they are equally likely.\nWhat is a prior?\nIn Bayesian statistics, a prior represents our initial belief about the probability of something before observing new evidence.\nIn the crocodile vs. alligator example, our prior belief is that either animal is equally likely because we do not yet have enough information to favour one over the other.\nAs we gather more evidence, we can update our prior belief to form a posterior—our updated belief after taking the new evidence into account.\nAdditional information\nYou realise that you are standing in the United States, where alligators are much more common than crocodiles (with ratio 2500:1). Now you are leaning towards the animal being an alligator. You can update your initial belief based on this new information.\nBut then your friend tells you that the animal was captured from the Nile River in Africa and brought to the United States. Nile crocodiles inhabit freshwater rivers, lakes, and marshes across sub-Saharan Africa, including parts of the Nile River. Now you are leaning towards the animal being a crocodile. Once again, you update your belief based on the latest information. If you followed that reasoning, then you have just used Bayesian inference in action.\nYou started with a prior belief, gathered new evidence, and updated your belief to form a posterior belief. As more evidence becomes available, you can continue updating what you believe."
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#who-is-bayes",
+    "href": "bioinformatics/bayesian-statistics.html#who-is-bayes",
+    "title": "Bayesian Statistics",
+    "section": "2. Who is Bayes?",
+    "text": "2. Who is Bayes?\nThomas Bayes (c. 1701–1761) was an English mathematician, statistician, and Presbyterian minister. He is best known for Bayes’ theorem, which describes how probabilities can be updated when new evidence becomes available. His work was published posthumously in 1763 and later became the foundation of Bayesian statistics. Today, Bayesian methods are widely used in medicine, genetics, bioinformatics, machine learning, and many other scientific fields.\nFACT: His famous theorem was published after he died. His friend Richard Price found and edited Bayes’ unpublished work, which appeared in 1763."
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#farmer-or-librarian",
+    "href": "bioinformatics/bayesian-statistics.html#farmer-or-librarian",
+    "title": "Bayesian Statistics",
+    "section": "3. Farmer or Librarian?",
+    "text": "3. Farmer or Librarian?\nYou and your friend are on a train from Bath to London. You notice a skinny man wearing glasses and reading a book. Your friend knows him personally and asks you to guess:\nIs he a farmer or a librarian?\nBased on his appearance, many people might immediately guess that he is a librarian.\nHowever, Daniel Kahneman, winner of the 2002 Nobel Memorial Prize in Economic Sciences, famously discussed how people often neglect base rates when making judgments like this.\nSuppose there are approximately 99,700 farmers and 47,800 librarians in the UK (UK government statistics, 2026). Before considering anything about the man’s appearance, randomly selecting a farmer would therefore be more likely than selecting a librarian.\nThis gives us our prior probability. But the base rate alone is not enough.\nWe also need to ask:\nHow likely would we be to see a skinny man wearing glasses and reading a book if he were a farmer, compared with if he were a librarian?\nThis is the likelihood.\nFor illustration, suppose:\n\n10% of farmers fit this description.\n80% of librarians fit this description.\n\nNote: These percentages are made-up data used only to illustrate Bayesian inference.\n\n\n\nFarmers and Librarians that fit the appearance"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#the-boring-formula-of-probability",
+    "href": "bioinformatics/bayesian-statistics.html#the-boring-formula-of-probability",
+    "title": "Bayesian Statistics",
+    "section": "4. The boring formula of probability",
+    "text": "4. The boring formula of probability\nApplying Bayes’ Theorem\nNow let’s use our numbers to calculate the probability that the man is a librarian.\nWe have:\n\nFarmers: 99,700\nLibrarians: 47,800\n10% of farmers fit the description\n80% of librarians fit the description\n\nLet:\n\n\\(L\\) = the man is a librarian\n\\(F\\) = the man is a farmer\n\\(E\\) = the man is skinny, wears glasses, and is reading a book\n\nStep 1: Calculate the prior probabilities\nBefore looking at the man, the probability that a randomly selected person from these two groups is a librarian is:\n\\[\nP(L) = \\frac{47,800}{47,800 + 99,700}\n= 0.324\n\\]\nSo our prior probability of librarian is about 32.4%.\nSimilarly:\n\\[\nP(F) = \\frac{99,700}{47,800 + 99,700}\n= 0.676\n\\]\nThe prior probability of farmer is therefore 67.6%.\nSo, before seeing any other information, farmer is more likely.\n⸻\nStep 2: Add the likelihood\nWe assumed that:\n\\[\nP(E \\mid L) = 0.80\n\\]\nmeaning that 80% of librarians fit our description.\nFor farmers:\n\\[\nP(E \\mid F) = 0.10\n\\]\nmeaning that 10% of farmers fit the description.\nNow we have both the prior and the likelihood.\n⸻\nStep 3: Apply Bayes’ theorem\nWe want to calculate:\n\\[\nP(L \\mid E)\n\\]\nwhich means:\nWhat is the probability that the man is a librarian given that we observed this evidence?\nBayes’ theorem gives us:\n\\[\nP(L \\mid E)\n=\n\\frac{P(E \\mid L)P(L)}\n{P(E \\mid L)P(L) + P(E \\mid F)P(F)}\n\\]\nSubstituting our numbers:\n\\[\nP(L \\mid E)\n=\n\\frac{0.80 \\times 0.324}\n{(0.80 \\times 0.324) + (0.10 \\times 0.676)}\n\\]\n\\[\n\\frac{0.2592}\n{0.2592 + 0.0676}\n=\n0.793\n\\]\nTherefore:\n\\[\n\\boxed{P(L \\mid E) \\approx 79.3\\%}\n\\]\nThe posterior probability that the man is a farmer is:\n\\[\nP(F \\mid E) = 1 - 0.793 = 0.207\n\\]\nor approximately 20.7%.\nWhat happened?\nBefore observing the man:\nFarmer: 67.6%; Librarian: 32.4%\nAfter observing the evidence:\nFarmer: 20.7; Librarian: 79.3%\nThe population numbers initially favour farmer. However, our hypothetical evidence is much more likely among librarians than farmers:\n\\[\n\\frac{P(E \\mid L)}{P(E \\mid F)}\n=\n\\frac{0.80}{0.10}\n=\n8\n\\]\nIn other words, this particular observation is 8 times more likely if the man is a librarian than if he is a farmer.\nThat evidence is strong enough to overcome the initial base-rate advantage of farmers.\nThis demonstrates the key idea of Bayesian inference:\nStart with a prior belief → observe evidence → update to a posterior belief.\nThe prior tells us what was plausible before seeing the evidence. The likelihood tells us how compatible the evidence is with each hypothesis. The posterior tells us what we should believe after combining both."
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#the-perfect-example-of-bayes-theorem-poker",
+    "href": "bioinformatics/bayesian-statistics.html#the-perfect-example-of-bayes-theorem-poker",
+    "title": "Bayesian Statistics",
+    "section": "5. The perfect example of Bayes’ theorem: POKER 🃏",
+    "text": "5. The perfect example of Bayes’ theorem: POKER 🃏\nPoker to me is a perfect example of Bayesian thinking because you constantly update your beliefs with incomplete information.\nImagine you are playing Texas Hold’em. You cannot see your opponent’s cards, but based on their position, previous behaviour, and possible starting hands, you already have an initial idea of what they might hold. This is your prior.\nYour opponent suddenly makes a large raise. This is new evidence.\nYou now ask: How likely are they to make this raise with a strong hand? How likely are they to do it with a weak hand or a bluff? This is the likelihood.\nYou combine the prior with this evidence and update your belief about their hand. This updated belief is the posterior.\nThen another card appears, your opponent bets again, and you update again:\nPrior → Evidence → Posterior → New evidence → New posterior\nIn poker, as in Bayesian inference, the key question is:\nGiven what I already know, how much should this new information change what I believe?"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-medicine",
+    "href": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-medicine",
+    "title": "Bayesian Statistics",
+    "section": "6. Bayes’ theorem in Medicine 🩺",
+    "text": "6. Bayes’ theorem in Medicine 🩺\nBayesian thinking is everywhere in medicine, particularly in diagnosis. Clinicians constantly start with an initial probability of disease, gather new evidence, and update that probability.\nDiagnostic tests\nA patient has a positive HIV test. Does this mean they definitely have HIV?\nNot necessarily.\nBefore testing, the patient has a pre-test probability of HIV based on factors such as prevalence and clinical context. The test result provides new evidence. Its sensitivity and specificity tell us how likely that result is in people with and without HIV.\nWe then update our probability:\nPre-test probability → Test result → Post-test probability\nIn Bayesian terms:\nPrior → Evidence → Posterior\n⸻\nPulmonary embolism\nA patient presents with shortness of breath and chest pain.\nBased on the history, examination, and a clinical prediction rule such as the Wells score, you estimate the probability of pulmonary embolism (PE).\nThis is your prior.\nYou perform a D-dimer test. A negative result provides new evidence and may substantially reduce the probability of PE.\nThe probability after considering the D-dimer is your posterior.\nThis explains an important principle in medicine:\nThe same test result can mean different things in patients with different pre-test probabilities.\n⸻\nMeningitis\nA patient presents with fever, headache, and neck stiffness.\nInitially, you consider several diagnoses, including bacterial meningitis, viral meningitis, and encephalitis. Your clinical assessment gives each diagnosis an initial probability.\nYou then perform a lumbar puncture.\nThe CSF shows:\n\nNeutrophilic pleocytosis\nLow glucose\nHigh protein\n\nThese findings are more compatible with bacterial meningitis, so you update your belief and assign a higher probability to that diagnosis.\nAgain:\nClinical suspicion → New evidence → Updated probability\n⸻\nSequential Bayesian updating\nIn real clinical practice, we rarely receive all the information at once.\nInstead, evidence arrives sequentially:\nHistory → Examination → Blood tests → Imaging → Microbiology → Treatment response\nAfter each new piece of information, we update our assessment.\nThe posterior from one step becomes the prior for the next.\nThis is Bayesian inference in everyday clinical medicine.\n\n\n\n\n\n\nTip\n\n\n\nClinical translation of Bayes’ theorem\nPrior = What did I think before the test?\nLikelihood = How compatible is this result with the disease?\nPosterior = What do I think after the test?\nOr, in familiar clinical language:\nPre-test probability → Diagnostic test → Post-test probability"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-bioinformatics",
+    "href": "bioinformatics/bayesian-statistics.html#bayes-theorem-in-bioinformatics",
+    "title": "Bayesian Statistics",
+    "section": "7. Bayes’ theorem in Bioinformatics 🧬",
+    "text": "7. Bayes’ theorem in Bioinformatics 🧬\nBayesian inference is widely used in bioinformatics because biological data are often incomplete, noisy, and uncertain.\nThe basic idea remains the same:\nPrior knowledge + Biological data → Updated probability\nPhylogenetics 🌳\nSuppose we have DNA sequences from several bacterial isolates and want to reconstruct their evolutionary history.\nThere are many possible phylogenetic trees.\nBefore examining the sequence data, our evolutionary model gives us some expectation about which trees and parameters are plausible. This represents our prior.\nWe then ask:\nHow likely are the observed DNA sequences if a particular tree and evolutionary model are correct?\nThis is the likelihood.\nCombining the prior and likelihood gives us the posterior probability of different trees and evolutionary parameters.\nPrior evolutionary assumptions → Sequence data → Posterior distribution of trees\nThis is the principle behind Bayesian phylogenetic programs such as BEAST and MrBayes.\n⸻\nMolecular dating ⏳\nBayesian inference can also be used to estimate when evolutionary events occurred.\nSuppose we have bacterial genomes collected at different dates.\nWe may have prior assumptions about the evolutionary rate. The observed genetic differences between isolates and their sampling dates provide the data.\nBayesian inference combines these to estimate posterior distributions for:\n\nevolutionary rate\ndates of ancestral nodes\ntime to the most recent common ancestor (tMRCA)\n\nInstead of simply saying:\n“This ancestor existed in 1900.”\nwe might estimate:\n“The most probable date is around 1900, with a credible interval representing our uncertainty.”\nTools such as BEAST and BactDating use Bayesian approaches for molecular dating.\n⸻\nVariant calling 🧬\nImagine sequencing a position in a genome where some reads contain A and others contain G.\nIs this a real genetic variant or simply sequencing error?\nA Bayesian variant caller can combine:\nPrior probability of a variant + observed sequencing reads → Posterior probability of a variant\nRead depth, base quality, sequencing error rates, and other information can contribute to the likelihood.\nThe result is a probability that a particular genotype or variant is actually present.\n⸻\nThe common pattern\nAlthough the biological questions are very different, the Bayesian logic is the same:\nApplication Prior Evidence Posterior Phylogenetics Evolutionary assumptions DNA sequences Probable trees Molecular dating Clock/model assumptions Sequences + sampling dates Ancestral dates and rates Variant calling Expected variant/genotype probabilities Sequencing reads Variant/genotype probabilities\nSo whether we are diagnosing a patient, playing poker, or reconstructing bacterial evolution, the underlying question is the same:\nGiven what I believed before, how should these new data change what I believe?"
+  },
+  {
+    "objectID": "bioinformatics/bayesian-statistics.html#bactdating-bayesian-inference-in-action",
+    "href": "bioinformatics/bayesian-statistics.html#bactdating-bayesian-inference-in-action",
+    "title": "Bayesian Statistics",
+    "section": "8. BactDating: Bayesian Inference in Action 🦠⏳",
+    "text": "8. BactDating: Bayesian Inference in Action 🦠⏳\nBactDating is a tool used to estimate the timescale of bacterial evolution.\nImagine you have 500 E. coli genomes collected between 2000 and 2025. You have already reconstructed a phylogenetic tree from their genomic sequences. The tree tells you which isolates are related, but its branch lengths mainly represent genetic change, not calendar time.\nWhat you want to know is:\nWhen did their common ancestors exist?\nFor example, when did a particular lineage emerge? When did two bacterial populations diverge? When did the most recent common ancestor (MRCA) exist?\nThis is where BactDating uses Bayesian inference.\nWhat goes into BactDating?\nBactDating combines several sources of information:\n\na bacterial phylogenetic tree\nthe genetic branch lengths of that tree\nthe sampling date of each isolate\na model describing how bacterial evolution occurs through time\n\nThe sampling dates are especially important because they provide calendar-time information. If genomes collected many years apart tend to accumulate more genetic changes, BactDating can use this relationship to estimate an evolutionary rate.\nWhere does Bayes come in?\nThere are several unknown parameters that we want to estimate, such as the evolutionary rate and the dates of ancestral nodes.\nBayesian inference treats these unknown quantities as probability distributions.\nConceptually:\nPrior assumptions + observed phylogeny and sampling dates → Posterior distributions\nThe prior describes which parameter values are considered plausible before fully considering the observed data.\nThe likelihood asks:\nGiven a particular evolutionary rate, ancestral dates, and clock model, how likely is it that we would observe this phylogenetic tree with these branch lengths and sampling dates?\nBactDating then combines the prior and likelihood to obtain the posterior distribution.\nHow does BactDating find the posterior?\nThere are far too many possible combinations of evolutionary rates and ancestral dates to calculate them all directly.\nBactDating therefore uses Markov chain Monte Carlo (MCMC) to explore the possible parameter values.\nVery roughly:\nPropose evolutionary parameters → evaluate how well they explain the data → accept or reject them → repeat many times\nAfter many iterations, the values sampled by the MCMC approximate the posterior distribution.\nInstead of producing only one date for an ancestor, BactDating therefore gives us a distribution of plausible dates.\nFor example:\nEstimated plasmid arrival: 1864 95% credible interval: 1853–1872\nThe estimate around 1864 represents the inferred timing from the posterior distribution, while the credible interval represents the uncertainty around that estimate.\n\nBayesian workflow in BactDating\nThe Bayesian workflow in BactDating can be simplified as:\n\nDated bacterial isolates + Phylogenetic tree\n↓\nEvolutionary model + Prior distributions\n↓\nLikelihood of the observed tree and sampling dates\n↓\nMCMC sampling\n↓\nPosterior distributions\n↓\nEvolutionary rate + Dated ancestral nodes + Credible intervals\n\nIn short, BactDating does not simply convert genetic distance into years. It uses a Bayesian model to estimate the evolutionary timescale while explicitly representing uncertainty.\nIn the end, Bayesian thinking is simply the art of starting with what we know, learning from what we observe, and updating what we believe.\n← Back to Bioinformatics for “Dumb Me”"
+  },
+  {
+    "objectID": "bioinformatics/tree_building_tools.html",
+    "href": "bioinformatics/tree_building_tools.html",
+    "title": "Fantastic Tree-Building Tools and How to Choose Them",
+    "section": "",
+    "text": "tree"
   }
 ]
