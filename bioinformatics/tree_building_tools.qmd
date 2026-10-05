@@ -9,6 +9,10 @@ categories:
   - Probability
   - Bayesian
 toc: true
+
+comments:
+  giscus:
+    repo: Trieu-Le1211/Trieu-Le1211.github.io
 ---
 
 tree

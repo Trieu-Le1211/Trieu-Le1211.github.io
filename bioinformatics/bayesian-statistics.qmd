@@ -1,6 +1,6 @@
 ---
 title: "Bayesian Statistics"
-subtitle: "Make you best guess, and then update it as you learn more."
+subtitle: "Make your best guess, and then update it as you learn more."
 date: "2026-09-27"
 author: "Trieu Le"
 image: images/bayesian_thumbnail.png
@@ -9,6 +9,10 @@ categories:
   - Probability
   - Bayesian
 toc: true
+
+comments:
+  giscus:
+    repo: Trieu-Le1211/Trieu-Le1211.github.io
 ---
 
 [← Back to Bioinformatics for "Dumb Me"](index.qmd)
