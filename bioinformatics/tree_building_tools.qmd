@@ -1,0 +1,14 @@
+---
+title: "Fantastic Tree-Building Tools and How to Choose Them"
+subtitle: "IQ-TREE, RAxML, FastTree and the confusing world of phylogenetic inference."
+date: "2026-10-02"
+author: "Trieu Le"
+image: images/sunlight-through-the-trees-photo.jpg
+categories:
+  - Statistics
+  - Probability
+  - Bayesian
+toc: true
+---
+
+tree

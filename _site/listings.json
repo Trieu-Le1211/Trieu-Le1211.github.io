@@ -1,18 +1,19 @@
 [
   {
+    "listing": "/bioinformatics/index.html",
+    "items": [
+      "/bioinformatics/tree_building_tools.html",
+      "/bioinformatics/bayesian-statistics.html",
+      "/bioinformatics/how_to_built_this.html"
+    ]
+  },
+  {
     "listing": "/thoughts/index.html",
     "items": [
       "/thoughts/preparation-for-a-conference.html",
       "/thoughts/science-through-the-lens-of-investing.html",
       "/thoughts/Just-start-writting.html",
       "/thoughts/Ask-more-questions-at-conferences.html"
-    ]
-  },
-  {
-    "listing": "/bioinformatics/index.html",
-    "items": [
-      "/bioinformatics/bayesian-statistics.html",
-      "/bioinformatics/how_to_built_this.html"
     ]
   }
 ]
